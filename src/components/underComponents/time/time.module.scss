@@ -1,0 +1,20 @@
+@import "../../../styles/settings.scss";
+
+.timeContainer {
+  padding: 1rem;
+  background-color: $colorwhite;
+  border-radius: 0.5rem;
+  line-height: 2.2rem;
+  height: 6rem;
+  width: 50%;
+  margin-bottom: 0.3rem;
+  input,
+  select {
+    all: unset;
+  }
+}
+@media screen and (min-width: 992px) {
+  .timeContainer {
+    width: 50.6%;
+  }
+}

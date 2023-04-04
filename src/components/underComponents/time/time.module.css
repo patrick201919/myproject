@@ -1,0 +1,19 @@
+.timeContainer {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.9137254902);
+  border-radius: 0.5rem;
+  line-height: 2.2rem;
+  height: 6rem;
+  width: 50%;
+  margin-bottom: 0.3rem;
+}
+.timeContainer input,
+.timeContainer select {
+  all: unset;
+}
+
+@media screen and (min-width: 992px) {
+  .timeContainer {
+    width: 50.6%;
+  }
+}/*# sourceMappingURL=time.module.css.map */

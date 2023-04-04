@@ -1,0 +1,110 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.containerLogo {
+  display: flex;
+  align-items: center;
+}
+.containerLogo p {
+  font-weight: bold;
+  color: #1d1e20;
+  letter-spacing: 0.2rem;
+  font-size: 1.8rem;
+}
+.containerLogo img {
+  width: 7rem;
+  height: 7rem;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 2rem;
+}
+.navBar .menuNavBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: #00a699;
+  opacity: 0.96;
+  transform: translateX(600px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.navBar .menuNavBar.active {
+  transform: translateX(0);
+}
+.navBar .menuNavBar a {
+  display: block;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.9137254902);
+  transition: all 0.3s ease-in-out;
+  line-height: 2.5;
+  font-size: 2.5rem;
+}
+.navBar .burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  width: 30px;
+  height: 18px;
+}
+.navBar .burger span {
+  width: 100%;
+  height: 3px;
+  background-color: #0077b6;
+  transition: all 0.3s ease-out;
+}
+.navBar .burger.active .beforeBurger {
+  transform: translateY(-8px) rotate(-45deg);
+  background-color: #184e77;
+}
+.navBar .burger.active .middleBurger {
+  opacity: 0;
+}
+.navBar .burger.active .afterBurger {
+  transform: translateY(8px) rotate(45deg);
+  background-color: #184e77;
+}
+
+@media screen and (min-width: 768px) {
+  .containerLogo p {
+    font-size: 2rem;
+  }
+  .containerLogo img {
+    width: 120px;
+    height: 100px;
+  }
+  .navBar .menuNavBar a {
+    font-size: 3rem;
+    line-height: 2.5;
+  }
+}
+@media screen and (min-width: 992px) {
+  .navBar .menuNavBar {
+    flex-direction: row;
+    justify-content: space-between;
+    position: static;
+    height: auto;
+    width: auto;
+    transform: none;
+    background-color: rgba(255, 255, 255, 0.9137254902);
+  }
+  .navBar .menuNavBar a {
+    font-size: 1.8rem;
+    color: #484848;
+  }
+  .navBar .burger {
+    display: none;
+  }
+}/*# sourceMappingURL=header.module.css.map */

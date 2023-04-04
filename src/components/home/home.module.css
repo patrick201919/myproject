@@ -1,0 +1,109 @@
+.formSearch {
+  background-color: #f4a261;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: left;
+}
+.formSearch .selectDeparture,
+.formSearch .selectReturn,
+.formSearch .returnDate,
+.formSearch .departureDate,
+.formSearch .categorie {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.9137254902);
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  border-radius: 0.5rem;
+  line-height: 2.2rem;
+  height: 6rem;
+}
+.formSearch .selectDeparture input,
+.formSearch .selectDeparture select,
+.formSearch .selectReturn input,
+.formSearch .selectReturn select,
+.formSearch .returnDate input,
+.formSearch .returnDate select,
+.formSearch .departureDate input,
+.formSearch .departureDate select,
+.formSearch .categorie input,
+.formSearch .categorie select {
+  all: unset;
+}
+.formSearch .formSelect {
+  margin: 0 auto;
+}
+.formSearch .categorie {
+  margin-top: 0;
+}
+.formSearch .selectDeparture,
+.formSearch .selectReturn,
+.formSearch .categorie {
+  display: flex;
+  align-items: center;
+}
+.formSearch .selectDeparture label,
+.formSearch .selectReturn label,
+.formSearch .categorie label {
+  padding-right: 1rem;
+}
+.formSearch .dateTimeDeparture,
+.formSearch .dateTimeReturn {
+  display: flex;
+}
+.formSearch .dateTimeDeparture .departureDate,
+.formSearch .dateTimeReturn .departureDate {
+  margin: 0;
+}
+.formSearch .dateTimeDeparture .departureDate,
+.formSearch .dateTimeDeparture .returnDate,
+.formSearch .dateTimeReturn .departureDate,
+.formSearch .dateTimeReturn .returnDate {
+  margin-right: 0.3rem;
+  width: 50%;
+}
+.formSearch .dateTimeDeparture .returnDate,
+.formSearch .dateTimeReturn .returnDate {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .containerHome h1 {
+    font-size: 2.8rem;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .containerHome .formSearch .formSelect {
+    display: flex;
+  }
+  .containerHome .formSearch .formSelect .selectDeparture,
+  .containerHome .formSearch .formSelect .selectReturn {
+    width: 50%;
+  }
+  .containerHome .formSearch .formSelect .selectReturn {
+    margin-left: 0.3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .formSearch .selectDateTime {
+    display: flex;
+  }
+  .formSearch .dateTimeDeparture {
+    margin-right: 0.15rem;
+  }
+  .formSearch .dateTimeReturn {
+    margin-left: 0.15rem;
+  }
+  .formSearch .dateTimeDeparture,
+  .formSearch .dateTimeReturn {
+    width: 50.3%;
+  }
+  .formSearch .dateTimeDeparture .departureDate,
+  .formSearch .dateTimeDeparture .returnDate,
+  .formSearch .dateTimeReturn .departureDate,
+  .formSearch .dateTimeReturn .returnDate {
+    width: 50%;
+  }
+}/*# sourceMappingURL=home.module.css.map */

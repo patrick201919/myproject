@@ -1,0 +1,51 @@
+@use "./general";
+@use "./gardeVoir";
+@import "./settings.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+// Generalities----------
+:root {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  margin: 0 auto;
+  color: $colorText;
+  h1,
+  h2,
+  h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 550;
+    color: $colorBlue;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  line-h {
+    line-height: 2;
+  }
+
+  img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: fill;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
