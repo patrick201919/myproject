@@ -2,15 +2,18 @@
   background-color: #f4a261;
   width: 80%;
   margin: 0 auto;
+  margin-top: 4rem;
   border-radius: 0.5rem;
   padding: 1rem;
   text-align: left;
+  font-size: 1.1rem;
 }
 .formSearch .selectDeparture,
 .formSearch .selectReturn,
 .formSearch .returnDate,
 .formSearch .departureDate,
-.formSearch .categorie {
+.formSearch .categorie,
+.formSearch .submitForm {
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.9137254902);
   margin-top: 0.3rem;
@@ -28,14 +31,18 @@
 .formSearch .departureDate input,
 .formSearch .departureDate select,
 .formSearch .categorie input,
-.formSearch .categorie select {
+.formSearch .categorie select,
+.formSearch .submitForm input,
+.formSearch .submitForm select {
   all: unset;
 }
 .formSearch .formSelect {
   margin: 0 auto;
 }
-.formSearch .categorie {
-  margin-top: 0;
+.formSearch .selectDeparture:hover,
+.formSearch .selectReturn:hover,
+.formSearch .categorie:hover {
+  color: #00a699;
 }
 .formSearch .selectDeparture,
 .formSearch .selectReturn,
@@ -60,6 +67,8 @@
 .formSearch .dateTimeDeparture .returnDate,
 .formSearch .dateTimeReturn .departureDate,
 .formSearch .dateTimeReturn .returnDate {
+  display: flex;
+  flex-direction: column;
   margin-right: 0.3rem;
   width: 50%;
 }
@@ -68,12 +77,39 @@
   margin-bottom: 0;
   margin-top: 0;
 }
+.formSearch .dateTimeDeparture input[type=date]::-webkit-calendar-picker-indicator,
+.formSearch .dateTimeReturn input[type=date]::-webkit-calendar-picker-indicator {
+  transform: scale(2);
+}
+.formSearch .categorieSubmit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.formSearch .categorie {
+  margin-top: 0;
+  width: 50%;
+}
+.formSearch .submitForm {
+  width: 50%;
+  margin-top: 0;
+  margin-left: 0.3rem;
+  border: none;
+  color: #00a699;
+  display: flex;
+  justify-content: center;
+  font-size: 1.1rem;
+}
 
 @media screen and (min-width: 768px) {
   .containerHome h1 {
     font-size: 2.8rem;
     width: 60%;
     margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+  .containerHome .formSearch {
+    font-size: 1.6rem;
   }
   .containerHome .formSearch .formSelect {
     display: flex;
@@ -84,6 +120,9 @@
   }
   .containerHome .formSearch .formSelect .selectReturn {
     margin-left: 0.3rem;
+  }
+  .containerHome .formSearch .submitForm {
+    font-size: 1.6rem;
   }
 }
 @media screen and (min-width: 992px) {

@@ -6,6 +6,7 @@ import {
   faLocationDot,
   faChargingStation,
 } from "@fortawesome/free-solid-svg-icons";
+
 const Home = () => {
   return (
     <main className="containerHome">
@@ -44,25 +45,30 @@ const Home = () => {
                 </div>
                 <div className="dateTimeReturn">
                   <div className="returnDate">
-                    <label htmlFor="returnDate" className="label-form">
-                      RETOUR
-                    </label>
+                    <label htmlFor="returnDate">RETOUR</label>
                     <input type="date" />
                   </div>
                   <Time />
                 </div>
               </div>
-              <div className="categorie">
-                <label htmlFor="categorie">
-                  <FontAwesomeIcon icon={faChargingStation} />
-                </label>
-                <select name="categorie" id="categorie">
-                  <option value="#">TYPE DE VEHICULE</option>
-                  <option value="car">Voiture</option>
-                  <option value="scooter">Scooter</option>
-                  <option value="elecScooter">Trottinette</option>
-                  <option value="bike">Vélo</option>
-                </select>
+              <div className="categorieSubmit">
+                <div className="categorie">
+                  <label htmlFor="categorie">
+                    <FontAwesomeIcon icon={faChargingStation} />
+                  </label>
+                  <select name="categorie" id="categorie">
+                    <option value="#">TYPE DE VEHICULE</option>
+                    <option value="car">Voiture</option>
+                    <option value="scooter">Scooter</option>
+                    <option value="elecScooter">Trottinette</option>
+                    <option value="bike">Vélo</option>
+                  </select>
+                </div>
+                <input
+                  type="submit"
+                  value="VOIR LA DISPONIBILITÉ"
+                  className="submitForm"
+                />
               </div>
             </div>
           </form>
