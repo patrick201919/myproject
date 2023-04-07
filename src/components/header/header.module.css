@@ -27,22 +27,24 @@
   justify-content: space-around;
   align-items: center;
   margin-right: 2rem;
+  z-index: 99;
 }
 .navBar .menuNavBar {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  width: 50%;
+  width: 60%;
   background-color: #00a699;
   opacity: 0.96;
-  transform: translateX(600px);
+  transform: translateX(1000px);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .navBar .menuNavBar.active {
   transform: translateX(0);
+  transition: all 0.3s ease-in-out;
 }
 .navBar .menuNavBar a {
   display: block;

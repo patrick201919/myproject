@@ -1,0 +1,20 @@
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+.loginForm input {
+  margin: 1rem;
+  padding: 1rem;
+  width: 280px;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  outline-style: none;
+  border: 1px solid #f4a261;
+}
+.loginForm input[type=submit] {
+  background-color: #f4a261;
+  color: #1d1e20;
+}/*# sourceMappingURL=login.module.css.map */

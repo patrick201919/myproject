@@ -6,12 +6,13 @@ import {
   faLocationDot,
   faChargingStation,
 } from "@fortawesome/free-solid-svg-icons";
+import Gallery from "./homeGallery/Gallery";
 
 const Home = () => {
   return (
-    <main className="containerHome">
-      <h1>Location de véhicules électrique pour une conduite souple.</h1>
-      <section>
+    <main className="container containerHome">
+      <h1>Location de véhicules électrique pour une conduite souple</h1>
+      <section className="sectionHomeSearch">
         <div>
           <form className="formSearch">
             <div className="form">
@@ -73,6 +74,9 @@ const Home = () => {
             </div>
           </form>
         </div>
+      </section>
+      <section className="sectionGallery">
+        <Gallery />
       </section>
     </main>
   );

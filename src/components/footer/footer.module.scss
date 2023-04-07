@@ -1,0 +1,39 @@
+@import "../../styles/settings.scss";
+
+//***********-Footer-***********
+.footer {
+  transition: all 0.5s ease-in-out;
+  background-color: $colorFlyGray;
+  padding-bottom: 1rem;
+  .logoFooter {
+    img {
+      width: 12rem;
+    }
+  }
+  .copyright {
+    color: $colorBlack;
+  }
+  .navFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -1.5rem;
+    margin-bottom: 1.5rem;
+
+    a {
+      padding: 1rem;
+      font-size: 1.8rem;
+      color: $colorBlack;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .navFooter {
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      a {
+        padding: 0;
+      }
+    }
+  }
+}

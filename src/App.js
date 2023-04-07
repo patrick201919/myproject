@@ -4,11 +4,12 @@ import Home from "./components/home/Home";
 import AllProfile from "./components/users/AllProfile";
 import ReadProfile from "./components/users/ReadProfile";
 import CreateProfile from "./components/users/CreateProfile";
-import Login from "./components/users/Login";
 import AllBooking from "./components/reservations/AllBooking";
 import Header from "./components/header/Header";
 // import Test from "./components/users/Test";
 import Teste from "./components/users/Teste";
+import Footer from "./components/footer/Footer";
+import Login from "./components/users/login/Login";
 function App() {
   return (
     <div className="App">
@@ -26,6 +27,7 @@ function App() {
         <Route />
         <Route />
       </Routes>
+      <Footer />
     </div>
   );
 }

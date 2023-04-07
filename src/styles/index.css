@@ -5,6 +5,7 @@
   margin-top: -1.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  margin-bottom: 3rem;
 }
 
 .containerLogo {
@@ -27,22 +28,24 @@
   justify-content: space-around;
   align-items: center;
   margin-right: 2rem;
+  z-index: 99;
 }
 .navBar .menuNavBar {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  width: 50%;
+  width: 60%;
   background-color: #00a699;
   opacity: 0.96;
-  transform: translateX(600px);
+  transform: translateX(1000px);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .navBar .menuNavBar.active {
   transform: translateX(0);
+  transition: all 0.3s ease-in-out;
 }
 .navBar .menuNavBar a {
   display: block;
@@ -109,19 +112,24 @@
     display: none;
   }
 }
+.sectionHomeSearch {
+  margin-bottom: 5rem;
+}
+
 .formSearch {
   background-color: #f4a261;
-  width: 80%;
-  margin: 0 auto;
+  margin-top: 4rem;
   border-radius: 0.5rem;
   padding: 1rem;
   text-align: left;
+  font-size: 1.1rem;
 }
 .formSearch .selectDeparture,
 .formSearch .selectReturn,
 .formSearch .returnDate,
 .formSearch .departureDate,
-.formSearch .categorie {
+.formSearch .categorie,
+.formSearch .submitForm {
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.9137254902);
   margin-top: 0.3rem;
@@ -139,14 +147,13 @@
 .formSearch .departureDate input,
 .formSearch .departureDate select,
 .formSearch .categorie input,
-.formSearch .categorie select {
+.formSearch .categorie select,
+.formSearch .submitForm input,
+.formSearch .submitForm select {
   all: unset;
 }
 .formSearch .formSelect {
   margin: 0 auto;
-}
-.formSearch .categorie {
-  margin-top: 0;
 }
 .formSearch .selectDeparture:hover,
 .formSearch .selectReturn:hover,
@@ -190,12 +197,44 @@
 .formSearch .dateTimeReturn input[type=date]::-webkit-calendar-picker-indicator {
   transform: scale(2);
 }
+.formSearch .dateTimeDeparture input[type=date]::-webkit-calendar-picker-indicator:hover,
+.formSearch .dateTimeReturn input[type=date]::-webkit-calendar-picker-indicator:hover {
+  transform: scale(2.8);
+}
+.formSearch .categorieSubmit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.formSearch .categorie {
+  margin-top: 0;
+  width: 50%;
+}
+.formSearch .submitForm {
+  width: 50%;
+  margin-top: 0;
+  margin-left: 0.3rem;
+  border: none;
+  color: #00a699;
+  display: flex;
+  justify-content: center;
+  font-size: 1.1rem;
+}
 
+@media screen and (min-width: 500px) {
+  .formSearch {
+    font-size: 1.6rem;
+  }
+  .formSearch .submitForm {
+    font-size: 1.6rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .containerHome h1 {
     font-size: 2.8rem;
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
+    margin-bottom: 4rem;
   }
   .containerHome .formSearch .formSelect {
     display: flex;
@@ -254,6 +293,105 @@
     width: 50.6%;
   }
 }
+.containerImgText {
+  transition: all 0.5s ease-in-out;
+  margin: 0 auto;
+}
+.containerImgText article {
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+.containerImgText article div {
+  margin: 0 auto;
+}
+.containerImgText article img {
+  border-radius: 0.3rem;
+  box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.1);
+}
+.containerImgText article p {
+  margin: 0 auto;
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 500px) {
+  article div,
+  article p {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 500px) and (min-width: 768px) {
+  .scooterImgText,
+  .bikeImgText {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  article div {
+    margin-right: 1.3rem;
+  }
+  article div img {
+    margin: 0;
+    padding: 0;
+  }
+  article p {
+    margin-left: 1.3rem;
+  }
+}
+@media screen and (min-width: 500px) and (min-width: 992px) {
+  article div,
+  article p {
+    margin: 0 auto;
+  }
+}
+.footer {
+  transition: all 0.5s ease-in-out;
+  background-color: #cbcbcb;
+  padding-bottom: 1rem;
+}
+.footer .logoFooter img {
+  width: 12rem;
+}
+.footer .copyright {
+  color: #1d1e20;
+}
+.footer .navFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -1.5rem;
+  margin-bottom: 1.5rem;
+}
+.footer .navFooter a {
+  padding: 1rem;
+  font-size: 1.8rem;
+  color: #1d1e20;
+}
+@media screen and (min-width: 768px) {
+  .footer .navFooter {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .footer .navFooter a {
+    padding: 0;
+  }
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.loginForm input {
+  margin: 1rem;
+  padding: 1rem;
+  width: 60%;
+}
+
 *,
 ::after,
 ::before {
@@ -485,8 +623,17 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
-  margin: 0 auto;
   color: #484848;
+  line-height: 1.3;
+}
+body .container {
+  width: 90%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 992px) {
+  body .container {
+    width: 85%;
+  }
 }
 body h1,
 body h2,
@@ -499,13 +646,14 @@ body h1 {
   color: #0077b6;
 }
 body h2 {
-  font-size: 1.6rem;
+  font-size: 2rem;
+  color: #0077b6;
 }
 body h3 {
   font-size: 1.6rem;
 }
 body line-h {
-  line-height: 2;
+  line-height: 4;
 }
 body img {
   max-width: 100%;

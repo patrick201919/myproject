@@ -1,0 +1,32 @@
+.footer {
+  transition: all 0.5s ease-in-out;
+  background-color: #cbcbcb;
+  padding-bottom: 1rem;
+}
+.footer .logoFooter img {
+  width: 12rem;
+}
+.footer .copyright {
+  color: #1d1e20;
+}
+.footer .navFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -1.5rem;
+  margin-bottom: 1.5rem;
+}
+.footer .navFooter a {
+  padding: 1rem;
+  font-size: 1.8rem;
+  color: #1d1e20;
+}
+@media screen and (min-width: 768px) {
+  .footer .navFooter {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .footer .navFooter a {
+    padding: 0;
+  }
+}/*# sourceMappingURL=footer.module.css.map */

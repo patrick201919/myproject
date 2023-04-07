@@ -1,19 +1,20 @@
-.formSearch {
+.containerHome .sectionHomeSearch {
+  margin-bottom: 5rem;
+}
+.containerHome .formSearch {
   background-color: #f4a261;
-  width: 80%;
-  margin: 0 auto;
   margin-top: 4rem;
   border-radius: 0.5rem;
   padding: 1rem;
   text-align: left;
   font-size: 1.1rem;
 }
-.formSearch .selectDeparture,
-.formSearch .selectReturn,
-.formSearch .returnDate,
-.formSearch .departureDate,
-.formSearch .categorie,
-.formSearch .submitForm {
+.containerHome .formSearch .selectDeparture,
+.containerHome .formSearch .selectReturn,
+.containerHome .formSearch .returnDate,
+.containerHome .formSearch .departureDate,
+.containerHome .formSearch .categorie,
+.containerHome .formSearch .submitForm {
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.9137254902);
   margin-top: 0.3rem;
@@ -22,75 +23,79 @@
   line-height: 2.2rem;
   height: 6rem;
 }
-.formSearch .selectDeparture input,
-.formSearch .selectDeparture select,
-.formSearch .selectReturn input,
-.formSearch .selectReturn select,
-.formSearch .returnDate input,
-.formSearch .returnDate select,
-.formSearch .departureDate input,
-.formSearch .departureDate select,
-.formSearch .categorie input,
-.formSearch .categorie select,
-.formSearch .submitForm input,
-.formSearch .submitForm select {
+.containerHome .formSearch .selectDeparture input,
+.containerHome .formSearch .selectDeparture select,
+.containerHome .formSearch .selectReturn input,
+.containerHome .formSearch .selectReturn select,
+.containerHome .formSearch .returnDate input,
+.containerHome .formSearch .returnDate select,
+.containerHome .formSearch .departureDate input,
+.containerHome .formSearch .departureDate select,
+.containerHome .formSearch .categorie input,
+.containerHome .formSearch .categorie select,
+.containerHome .formSearch .submitForm input,
+.containerHome .formSearch .submitForm select {
   all: unset;
 }
-.formSearch .formSelect {
+.containerHome .formSearch .formSelect {
   margin: 0 auto;
 }
-.formSearch .selectDeparture:hover,
-.formSearch .selectReturn:hover,
-.formSearch .categorie:hover {
+.containerHome .formSearch .selectDeparture:hover,
+.containerHome .formSearch .selectReturn:hover,
+.containerHome .formSearch .categorie:hover {
   color: #00a699;
 }
-.formSearch .selectDeparture,
-.formSearch .selectReturn,
-.formSearch .categorie {
+.containerHome .formSearch .selectDeparture,
+.containerHome .formSearch .selectReturn,
+.containerHome .formSearch .categorie {
   display: flex;
   align-items: center;
 }
-.formSearch .selectDeparture label,
-.formSearch .selectReturn label,
-.formSearch .categorie label {
+.containerHome .formSearch .selectDeparture label,
+.containerHome .formSearch .selectReturn label,
+.containerHome .formSearch .categorie label {
   padding-right: 1rem;
 }
-.formSearch .dateTimeDeparture,
-.formSearch .dateTimeReturn {
+.containerHome .formSearch .dateTimeDeparture,
+.containerHome .formSearch .dateTimeReturn {
   display: flex;
 }
-.formSearch .dateTimeDeparture .departureDate,
-.formSearch .dateTimeReturn .departureDate {
+.containerHome .formSearch .dateTimeDeparture .departureDate,
+.containerHome .formSearch .dateTimeReturn .departureDate {
   margin: 0;
 }
-.formSearch .dateTimeDeparture .departureDate,
-.formSearch .dateTimeDeparture .returnDate,
-.formSearch .dateTimeReturn .departureDate,
-.formSearch .dateTimeReturn .returnDate {
+.containerHome .formSearch .dateTimeDeparture .departureDate,
+.containerHome .formSearch .dateTimeDeparture .returnDate,
+.containerHome .formSearch .dateTimeReturn .departureDate,
+.containerHome .formSearch .dateTimeReturn .returnDate {
   display: flex;
   flex-direction: column;
   margin-right: 0.3rem;
   width: 50%;
 }
-.formSearch .dateTimeDeparture .returnDate,
-.formSearch .dateTimeReturn .returnDate {
+.containerHome .formSearch .dateTimeDeparture .returnDate,
+.containerHome .formSearch .dateTimeReturn .returnDate {
   margin-bottom: 0;
   margin-top: 0;
 }
-.formSearch .dateTimeDeparture input[type=date]::-webkit-calendar-picker-indicator,
-.formSearch .dateTimeReturn input[type=date]::-webkit-calendar-picker-indicator {
+.containerHome .formSearch .dateTimeDeparture input[type=date]::-webkit-calendar-picker-indicator,
+.containerHome .formSearch .dateTimeReturn input[type=date]::-webkit-calendar-picker-indicator {
   transform: scale(2);
 }
-.formSearch .categorieSubmit {
+.containerHome .formSearch .dateTimeDeparture input[type=date]::-webkit-calendar-picker-indicator:hover,
+.containerHome .formSearch .dateTimeReturn input[type=date]::-webkit-calendar-picker-indicator:hover {
+  transform: scale(2.8);
+}
+.containerHome .formSearch .categorieSubmit {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.formSearch .categorie {
+.containerHome .formSearch .categorie {
   margin-top: 0;
   width: 50%;
 }
-.formSearch .submitForm {
+.containerHome .formSearch .submitForm {
   width: 50%;
   margin-top: 0;
   margin-left: 0.3rem;
@@ -100,49 +105,55 @@
   justify-content: center;
   font-size: 1.1rem;
 }
-
-@media screen and (min-width: 768px) {
-  .containerHome h1 {
-    font-size: 2.8rem;
-    width: 60%;
-    margin: 0 auto;
-    margin-bottom: 4rem;
-  }
+@media screen and (min-width: 500px) {
   .containerHome .formSearch {
     font-size: 1.6rem;
-  }
-  .containerHome .formSearch .formSelect {
-    display: flex;
-  }
-  .containerHome .formSearch .formSelect .selectDeparture,
-  .containerHome .formSearch .formSelect .selectReturn {
-    width: 50%;
-  }
-  .containerHome .formSearch .formSelect .selectReturn {
-    margin-left: 0.3rem;
   }
   .containerHome .formSearch .submitForm {
     font-size: 1.6rem;
   }
 }
-@media screen and (min-width: 992px) {
-  .formSearch .selectDateTime {
+@media screen and (min-width: 768px) {
+  .containerHome .containerHome h1 {
+    font-size: 2.8rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+  .containerHome .containerHome .formSearch .formSelect {
     display: flex;
   }
-  .formSearch .dateTimeDeparture {
+  .containerHome .containerHome .formSearch .formSelect .selectDeparture,
+  .containerHome .containerHome .formSearch .formSelect .selectReturn {
+    width: 50%;
+  }
+  .containerHome .containerHome .formSearch .formSelect .selectReturn {
+    margin-left: 0.3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .containerHome h1 {
+    font-size: 3.3rem;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .containerHome .formSearch .selectDateTime {
+    display: flex;
+  }
+  .containerHome .formSearch .dateTimeDeparture {
     margin-right: 0.15rem;
   }
-  .formSearch .dateTimeReturn {
+  .containerHome .formSearch .dateTimeReturn {
     margin-left: 0.15rem;
   }
-  .formSearch .dateTimeDeparture,
-  .formSearch .dateTimeReturn {
+  .containerHome .formSearch .dateTimeDeparture,
+  .containerHome .formSearch .dateTimeReturn {
     width: 50.3%;
   }
-  .formSearch .dateTimeDeparture .departureDate,
-  .formSearch .dateTimeDeparture .returnDate,
-  .formSearch .dateTimeReturn .departureDate,
-  .formSearch .dateTimeReturn .returnDate {
+  .containerHome .formSearch .dateTimeDeparture .departureDate,
+  .containerHome .formSearch .dateTimeDeparture .returnDate,
+  .containerHome .formSearch .dateTimeReturn .departureDate,
+  .containerHome .formSearch .dateTimeReturn .returnDate {
     width: 50%;
   }
 }/*# sourceMappingURL=home.module.css.map */
