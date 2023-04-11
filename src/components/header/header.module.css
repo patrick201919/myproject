@@ -1,3 +1,27 @@
+input,
+.btn {
+  margin: 1rem;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  outline-style: none;
+  border: 2px solid #0077b6;
+}
+
+input[type=submit],
+.btn {
+  background-color: #0077b6;
+  color: rgba(255, 255, 255, 0.9137254902);
+  font-weight: 100;
+}
+
+@media screen and (min-width: 768px) {
+  input,
+  .btn {
+    width: 60%;
+  }
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -53,6 +77,9 @@
   transition: all 0.3s ease-in-out;
   line-height: 2.5;
   font-size: 2.5rem;
+}
+.navBar .menuNavBar a:hover {
+  color: #cbcbcb;
 }
 .navBar .burger {
   display: flex;

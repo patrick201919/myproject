@@ -59,6 +59,9 @@
       line-height: 2.5;
       font-size: 2.5rem;
     }
+    a:hover {
+      color: $colorFlyGray;
+    }
   }
   .burger {
     display: flex;

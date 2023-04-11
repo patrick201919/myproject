@@ -1,3 +1,27 @@
+input,
+.btn {
+  margin: 1rem;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  outline-style: none;
+  border: 2px solid #0077b6;
+}
+
+input[type=submit],
+.btn {
+  background-color: #0077b6;
+  color: rgba(255, 255, 255, 0.9137254902);
+  font-weight: 100;
+}
+
+@media screen and (min-width: 768px) {
+  input,
+  .btn {
+    width: 60%;
+  }
+}
 .footer {
   transition: all 0.5s ease-in-out;
   background-color: #cbcbcb;
@@ -12,7 +36,7 @@
 .footer .navFooter {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   margin-top: -1.5rem;
   margin-bottom: 1.5rem;
 }

@@ -1,4 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+input,
+.btn {
+  margin: 1rem;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  outline-style: none;
+  border: 2px solid #0077b6;
+}
+
+input[type=submit],
+.btn {
+  background-color: #0077b6;
+  color: rgba(255, 255, 255, 0.9137254902);
+  font-weight: 100;
+}
+
+@media screen and (min-width: 768px) {
+  input,
+  .btn {
+    width: 60%;
+  }
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -54,6 +78,9 @@
   transition: all 0.3s ease-in-out;
   line-height: 2.5;
   font-size: 2.5rem;
+}
+.navBar .menuNavBar a:hover {
+  color: #cbcbcb;
 }
 .navBar .burger {
   display: flex;
@@ -112,11 +139,34 @@
     display: none;
   }
 }
-.sectionHomeSearch {
-  margin-bottom: 5rem;
+input,
+.btn {
+  margin: 1rem;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  outline-style: none;
+  border: 2px solid #0077b6;
 }
 
-.formSearch {
+input[type=submit],
+.btn {
+  background-color: #0077b6;
+  color: rgba(255, 255, 255, 0.9137254902);
+  font-weight: 100;
+}
+
+@media screen and (min-width: 768px) {
+  input,
+  .btn {
+    width: 60%;
+  }
+}
+.containerHome .sectionHomeSearch {
+  margin-bottom: 5rem;
+}
+.containerHome .formSearch {
   background-color: #f4a261;
   margin-top: 4rem;
   border-radius: 0.5rem;
@@ -124,12 +174,12 @@
   text-align: left;
   font-size: 1.1rem;
 }
-.formSearch .selectDeparture,
-.formSearch .selectReturn,
-.formSearch .returnDate,
-.formSearch .departureDate,
-.formSearch .categorie,
-.formSearch .submitForm {
+.containerHome .formSearch .selectDeparture,
+.containerHome .formSearch .selectReturn,
+.containerHome .formSearch .returnDate,
+.containerHome .formSearch .departureDate,
+.containerHome .formSearch .categorie,
+.containerHome .formSearch .submitForm {
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.9137254902);
   margin-top: 0.3rem;
@@ -138,80 +188,81 @@
   line-height: 2.2rem;
   height: 6rem;
 }
-.formSearch .selectDeparture input,
-.formSearch .selectDeparture select,
-.formSearch .selectReturn input,
-.formSearch .selectReturn select,
-.formSearch .returnDate input,
-.formSearch .returnDate select,
-.formSearch .departureDate input,
-.formSearch .departureDate select,
-.formSearch .categorie input,
-.formSearch .categorie select,
-.formSearch .submitForm input,
-.formSearch .submitForm select {
+.containerHome .formSearch .selectDeparture input,
+.containerHome .formSearch .selectDeparture select,
+.containerHome .formSearch .selectReturn input,
+.containerHome .formSearch .selectReturn select,
+.containerHome .formSearch .returnDate input,
+.containerHome .formSearch .returnDate select,
+.containerHome .formSearch .departureDate input,
+.containerHome .formSearch .departureDate select,
+.containerHome .formSearch .categorie input,
+.containerHome .formSearch .categorie select,
+.containerHome .formSearch .submitForm input,
+.containerHome .formSearch .submitForm select {
   all: unset;
 }
-.formSearch .formSelect {
+.containerHome .formSearch .formSelect {
   margin: 0 auto;
 }
-.formSearch .selectDeparture:hover,
-.formSearch .selectReturn:hover,
-.formSearch .categorie:hover {
+.containerHome .formSearch .selectDeparture:hover,
+.containerHome .formSearch .selectReturn:hover,
+.containerHome .formSearch .categorie:hover {
   color: #00a699;
 }
-.formSearch .selectDeparture,
-.formSearch .selectReturn,
-.formSearch .categorie {
+.containerHome .formSearch .selectDeparture,
+.containerHome .formSearch .selectReturn,
+.containerHome .formSearch .categorie {
   display: flex;
   align-items: center;
 }
-.formSearch .selectDeparture label,
-.formSearch .selectReturn label,
-.formSearch .categorie label {
+.containerHome .formSearch .selectDeparture label,
+.containerHome .formSearch .selectReturn label,
+.containerHome .formSearch .categorie label {
   padding-right: 1rem;
 }
-.formSearch .dateTimeDeparture,
-.formSearch .dateTimeReturn {
+.containerHome .formSearch .dateTimeDeparture,
+.containerHome .formSearch .dateTimeReturn {
   display: flex;
 }
-.formSearch .dateTimeDeparture .departureDate,
-.formSearch .dateTimeReturn .departureDate {
+.containerHome .formSearch .dateTimeDeparture .departureDate,
+.containerHome .formSearch .dateTimeReturn .departureDate {
   margin: 0;
 }
-.formSearch .dateTimeDeparture .departureDate,
-.formSearch .dateTimeDeparture .returnDate,
-.formSearch .dateTimeReturn .departureDate,
-.formSearch .dateTimeReturn .returnDate {
+.containerHome .formSearch .dateTimeDeparture .departureDate,
+.containerHome .formSearch .dateTimeDeparture .returnDate,
+.containerHome .formSearch .dateTimeReturn .departureDate,
+.containerHome .formSearch .dateTimeReturn .returnDate {
   display: flex;
   flex-direction: column;
   margin-right: 0.3rem;
   width: 50%;
 }
-.formSearch .dateTimeDeparture .returnDate,
-.formSearch .dateTimeReturn .returnDate {
+.containerHome .formSearch .dateTimeDeparture .returnDate,
+.containerHome .formSearch .dateTimeReturn .returnDate {
   margin-bottom: 0;
   margin-top: 0;
 }
-.formSearch .dateTimeDeparture input[type=date]::-webkit-calendar-picker-indicator,
-.formSearch .dateTimeReturn input[type=date]::-webkit-calendar-picker-indicator {
+.containerHome .formSearch .dateTimeDeparture input[type=date]::-webkit-calendar-picker-indicator,
+.containerHome .formSearch .dateTimeReturn input[type=date]::-webkit-calendar-picker-indicator {
   transform: scale(2);
 }
-.formSearch .dateTimeDeparture input[type=date]::-webkit-calendar-picker-indicator:hover,
-.formSearch .dateTimeReturn input[type=date]::-webkit-calendar-picker-indicator:hover {
+.containerHome .formSearch .dateTimeDeparture input[type=date]::-webkit-calendar-picker-indicator:hover,
+.containerHome .formSearch .dateTimeReturn input[type=date]::-webkit-calendar-picker-indicator:hover {
   transform: scale(2.8);
 }
-.formSearch .categorieSubmit {
+.containerHome .formSearch .categorieSubmit {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.formSearch .categorie {
+.containerHome .formSearch .categorie {
   margin-top: 0;
   width: 50%;
 }
-.formSearch .submitForm {
+.containerHome .formSearch .submitForm {
   width: 50%;
+  margin-right: 0;
   margin-top: 0;
   margin-left: 0.3rem;
   border: none;
@@ -220,52 +271,81 @@
   justify-content: center;
   font-size: 1.1rem;
 }
-
 @media screen and (min-width: 500px) {
-  .formSearch {
+  .containerHome .formSearch {
     font-size: 1.6rem;
   }
-  .formSearch .submitForm {
+  .containerHome .formSearch .submitForm {
     font-size: 1.6rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .containerHome h1 {
+  .containerHome .containerHome h1 {
     font-size: 2.8rem;
     width: 80%;
     margin: 0 auto;
     margin-bottom: 4rem;
   }
-  .containerHome .formSearch .formSelect {
+  .containerHome .containerHome .formSearch .formSelect {
     display: flex;
   }
-  .containerHome .formSearch .formSelect .selectDeparture,
-  .containerHome .formSearch .formSelect .selectReturn {
+  .containerHome .containerHome .formSearch .formSelect .selectDeparture,
+  .containerHome .containerHome .formSearch .formSelect .selectReturn {
     width: 50%;
   }
-  .containerHome .formSearch .formSelect .selectReturn {
+  .containerHome .containerHome .formSearch .formSelect .selectReturn {
     margin-left: 0.3rem;
   }
 }
 @media screen and (min-width: 992px) {
-  .formSearch .selectDateTime {
+  .containerHome h1 {
+    font-size: 3.3rem;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .containerHome .formSearch .selectDateTime {
     display: flex;
   }
-  .formSearch .dateTimeDeparture {
+  .containerHome .formSearch .dateTimeDeparture {
     margin-right: 0.15rem;
   }
-  .formSearch .dateTimeReturn {
+  .containerHome .formSearch .dateTimeReturn {
     margin-left: 0.15rem;
   }
-  .formSearch .dateTimeDeparture,
-  .formSearch .dateTimeReturn {
+  .containerHome .formSearch .dateTimeDeparture,
+  .containerHome .formSearch .dateTimeReturn {
     width: 50.3%;
   }
-  .formSearch .dateTimeDeparture .departureDate,
-  .formSearch .dateTimeDeparture .returnDate,
-  .formSearch .dateTimeReturn .departureDate,
-  .formSearch .dateTimeReturn .returnDate {
+  .containerHome .formSearch .dateTimeDeparture .departureDate,
+  .containerHome .formSearch .dateTimeDeparture .returnDate,
+  .containerHome .formSearch .dateTimeReturn .departureDate,
+  .containerHome .formSearch .dateTimeReturn .returnDate {
     width: 50%;
+  }
+}
+
+input,
+.btn {
+  margin: 1rem;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  outline-style: none;
+  border: 2px solid #0077b6;
+}
+
+input[type=submit],
+.btn {
+  background-color: #0077b6;
+  color: rgba(255, 255, 255, 0.9137254902);
+  font-weight: 100;
+}
+
+@media screen and (min-width: 768px) {
+  input,
+  .btn {
+    width: 60%;
   }
 }
 .timeContainer {
@@ -293,58 +373,86 @@
     width: 50.6%;
   }
 }
-.containerImgText {
+.containerGalleryHome h2 {
+  font-size: 2.3rem;
+  margin-bottom: 3rem;
+}
+.containerGalleryHome .containerImgText {
   transition: all 0.5s ease-in-out;
   margin: 0 auto;
 }
-.containerImgText article {
+.containerGalleryHome .containerImgText article {
   margin: 0 auto;
   margin-bottom: 4rem;
 }
-.containerImgText article div {
+.containerGalleryHome .containerImgText article div {
   margin: 0 auto;
 }
-.containerImgText article img {
+.containerGalleryHome .containerImgText article img {
   border-radius: 0.3rem;
   box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.1);
 }
-.containerImgText article p {
+.containerGalleryHome .containerImgText article p {
   margin: 0 auto;
   margin-top: 1.5rem;
 }
-
 @media screen and (min-width: 500px) {
-  article div,
-  article p {
+  .containerGalleryHome article div,
+  .containerGalleryHome article p {
     width: 400px;
   }
 }
 @media screen and (min-width: 500px) and (min-width: 768px) {
-  .scooterImgText,
-  .bikeImgText {
+  .containerGalleryHome .scooterImgText,
+  .containerGalleryHome .bikeImgText {
     display: flex;
     flex-direction: row-reverse;
   }
-  article {
+  .containerGalleryHome article {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  article div {
+  .containerGalleryHome article div {
     margin-right: 1.3rem;
   }
-  article div img {
+  .containerGalleryHome article div img {
     margin: 0;
     padding: 0;
   }
-  article p {
+  .containerGalleryHome article p {
     margin-left: 1.3rem;
   }
 }
 @media screen and (min-width: 500px) and (min-width: 992px) {
-  article div,
-  article p {
+  .containerGalleryHome article div,
+  .containerGalleryHome article p {
     margin: 0 auto;
+  }
+}
+
+input,
+.btn {
+  margin: 1rem;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  outline-style: none;
+  border: 2px solid #0077b6;
+}
+
+input[type=submit],
+.btn {
+  background-color: #0077b6;
+  color: rgba(255, 255, 255, 0.9137254902);
+  font-weight: 100;
+}
+
+@media screen and (min-width: 768px) {
+  input,
+  .btn {
+    width: 60%;
   }
 }
 .footer {
@@ -361,7 +469,7 @@
 .footer .navFooter {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   margin-top: -1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -380,16 +488,255 @@
   }
 }
 
-.loginForm {
+input,
+.btn {
+  margin: 1rem;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  outline-style: none;
+  border: 2px solid #0077b6;
+}
+
+input[type=submit],
+.btn {
+  background-color: #0077b6;
+  color: rgba(255, 255, 255, 0.9137254902);
+  font-weight: 100;
+}
+
+@media screen and (min-width: 768px) {
+  input,
+  .btn {
+    width: 60%;
+  }
+}
+.login {
+  margin: 8rem 0;
+}
+.login .passwordForget {
+  margin-bottom: 3rem;
+}
+.login .createAccount a,
+.login .passwordForget a {
+  color: #0077b6;
+}
+
+input,
+.btn {
+  margin: 1rem;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  outline-style: none;
+  border: 2px solid #0077b6;
+}
+
+input[type=submit],
+.btn {
+  background-color: #0077b6;
+  color: rgba(255, 255, 255, 0.9137254902);
+  font-weight: 100;
+}
+
+@media screen and (min-width: 768px) {
+  input,
+  .btn {
+    width: 60%;
+  }
+}
+.createProfileForm {
+  transition: all 0.5s ease-in-out;
+  margin-bottom: 3rem;
+}
+.createProfileForm h2 {
+  margin-bottom: 3rem;
+}
+.createProfileForm form {
+  margin: 0 auto;
+  width: 90%;
+}
+.createProfileForm form div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
 }
-.loginForm input {
+.createProfileForm form input[type=submit] {
+  margin-top: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .createProfileForm form {
+    width: 60%;
+    border: 3px solid #f4a261;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  .createProfileForm form div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .createProfileForm form div input {
+    margin-right: 0;
+  }
+  .createProfileForm form input[type=submit] {
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+}
+
+input,
+.btn {
   margin: 1rem;
   padding: 1rem;
-  width: 60%;
+  width: 80%;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  outline-style: none;
+  border: 2px solid #0077b6;
+}
+
+input[type=submit],
+.btn {
+  background-color: #0077b6;
+  color: rgba(255, 255, 255, 0.9137254902);
+  font-weight: 100;
+}
+
+@media screen and (min-width: 768px) {
+  input,
+  .btn {
+    width: 60%;
+  }
+}
+.readProfileForm {
+  transition: all 0.5s ease-in-out;
+  margin-bottom: 3rem;
+}
+.readProfileForm h2 {
+  margin-bottom: 3rem;
+}
+.readProfileForm form {
+  margin: 0 auto;
+  width: 90%;
+}
+.readProfileForm form div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.readProfileForm form .btn {
+  margin-top: 3rem;
+}
+.readProfileForm form input[type=submit] {
+  margin-top: 1rem;
+}
+.readProfileForm form .passwordProfile {
+  margin: 0 auto;
+  color: #00a699;
+  color: #0077b6;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.readProfileForm form .passwordProfile:hover {
+  color: #f4a261;
+}
+@media screen and (min-width: 768px) {
+  .readProfileForm form {
+    width: 60%;
+    border: 3px solid #f4a261;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  .readProfileForm form div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .readProfileForm form div input {
+    margin-right: 0;
+  }
+  .readProfileForm form input[type=submit],
+  .readProfileForm form .btn {
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+  .readProfileForm form .btn {
+    margin-right: 5%;
+  }
+}
+
+input,
+.btn {
+  margin: 1rem;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  outline-style: none;
+  border: 2px solid #0077b6;
+}
+
+input[type=submit],
+.btn {
+  background-color: #0077b6;
+  color: rgba(255, 255, 255, 0.9137254902);
+  font-weight: 100;
+}
+
+@media screen and (min-width: 768px) {
+  input,
+  .btn {
+    width: 60%;
+  }
+}
+.passwordForm {
+  transition: all 0.5s ease-in-out;
+  margin-bottom: 3rem;
+}
+.passwordForm h2 {
+  margin-bottom: 3rem;
+}
+.passwordForm form {
+  margin: 0 auto;
+  width: 90%;
+}
+.passwordForm form div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.passwordForm form .btn {
+  margin-top: 3rem;
+}
+.passwordForm form input[type=submit] {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .passwordForm form {
+    width: 70%;
+    border: 3px solid #f4a261;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  .passwordForm form div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .passwordForm form div input {
+    margin-right: 0;
+  }
+  .passwordForm form input[type=submit],
+  .passwordForm form .btn {
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+  .passwordForm form .btn {
+    margin-right: 5%;
+  }
 }
 
 *,
@@ -615,6 +962,30 @@
   display: none;
 }
 
+input,
+.btn {
+  margin: 1rem;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  outline-style: none;
+  border: 2px solid #0077b6;
+}
+
+input[type=submit],
+.btn {
+  background-color: #0077b6;
+  color: rgba(255, 255, 255, 0.9137254902);
+  font-weight: 100;
+}
+
+@media screen and (min-width: 768px) {
+  input,
+  .btn {
+    width: 60%;
+  }
+}
 :root {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -648,6 +1019,7 @@ body h1 {
 body h2 {
   font-size: 2rem;
   color: #0077b6;
+  margin-bottom: 2rem;
 }
 body h3 {
   font-size: 1.6rem;

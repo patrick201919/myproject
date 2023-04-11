@@ -1,23 +1,15 @@
 @import "../../../styles/settings.scss";
 
 //*********LOGIN**************
-.loginForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  margin-bottom: 4rem;
-  input {
-    margin: 1rem;
-    padding: 1rem;
-    width: 280px;
-    border-radius: 0.6rem;
-    font-size: 1.8rem;
-    outline-style: none;
-    border: 1px solid $colorOrange;
+.login {
+  margin: 8rem 0;
+  .passwordForget {
+    margin-bottom: 3rem;
   }
-  input[type="submit"] {
-    background-color: $colorOrange;
-    color: $colorBlack;
+  .createAccount,
+  .passwordForget {
+    a {
+      color: $colorBlue;
+    }
   }
 }

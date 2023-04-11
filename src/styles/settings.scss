@@ -1,3 +1,5 @@
+// Variables Color
+
 $colorGreen: #00a699;
 $colorOrange: #f4a261;
 $colorBlue: #0077b6;
@@ -6,3 +8,28 @@ $colorwhite: #ffffffe9;
 $colorText: #484848;
 $colorBlack: #1d1e20;
 $colorFlyGray: #cbcbcb;
+
+// style Input
+
+input,
+.btn {
+  margin: 1rem;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  outline-style: none;
+  border: 2px solid $colorBlue;
+}
+input[type="submit"],
+.btn {
+  background-color: $colorBlue;
+  color: $colorwhite;
+  font-weight: 100;
+}
+@media screen and (min-width: 768px) {
+  input,
+  .btn {
+    width: 60%;
+  }
+}

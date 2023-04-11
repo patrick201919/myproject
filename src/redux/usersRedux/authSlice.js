@@ -1,25 +1,23 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-// import { API_URL } from "../../constants/ApiConstant";
-// import {
-//   getItem,
-//   setItem,
-//   removeItem,
-// } from "../../components/utils/locatStorage";
+import { API_URL } from "../../constants/ApiConstant";
 
 export const loginUser = createAsyncThunk(
   "auth/loginUser",
   async (loginData, thunkAPI) => {
     try {
-      const response = await fetch("http://localhost:3006/users/login", {
+      const response = await fetch(`${API_URL}` + "/users/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(loginData),
       });
-      const data = await response.json();
-      localStorage.setItem("token", data.token);
-      return data.token;
+      if (response.ok) {
+        const data = await response.json();
+        localStorage.setItem("token", data.token);
+        window.location.href = "/";
+        return data.token;
+      }
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);
     }
@@ -48,7 +46,6 @@ const authSlice = createSlice({
         state.token = action.payload;
         state.error = null;
         localStorage.setItem("token", action.payload);
-        // window.location.href = "/";
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.token = null;
