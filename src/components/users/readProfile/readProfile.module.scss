@@ -1,15 +1,42 @@
 @import "../../../styles/settings.scss";
 
-.readProfileForm {
+.readProfileForm,
+.containerPersonalInfo {
   transition: all 0.5s ease-in-out;
   margin-bottom: 3rem;
   h2 {
     margin-bottom: 3rem;
   }
 
-  form {
+  form,
+  .articlePeronalInfo {
     margin: 0 auto;
     width: 90%;
+
+    .titleLicense {
+      display: block;
+      color: $colorOrange;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin: 3.5rem 0;
+    }
+    p {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      margin-top: 2rem;
+      span {
+        font-size: 1.7rem;
+      }
+    }
+    strong,
+    label {
+      font-size: 2rem;
+      color: $colorGreen;
+    }
+
     div {
       display: flex;
       flex-direction: column;
@@ -32,8 +59,25 @@
       color: $colorOrange;
     }
   }
+  @media screen and (min-width: 520px) {
+    .articlePeronalInfo {
+      width: 80%;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    .articlePeronalInfo {
+      width: 75%;
+    }
+  }
+  @media screen and (min-width: 700px) {
+    .articlePeronalInfo {
+      width: 65%;
+    }
+  }
+
   @media screen and (min-width: 768px) {
-    form {
+    form,
+    .articlePeronalInfo {
       width: 60%;
       border: 3px solid $colorOrange;
       border-radius: 0.5rem;
@@ -55,6 +99,14 @@
       .btn {
         margin-right: 5%;
       }
+    }
+    .articlePeronalInfo {
+      width: 65%;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .articlePeronalInfo {
+      width: 50%;
     }
   }
 }

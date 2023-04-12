@@ -16,7 +16,6 @@ const ReadProfile = () => {
   }, [dispatch]);
 
   const [state, setState] = useState(user);
-  console.log(state);
   const [editUser, setEditUser] = useState(false);
 
   useEffect(() => {
@@ -49,6 +48,7 @@ const ReadProfile = () => {
     <main>
       {editUser ? (
         <section className="readProfileForm">
+          <h2>Modifier vos informations </h2>
           <form onSubmit={handleSubmit}>
             <div>
               <label htmlFor="firstName">Prénom</label>
@@ -68,6 +68,16 @@ const ReadProfile = () => {
                 placeholder="Nom"
                 value={state.name}
                 onChange={(e) => handleChange("name", e.target.value)}
+              />
+            </div>
+            <div>
+              <label htmlFor="age">Age</label>
+              <input
+                type="number"
+                name="age"
+                placeholder="votre age"
+                value={state.age}
+                onChange={(e) => handleChange("age", e.target.value)}
               />
             </div>
             <div>
@@ -125,11 +135,12 @@ const ReadProfile = () => {
               />
             </div>
             <div>
-              <label htmlFor="telephones">Numéro de téléphone</label>
+              <label htmlFor="telephone">Numéro de téléphone</label>
               <input
                 type="tel"
                 name="telephone"
                 placeholder="Téléphone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 value={state.telephone}
                 required
                 onChange={(e) => handleChange("telephone", e.target.value)}
@@ -146,6 +157,44 @@ const ReadProfile = () => {
                 onChange={(e) => handleChange("email", e.target.value)}
               />
             </div>
+            <span className="titleLicense">Permis de conduire</span>
+            <div>
+              <label htmlFor="drivingLicenseNumber">N° de permis</label>
+              <input
+                type="text"
+                name="drivingLicenseNumber"
+                placeholder="N° de permis"
+                value={state.drivingLicenseNumber}
+                required
+                onChange={(e) =>
+                  handleChange("drivingLicenseNumber", e.target.value)
+                }
+              />
+            </div>
+            <div>
+              <label htmlFor="permitIssuedOn">Permis délivré le</label>
+              <input
+                type="date"
+                name="permitIssuedOn"
+                placeholder="Date"
+                value={state.permitIssuedOn}
+                required
+                onChange={(e) => handleChange("permitIssuedOn", e.target.value)}
+              />
+            </div>
+            <div>
+              <label htmlFor="licenseIssuedBy">Permis délivré par</label>
+              <input
+                type="text"
+                name="licenseIssuedBy"
+                placeholder="Permis délivré par"
+                value={state.licenseIssuedBy}
+                required
+                onChange={(e) =>
+                  handleChange("licenseIssuedBy", e.target.value)
+                }
+              />
+            </div>
             <div>
               <Link to="/password" className="passwordProfile">
                 Modifier votre mot de passe
@@ -160,51 +209,81 @@ const ReadProfile = () => {
           </form>
         </section>
       ) : (
-        <section>
-          <article>
-            <ul>
-              <li>
-                <strong>Prémon</strong> <span>{user.firstName}</span>
-              </li>
-              <li>
-                <strong>Nom</strong>
+        <section className="containerPersonalInfo">
+          <h2>Vos informations personnelles</h2>
+          <article className="articlePeronalInfo">
+            <article className="PersonalInfo">
+              <p>
+                <strong>Prémon : </strong> <span>{user.firstName}</span>
+              </p>
+              <p>
+                <strong>Nom : </strong>
                 <span>{user.name}</span>
-              </li>
-              <li>
-                <strong>Date de naissance</strong>
+              </p>
+              <p>
+                <strong>Age : </strong>
+                <span>{user.age} ans</span>
+              </p>
+              <p>
+                <strong>Date de naissance : </strong>
                 <span>{user.birthDay}</span>
-              </li>
-              <li>
-                <strong>Votre adresse</strong>
+              </p>
+              <p>
+                <strong>Votre adresse : </strong>
                 <span>{user.address}</span>
-              </li>
-              <li>
-                <strong> Code postal</strong>
+              </p>
+              <p>
+                <strong> Code postal : </strong>
                 <span> {user.postCode}</span>
-              </li>
-              <li>
-                <strong>Ville</strong>
+              </p>
+              <p>
+                <strong>Ville : </strong>
                 <span> {user.city}</span>
-              </li>
-              <li>
-                <strong>Pays</strong>
+              </p>
+              <p>
+                <strong>Pays : </strong>
                 <span> {user.country}</span>
-              </li>
-              <li>
-                <strong>Téléphone</strong>
+              </p>
+              <p>
+                <strong>Téléphone : </strong>
                 <span> {user.telephone}</span>
-              </li>
-              <li>
-                <strong>Votre email</strong>
+              </p>
+              <p>
+                <strong>Votre email : </strong>
                 <span> {user.email}</span>
-              </li>
-              <li>
-                <strong>Statut</strong>
-                <span>{user.role}</span>
-              </li>
-            </ul>
-            <button onClick={handleEditClick}>Modifier</button>
-            <button onClick={handleDeleteClick}>Supprimer</button>
+              </p>
+              <p>
+                <strong>Statut : </strong>
+                {user.role === 2
+                  ? "Membre"
+                  : user.role === 1
+                  ? "Admin"
+                  : "Autre"}
+              </p>
+            </article>
+            <article className="personalLicense">
+              <h3 className="titleLicense">Permis de conduire</h3>
+              <article>
+                <p>
+                  <strong>N° de permis de conduire : </strong>
+                  <span>{user.drivingLicenseNumber}</span>
+                </p>
+                <p>
+                  <strong>Permis délivré le : </strong>
+                  <span>{user.permitIssuedOn}</span>
+                </p>
+                <p>
+                  <strong>Permis délivré par : </strong>
+                  <span>{user.licenseIssuedBy}</span>
+                </p>
+              </article>
+            </article>
+            <button className="btn" onClick={handleEditClick}>
+              Modifier
+            </button>
+            <button className="btn" onClick={handleDeleteClick}>
+              Supprimer
+            </button>
           </article>
         </section>
       )}

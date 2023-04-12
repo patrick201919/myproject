@@ -20,7 +20,7 @@ input[type=submit],
 @media screen and (min-width: 768px) {
   input,
   .btn {
-    width: 60%;
+    width: 70%;
   }
 }
 .header {
@@ -160,7 +160,7 @@ input[type=submit],
 @media screen and (min-width: 768px) {
   input,
   .btn {
-    width: 60%;
+    width: 70%;
   }
 }
 .containerHome .sectionHomeSearch {
@@ -345,7 +345,7 @@ input[type=submit],
 @media screen and (min-width: 768px) {
   input,
   .btn {
-    width: 60%;
+    width: 70%;
   }
 }
 .timeContainer {
@@ -452,7 +452,7 @@ input[type=submit],
 @media screen and (min-width: 768px) {
   input,
   .btn {
-    width: 60%;
+    width: 70%;
   }
 }
 .footer {
@@ -509,7 +509,7 @@ input[type=submit],
 @media screen and (min-width: 768px) {
   input,
   .btn {
-    width: 60%;
+    width: 70%;
   }
 }
 .login {
@@ -544,7 +544,7 @@ input[type=submit],
 @media screen and (min-width: 768px) {
   input,
   .btn {
-    width: 60%;
+    width: 70%;
   }
 }
 .createProfileForm {
@@ -608,63 +608,178 @@ input[type=submit],
 @media screen and (min-width: 768px) {
   input,
   .btn {
-    width: 60%;
+    width: 70%;
   }
 }
-.readProfileForm {
+.readProfileForm,
+.containerPersonalInfo {
   transition: all 0.5s ease-in-out;
   margin-bottom: 3rem;
 }
-.readProfileForm h2 {
+.readProfileForm h2,
+.containerPersonalInfo h2 {
   margin-bottom: 3rem;
 }
-.readProfileForm form {
+.readProfileForm form,
+.readProfileForm .articlePeronalInfo,
+.containerPersonalInfo form,
+.containerPersonalInfo .articlePeronalInfo {
   margin: 0 auto;
   width: 90%;
 }
-.readProfileForm form div {
+.readProfileForm form h3,
+.readProfileForm .articlePeronalInfo h3,
+.containerPersonalInfo form h3,
+.containerPersonalInfo .articlePeronalInfo h3 {
+  margin: 3rem 0;
+}
+.readProfileForm form p,
+.readProfileForm .articlePeronalInfo p,
+.containerPersonalInfo form p,
+.containerPersonalInfo .articlePeronalInfo p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.readProfileForm form p span,
+.readProfileForm .articlePeronalInfo p span,
+.containerPersonalInfo form p span,
+.containerPersonalInfo .articlePeronalInfo p span {
+  font-size: 1.7rem;
+}
+.readProfileForm form strong,
+.readProfileForm form label,
+.readProfileForm .articlePeronalInfo strong,
+.readProfileForm .articlePeronalInfo label,
+.containerPersonalInfo form strong,
+.containerPersonalInfo form label,
+.containerPersonalInfo .articlePeronalInfo strong,
+.containerPersonalInfo .articlePeronalInfo label {
+  font-size: 2rem;
+  color: #00a699;
+}
+.readProfileForm form .titleLicense,
+.readProfileForm form .titleLicenseForm,
+.readProfileForm .articlePeronalInfo .titleLicense,
+.readProfileForm .articlePeronalInfo .titleLicenseForm,
+.containerPersonalInfo form .titleLicense,
+.containerPersonalInfo form .titleLicenseForm,
+.containerPersonalInfo .articlePeronalInfo .titleLicense,
+.containerPersonalInfo .articlePeronalInfo .titleLicenseForm {
+  color: #f4a261;
+}
+.readProfileForm form .titleLicenseForm,
+.readProfileForm .articlePeronalInfo .titleLicenseForm,
+.containerPersonalInfo form .titleLicenseForm,
+.containerPersonalInfo .articlePeronalInfo .titleLicenseForm {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.readProfileForm form div,
+.readProfileForm .articlePeronalInfo div,
+.containerPersonalInfo form div,
+.containerPersonalInfo .articlePeronalInfo div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.readProfileForm form .btn {
+.readProfileForm form .btn,
+.readProfileForm .articlePeronalInfo .btn,
+.containerPersonalInfo form .btn,
+.containerPersonalInfo .articlePeronalInfo .btn {
   margin-top: 3rem;
 }
-.readProfileForm form input[type=submit] {
+.readProfileForm form input[type=submit],
+.readProfileForm .articlePeronalInfo input[type=submit],
+.containerPersonalInfo form input[type=submit],
+.containerPersonalInfo .articlePeronalInfo input[type=submit] {
   margin-top: 1rem;
 }
-.readProfileForm form .passwordProfile {
+.readProfileForm form .passwordProfile,
+.readProfileForm .articlePeronalInfo .passwordProfile,
+.containerPersonalInfo form .passwordProfile,
+.containerPersonalInfo .articlePeronalInfo .passwordProfile {
   margin: 0 auto;
   color: #00a699;
   color: #0077b6;
   margin-top: 2rem;
   font-size: 2rem;
 }
-.readProfileForm form .passwordProfile:hover {
+.readProfileForm form .passwordProfile:hover,
+.readProfileForm .articlePeronalInfo .passwordProfile:hover,
+.containerPersonalInfo form .passwordProfile:hover,
+.containerPersonalInfo .articlePeronalInfo .passwordProfile:hover {
   color: #f4a261;
 }
+@media screen and (min-width: 520px) {
+  .readProfileForm .articlePeronalInfo,
+  .containerPersonalInfo .articlePeronalInfo {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .readProfileForm .articlePeronalInfo,
+  .containerPersonalInfo .articlePeronalInfo {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .readProfileForm .articlePeronalInfo,
+  .containerPersonalInfo .articlePeronalInfo {
+    width: 65%;
+  }
+}
 @media screen and (min-width: 768px) {
-  .readProfileForm form {
+  .readProfileForm form,
+  .readProfileForm .articlePeronalInfo,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .articlePeronalInfo {
     width: 60%;
     border: 3px solid #f4a261;
     border-radius: 0.5rem;
     padding: 1rem;
   }
-  .readProfileForm form div {
+  .readProfileForm form div,
+  .readProfileForm .articlePeronalInfo div,
+  .containerPersonalInfo form div,
+  .containerPersonalInfo .articlePeronalInfo div {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-  .readProfileForm form div input {
+  .readProfileForm form div input,
+  .readProfileForm .articlePeronalInfo div input,
+  .containerPersonalInfo form div input,
+  .containerPersonalInfo .articlePeronalInfo div input {
     margin-right: 0;
   }
   .readProfileForm form input[type=submit],
-  .readProfileForm form .btn {
+  .readProfileForm form .btn,
+  .readProfileForm .articlePeronalInfo input[type=submit],
+  .readProfileForm .articlePeronalInfo .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn,
+  .containerPersonalInfo .articlePeronalInfo input[type=submit],
+  .containerPersonalInfo .articlePeronalInfo .btn {
     margin: 0 auto;
     margin-top: 3rem;
   }
-  .readProfileForm form .btn {
+  .readProfileForm form .btn,
+  .readProfileForm .articlePeronalInfo .btn,
+  .containerPersonalInfo form .btn,
+  .containerPersonalInfo .articlePeronalInfo .btn {
     margin-right: 5%;
+  }
+  .readProfileForm .articlePeronalInfo,
+  .containerPersonalInfo .articlePeronalInfo {
+    width: 65%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .readProfileForm .articlePeronalInfo,
+  .containerPersonalInfo .articlePeronalInfo {
+    width: 50%;
   }
 }
 
@@ -689,7 +804,7 @@ input[type=submit],
 @media screen and (min-width: 768px) {
   input,
   .btn {
-    width: 60%;
+    width: 70%;
   }
 }
 .passwordForm {
@@ -708,7 +823,11 @@ input[type=submit],
   flex-direction: column;
   align-items: center;
 }
-.passwordForm form .btn {
+.passwordForm form a {
+  margin: 0 auto;
+  width: 100%;
+}
+.passwordForm form a .btn {
   margin-top: 3rem;
 }
 .passwordForm form input[type=submit] {
@@ -729,13 +848,20 @@ input[type=submit],
   .passwordForm form div input {
     margin-right: 0;
   }
+  .passwordForm form input[type=submit] {
+    width: 50%;
+  }
+  .passwordForm form a {
+    width: 50%;
+    margin-right: 5%;
+  }
+  .passwordForm form a .btn {
+    width: 100%;
+  }
   .passwordForm form input[type=submit],
   .passwordForm form .btn {
     margin: 0 auto;
     margin-top: 3rem;
-  }
-  .passwordForm form .btn {
-    margin-right: 5%;
   }
 }
 
@@ -983,7 +1109,7 @@ input[type=submit],
 @media screen and (min-width: 768px) {
   input,
   .btn {
-    width: 60%;
+    width: 70%;
   }
 }
 :root {
@@ -1022,7 +1148,7 @@ body h2 {
   margin-bottom: 2rem;
 }
 body h3 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 body line-h {
   line-height: 4;
