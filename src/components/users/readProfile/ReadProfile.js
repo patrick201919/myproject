@@ -46,9 +46,9 @@ const ReadProfile = () => {
   };
 
   return (
-    <div>
+    <main>
       {editUser ? (
-        <div className="readProfileForm">
+        <section className="readProfileForm">
           <form onSubmit={handleSubmit}>
             <div>
               <label htmlFor="firstName">Prénom</label>
@@ -158,26 +158,57 @@ const ReadProfile = () => {
               <input type="submit" value="Enregistrer" />
             </div>
           </form>
-        </div>
+        </section>
       ) : (
-        <div>
-          <ul>
-            <li>Prémon : {user.firstName}</li>
-            <li>Nom : {user.name}</li>
-            <li>Date de naissance : {user.birthDay}</li>
-            <li>votre adresse : {user.address}</li>
-            <li> Code postal : {user.postCode}</li>
-            <li>Ville : {user.city}</li>
-            <li>Pays : {user.country}</li>
-            <li>Téléphone : {user.telephone}</li>
-            <li> votre mail : {user.email}</li>
-            <li>{user.id}</li>
-          </ul>
-          <button onClick={handleEditClick}>Modifier</button>
-          <button onClick={handleDeleteClick}>Supprimer</button>
-        </div>
+        <section>
+          <article>
+            <ul>
+              <li>
+                <strong>Prémon</strong> <span>{user.firstName}</span>
+              </li>
+              <li>
+                <strong>Nom</strong>
+                <span>{user.name}</span>
+              </li>
+              <li>
+                <strong>Date de naissance</strong>
+                <span>{user.birthDay}</span>
+              </li>
+              <li>
+                <strong>Votre adresse</strong>
+                <span>{user.address}</span>
+              </li>
+              <li>
+                <strong> Code postal</strong>
+                <span> {user.postCode}</span>
+              </li>
+              <li>
+                <strong>Ville</strong>
+                <span> {user.city}</span>
+              </li>
+              <li>
+                <strong>Pays</strong>
+                <span> {user.country}</span>
+              </li>
+              <li>
+                <strong>Téléphone</strong>
+                <span> {user.telephone}</span>
+              </li>
+              <li>
+                <strong>Votre email</strong>
+                <span> {user.email}</span>
+              </li>
+              <li>
+                <strong>Statut</strong>
+                <span>{user.role}</span>
+              </li>
+            </ul>
+            <button onClick={handleEditClick}>Modifier</button>
+            <button onClick={handleDeleteClick}>Supprimer</button>
+          </article>
+        </section>
       )}
-    </div>
+    </main>
   );
 };
 

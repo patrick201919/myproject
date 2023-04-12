@@ -56,17 +56,17 @@ export const updateUser = createAsyncThunk(
   }
 );
 
-export const UpdatePassword = createAsyncThunk(
+export const updatePassword = createAsyncThunk(
   "/users/password",
   async (form, thunkApi) => {
     const { fulfillWithValue, rejectWithValue } = thunkApi;
     const token = window.localStorage.getItem("token");
     const { status, result, error } = await putRequest(
       "/users/password",
-      form,
+      { password: form },
       token
     );
-
+    window.location.href = "/profile";
     console.log(result);
     return error
       ? rejectWithValue(`Cannot get user - Error status ${status} - ${error}`)

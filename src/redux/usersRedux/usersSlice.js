@@ -4,6 +4,7 @@ import {
   deleteUser,
   getAllUser,
   readUser,
+  updatePassword,
   updateUser,
 } from "./requestUser";
 
@@ -72,6 +73,18 @@ export const usersSlice = createSlice({
         state = { ...state, ...action.payload };
       })
       .addCase(updateUser.rejected, (state, action) => {
+        state.loading = false;
+      })
+
+      // Update Password
+      .addCase(updatePassword.pending, (state, action) => {
+        state.loading = true;
+      })
+      .addCase(updatePassword.fulfilled, (state, action) => {
+        state.loading = false;
+        state = { ...state, ...action.payload };
+      })
+      .addCase(updatePassword.rejected, (state, action) => {
         state.loading = false;
       });
   },
