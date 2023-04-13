@@ -1,112 +1,66 @@
 @import "../../../styles/settings.scss";
 
-.readProfileForm,
-.containerPersonalInfo {
-  transition: all 0.5s ease-in-out;
-  margin-bottom: 3rem;
-  h2 {
-    margin-bottom: 3rem;
-  }
-
-  form,
+.containerPersonalInfo,
+.editProfileForm {
   .articlePeronalInfo {
     margin: 0 auto;
     width: 90%;
+    border: 3px solid $colorOrange;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
 
-    .titleLicense {
-      display: block;
-      color: $colorOrange;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-size: 1.8rem;
-      font-weight: bold;
-      margin: 3.5rem 0;
+  p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+    span {
+      font-size: 1.7rem;
     }
-    p {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 0 auto;
-      margin-top: 2rem;
-      span {
-        font-size: 1.7rem;
-      }
-    }
-    strong,
-    label {
-      font-size: 2rem;
-      color: $colorGreen;
-    }
+  }
 
-    div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .btn {
-      margin-top: 3rem;
-    }
-    input[type="submit"] {
-      margin-top: 1rem;
-    }
-    .passwordProfile {
-      margin: 0 auto;
-      color: $colorGreen;
-      color: $colorBlue;
-      margin-top: 2rem;
-      font-size: 2rem;
-    }
-    .passwordProfile:hover {
-      color: $colorOrange;
-    }
+  .passwordProfile {
+    margin: 0 auto;
+    color: $colorBlue;
+    margin-top: 2rem;
+    font-size: 2rem;
   }
-  @media screen and (min-width: 520px) {
-    .articlePeronalInfo {
-      width: 80%;
-    }
-  }
-  @media screen and (min-width: 600px) {
-    .articlePeronalInfo {
-      width: 75%;
-    }
-  }
-  @media screen and (min-width: 700px) {
-    .articlePeronalInfo {
-      width: 65%;
-    }
+  .passwordProfile:hover {
+    color: $colorOrange;
   }
 
   @media screen and (min-width: 768px) {
-    form,
     .articlePeronalInfo {
       width: 60%;
-      border: 3px solid $colorOrange;
-      border-radius: 0.5rem;
-      padding: 1rem;
-
-      div {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        input {
-          margin-right: 0;
-        }
-      }
-      input[type="submit"],
       .btn {
+        width: 100%;
         margin: 0 auto;
         margin-top: 3rem;
       }
-      .btn {
-        margin-right: 5%;
-      }
     }
-    .articlePeronalInfo {
-      width: 65%;
+    .editForm {
+      margin: 0 auto;
+      width: 80%;
     }
   }
+
   @media screen and (min-width: 992px) {
     .articlePeronalInfo {
-      width: 50%;
+      width: 55%;
+    }
+    .editForm {
+      width: 60%;
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    .articlePeronalInfo {
+      width: 40%;
+    }
+    .editForm {
+      width: 40%;
     }
   }
 }

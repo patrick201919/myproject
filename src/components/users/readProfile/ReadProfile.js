@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./readProfile.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import {
   deleteUser,
@@ -34,7 +35,7 @@ const ReadProfile = () => {
   };
 
   const handleDeleteClick = () => {
-    dispatch(deleteUser(user.id));
+    dispatch(deleteUser(user));
     //redirection home page
   };
   const handleCancelEdit = () => {
@@ -47,9 +48,9 @@ const ReadProfile = () => {
   return (
     <main>
       {editUser ? (
-        <section className="readProfileForm">
+        <section className="editProfileForm">
           <h2>Modifier vos informations </h2>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="editForm">
             <div>
               <label htmlFor="firstName">Prénom</label>
               <input
@@ -165,7 +166,6 @@ const ReadProfile = () => {
                 name="drivingLicenseNumber"
                 placeholder="N° de permis"
                 value={state.drivingLicenseNumber}
-                required
                 onChange={(e) =>
                   handleChange("drivingLicenseNumber", e.target.value)
                 }
@@ -178,7 +178,6 @@ const ReadProfile = () => {
                 name="permitIssuedOn"
                 placeholder="Date"
                 value={state.permitIssuedOn}
-                required
                 onChange={(e) => handleChange("permitIssuedOn", e.target.value)}
               />
             </div>
@@ -189,7 +188,6 @@ const ReadProfile = () => {
                 name="licenseIssuedBy"
                 placeholder="Permis délivré par"
                 value={state.licenseIssuedBy}
-                required
                 onChange={(e) =>
                   handleChange("licenseIssuedBy", e.target.value)
                 }

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./updatePassword.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import {
@@ -34,7 +35,7 @@ const UpdatePassword = () => {
   return (
     <div className="passwordForm">
       <h2>Modification mot de passe</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form">
         <div>
           <label htmlFor="oldPassword">Ancien mot de passe</label>
           <input

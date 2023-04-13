@@ -76,11 +76,12 @@ export const updatePassword = createAsyncThunk(
 
 export const deleteUser = createAsyncThunk(
   "/users/read",
-  async (_, thunkApi) => {
+  async (user, thunkApi) => {
     const { fulfillWithValue, rejectWithValue } = thunkApi;
     const token = window.localStorage.getItem("token");
     const { status, result, error } = await deleteRequest(
       "/users/delete",
+      { user: user },
       token
     );
     return error

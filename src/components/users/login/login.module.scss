@@ -4,12 +4,29 @@
 .login {
   margin: 8rem 0;
   .passwordForget {
+    margin-top: 2rem;
     margin-bottom: 3rem;
   }
   .createAccount,
   .passwordForget {
     a {
       color: $colorBlue;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .loginForm {
+      border: none;
+      margin: 0 auto;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    form {
+      width: 80%;
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    form {
+      width: 60%;
     }
   }
 }

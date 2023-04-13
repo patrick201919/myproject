@@ -22,13 +22,150 @@ input[type=submit],
     width: 60%;
   }
 }
+.titleLicense {
+  display: block;
+  color: #f4a261;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 3.5rem 0;
+}
+
+.containerPersonalInfo,
+.passwordForm,
+.createProfileForm,
+.readProfileForm,
+.containerPersonalInfo {
+  transition: all 0.5s ease-in-out;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  width: 90%;
+}
+.containerPersonalInfo h2,
+.passwordForm h2,
+.createProfileForm h2,
+.readProfileForm h2,
+.containerPersonalInfo h2 {
+  margin-bottom: 3rem;
+}
+.containerPersonalInfo strong,
+.containerPersonalInfo label,
+.passwordForm strong,
+.passwordForm label,
+.createProfileForm strong,
+.createProfileForm label,
+.readProfileForm strong,
+.readProfileForm label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label {
+  font-size: 2rem;
+  color: #00a699;
+}
+.containerPersonalInfo div,
+.passwordForm div,
+.createProfileForm div,
+.readProfileForm div,
+.containerPersonalInfo div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.containerPersonalInfo .btn,
+.passwordForm .btn,
+.createProfileForm .btn,
+.readProfileForm .btn,
+.containerPersonalInfo .btn {
+  margin-top: 3rem;
+}
+.containerPersonalInfo input[type=submit],
+.passwordForm input[type=submit],
+.createProfileForm input[type=submit],
+.readProfileForm input[type=submit],
+.containerPersonalInfo input[type=submit] {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .containerPersonalInfo form,
+  .passwordForm form,
+  .createProfileForm form,
+  .readProfileForm form,
+  .containerPersonalInfo form {
+    width: 70%;
+    border: 3px solid #f4a261;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  .containerPersonalInfo form div,
+  .passwordForm form div,
+  .createProfileForm form div,
+  .readProfileForm form div,
+  .containerPersonalInfo form div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .containerPersonalInfo form div input,
+  .passwordForm form div input,
+  .createProfileForm form div input,
+  .readProfileForm form div input,
+  .containerPersonalInfo form div input {
+    margin-right: 0;
+  }
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn,
+  .passwordForm form input[type=submit],
+  .passwordForm form .btn,
+  .createProfileForm form input[type=submit],
+  .createProfileForm form .btn,
+  .readProfileForm form input[type=submit],
+  .readProfileForm form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn {
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+  .containerPersonalInfo form .btn,
+  .passwordForm form .btn,
+  .createProfileForm form .btn,
+  .readProfileForm form .btn,
+  .containerPersonalInfo form .btn {
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .containerPersonalInfo form,
+  .passwordForm form,
+  .createProfileForm form,
+  .readProfileForm form,
+  .containerPersonalInfo form {
+    width: 60%;
+  }
+}
+
 .login {
   margin: 8rem 0;
 }
 .login .passwordForget {
+  margin-top: 2rem;
   margin-bottom: 3rem;
 }
 .login .createAccount a,
 .login .passwordForget a {
   color: #0077b6;
+}
+@media screen and (min-width: 768px) {
+  .login .loginForm {
+    border: none;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .login form {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .login form {
+    width: 60%;
+  }
 }/*# sourceMappingURL=login.module.css.map */

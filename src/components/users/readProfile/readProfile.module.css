@@ -19,29 +19,10 @@ input[type=submit],
 @media screen and (min-width: 768px) {
   input,
   .btn {
-    width: 70%;
+    width: 60%;
   }
 }
-.readProfileForm,
-.containerPersonalInfo {
-  transition: all 0.5s ease-in-out;
-  margin-bottom: 3rem;
-}
-.readProfileForm h2,
-.containerPersonalInfo h2 {
-  margin-bottom: 3rem;
-}
-.readProfileForm form,
-.readProfileForm .articlePeronalInfo,
-.containerPersonalInfo form,
-.containerPersonalInfo .articlePeronalInfo {
-  margin: 0 auto;
-  width: 90%;
-}
-.readProfileForm form .titleLicense,
-.readProfileForm .articlePeronalInfo .titleLicense,
-.containerPersonalInfo form .titleLicense,
-.containerPersonalInfo .articlePeronalInfo .titleLicense {
+.titleLicense {
   display: block;
   color: #f4a261;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -49,136 +30,183 @@ input[type=submit],
   font-weight: bold;
   margin: 3.5rem 0;
 }
-.readProfileForm form p,
-.readProfileForm .articlePeronalInfo p,
-.containerPersonalInfo form p,
-.containerPersonalInfo .articlePeronalInfo p {
+
+.containerPersonalInfo,
+.passwordForm,
+.createProfileForm,
+.editProfileForm,
+.containerPersonalInfo {
+  transition: all 0.5s ease-in-out;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  width: 90%;
+}
+.containerPersonalInfo h2,
+.passwordForm h2,
+.createProfileForm h2,
+.editProfileForm h2,
+.containerPersonalInfo h2 {
+  margin-bottom: 3rem;
+}
+.containerPersonalInfo strong,
+.containerPersonalInfo label,
+.passwordForm strong,
+.passwordForm label,
+.createProfileForm strong,
+.createProfileForm label,
+.editProfileForm strong,
+.editProfileForm label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label {
+  font-size: 2rem;
+  color: #00a699;
+}
+.containerPersonalInfo div,
+.passwordForm div,
+.createProfileForm div,
+.editProfileForm div,
+.containerPersonalInfo div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.containerPersonalInfo .btn,
+.passwordForm .btn,
+.createProfileForm .btn,
+.editProfileForm .btn,
+.containerPersonalInfo .btn {
+  margin-top: 3rem;
+}
+.containerPersonalInfo input[type=submit],
+.passwordForm input[type=submit],
+.createProfileForm input[type=submit],
+.editProfileForm input[type=submit],
+.containerPersonalInfo input[type=submit] {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .containerPersonalInfo form,
+  .passwordForm form,
+  .createProfileForm form,
+  .editProfileForm form,
+  .containerPersonalInfo form {
+    width: 70%;
+    border: 3px solid #f4a261;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  .containerPersonalInfo form div,
+  .passwordForm form div,
+  .createProfileForm form div,
+  .editProfileForm form div,
+  .containerPersonalInfo form div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .containerPersonalInfo form div input,
+  .passwordForm form div input,
+  .createProfileForm form div input,
+  .editProfileForm form div input,
+  .containerPersonalInfo form div input {
+    margin-right: 0;
+  }
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn,
+  .passwordForm form input[type=submit],
+  .passwordForm form .btn,
+  .createProfileForm form input[type=submit],
+  .createProfileForm form .btn,
+  .editProfileForm form input[type=submit],
+  .editProfileForm form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn {
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+  .containerPersonalInfo form .btn,
+  .passwordForm form .btn,
+  .createProfileForm form .btn,
+  .editProfileForm form .btn,
+  .containerPersonalInfo form .btn {
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .containerPersonalInfo form,
+  .passwordForm form,
+  .createProfileForm form,
+  .editProfileForm form,
+  .containerPersonalInfo form {
+    width: 60%;
+  }
+}
+
+.containerPersonalInfo .articlePeronalInfo,
+.editProfileForm .articlePeronalInfo {
+  margin: 0 auto;
+  width: 90%;
+  border: 3px solid #f4a261;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.containerPersonalInfo p,
+.editProfileForm p {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   margin-top: 2rem;
 }
-.readProfileForm form p span,
-.readProfileForm .articlePeronalInfo p span,
-.containerPersonalInfo form p span,
-.containerPersonalInfo .articlePeronalInfo p span {
+.containerPersonalInfo p span,
+.editProfileForm p span {
   font-size: 1.7rem;
 }
-.readProfileForm form strong,
-.readProfileForm form label,
-.readProfileForm .articlePeronalInfo strong,
-.readProfileForm .articlePeronalInfo label,
-.containerPersonalInfo form strong,
-.containerPersonalInfo form label,
-.containerPersonalInfo .articlePeronalInfo strong,
-.containerPersonalInfo .articlePeronalInfo label {
-  font-size: 2rem;
-  color: #00a699;
-}
-.readProfileForm form div,
-.readProfileForm .articlePeronalInfo div,
-.containerPersonalInfo form div,
-.containerPersonalInfo .articlePeronalInfo div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.readProfileForm form .btn,
-.readProfileForm .articlePeronalInfo .btn,
-.containerPersonalInfo form .btn,
-.containerPersonalInfo .articlePeronalInfo .btn {
-  margin-top: 3rem;
-}
-.readProfileForm form input[type=submit],
-.readProfileForm .articlePeronalInfo input[type=submit],
-.containerPersonalInfo form input[type=submit],
-.containerPersonalInfo .articlePeronalInfo input[type=submit] {
-  margin-top: 1rem;
-}
-.readProfileForm form .passwordProfile,
-.readProfileForm .articlePeronalInfo .passwordProfile,
-.containerPersonalInfo form .passwordProfile,
-.containerPersonalInfo .articlePeronalInfo .passwordProfile {
+.containerPersonalInfo .passwordProfile,
+.editProfileForm .passwordProfile {
   margin: 0 auto;
-  color: #00a699;
   color: #0077b6;
   margin-top: 2rem;
   font-size: 2rem;
 }
-.readProfileForm form .passwordProfile:hover,
-.readProfileForm .articlePeronalInfo .passwordProfile:hover,
-.containerPersonalInfo form .passwordProfile:hover,
-.containerPersonalInfo .articlePeronalInfo .passwordProfile:hover {
+.containerPersonalInfo .passwordProfile:hover,
+.editProfileForm .passwordProfile:hover {
   color: #f4a261;
 }
-@media screen and (min-width: 520px) {
-  .readProfileForm .articlePeronalInfo,
-  .containerPersonalInfo .articlePeronalInfo {
-    width: 80%;
-  }
-}
-@media screen and (min-width: 600px) {
-  .readProfileForm .articlePeronalInfo,
-  .containerPersonalInfo .articlePeronalInfo {
-    width: 75%;
-  }
-}
-@media screen and (min-width: 700px) {
-  .readProfileForm .articlePeronalInfo,
-  .containerPersonalInfo .articlePeronalInfo {
-    width: 65%;
-  }
-}
 @media screen and (min-width: 768px) {
-  .readProfileForm form,
-  .readProfileForm .articlePeronalInfo,
-  .containerPersonalInfo form,
-  .containerPersonalInfo .articlePeronalInfo {
+  .containerPersonalInfo .articlePeronalInfo,
+  .editProfileForm .articlePeronalInfo {
     width: 60%;
-    border: 3px solid #f4a261;
-    border-radius: 0.5rem;
-    padding: 1rem;
   }
-  .readProfileForm form div,
-  .readProfileForm .articlePeronalInfo div,
-  .containerPersonalInfo form div,
-  .containerPersonalInfo .articlePeronalInfo div {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .readProfileForm form div input,
-  .readProfileForm .articlePeronalInfo div input,
-  .containerPersonalInfo form div input,
-  .containerPersonalInfo .articlePeronalInfo div input {
-    margin-right: 0;
-  }
-  .readProfileForm form input[type=submit],
-  .readProfileForm form .btn,
-  .readProfileForm .articlePeronalInfo input[type=submit],
-  .readProfileForm .articlePeronalInfo .btn,
-  .containerPersonalInfo form input[type=submit],
-  .containerPersonalInfo form .btn,
-  .containerPersonalInfo .articlePeronalInfo input[type=submit],
-  .containerPersonalInfo .articlePeronalInfo .btn {
+  .containerPersonalInfo .articlePeronalInfo .btn,
+  .editProfileForm .articlePeronalInfo .btn {
+    width: 100%;
     margin: 0 auto;
     margin-top: 3rem;
   }
-  .readProfileForm form .btn,
-  .readProfileForm .articlePeronalInfo .btn,
-  .containerPersonalInfo form .btn,
-  .containerPersonalInfo .articlePeronalInfo .btn {
-    margin-right: 5%;
-  }
-  .readProfileForm .articlePeronalInfo,
-  .containerPersonalInfo .articlePeronalInfo {
-    width: 65%;
+  .containerPersonalInfo .editForm,
+  .editProfileForm .editForm {
+    margin: 0 auto;
+    width: 80%;
   }
 }
 @media screen and (min-width: 992px) {
-  .readProfileForm .articlePeronalInfo,
-  .containerPersonalInfo .articlePeronalInfo {
-    width: 50%;
+  .containerPersonalInfo .articlePeronalInfo,
+  .editProfileForm .articlePeronalInfo {
+    width: 55%;
+  }
+  .containerPersonalInfo .editForm,
+  .editProfileForm .editForm {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .containerPersonalInfo .articlePeronalInfo,
+  .editProfileForm .articlePeronalInfo {
+    width: 40%;
+  }
+  .containerPersonalInfo .editForm,
+  .editProfileForm .editForm {
+    width: 40%;
   }
 }/*# sourceMappingURL=readProfile.module.css.map */
