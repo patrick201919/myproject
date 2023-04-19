@@ -7,6 +7,7 @@ import {
   updatePassword,
 } from "../../../redux/usersRedux/requestUser";
 import bcrypt from "bcryptjs-react";
+import { passwordIsValid } from "../../../constants/regex";
 
 const UpdatePassword = () => {
   const userPassword = useSelector((state) => state.users.users.password);
@@ -19,12 +20,15 @@ const UpdatePassword = () => {
   const [oldPassword, setOldPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const isNewPasswordIsValid = passwordIsValid(newPassword);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const isPasswordValid = await bcrypt.compare(oldPassword, userPassword);
     if (!isPasswordValid) {
       alert("L'ancien mot de passe est incorrect.");
+    } else if (!isNewPasswordIsValid) {
+      alert("le nouveau mot passe est incorrect");
     } else if (newPassword !== confirmPassword) {
       alert("Les mots de passe ne correspondent pas.");
     } else {
@@ -52,6 +56,7 @@ const UpdatePassword = () => {
             type="password"
             name="newPassword"
             value={newPassword}
+            pattern={isNewPasswordIsValid}
             required
             onChange={(e) => setNewPassword(e.target.value)}
           />

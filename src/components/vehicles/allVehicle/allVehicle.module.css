@@ -33,6 +33,15 @@ input[type=submit],
   margin: 3.5rem 0;
 }
 
+.containerAllUser form,
+.containerVehicleAll form {
+  margin: 0 auto;
+  border: 3px solid #f4a261;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 5rem;
+}
+
 .containerAllUser,
 .containerVehicleAll,
 .containerVehicleCreate,
@@ -194,30 +203,13 @@ input[type=submit],
   }
 }
 
-.login {
-  margin: 8rem 0;
-}
-.login .passwordForget {
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-}
-.login .createAccount a,
-.login .passwordForget a {
-  color: #0077b6;
+.containerVehicleAll form select {
+  padding-left: 0.5rem;
 }
 @media screen and (min-width: 768px) {
-  .login .loginForm {
-    border: none;
-    margin: 0 auto;
+  .containerVehicleAll .formVehicleAll select,
+  .containerVehicleAll .formVehicleAll input {
+    width: 50%;
+    margin-right: 0;
   }
-}
-@media screen and (min-width: 992px) {
-  .login form {
-    width: 80%;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .login form {
-    width: 60%;
-  }
-}/*# sourceMappingURL=login.module.css.map */
+}/*# sourceMappingURL=allVehicle.module.css.map */

@@ -2,37 +2,31 @@ import React, { useState } from "react";
 import "./header.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-// import { logout } from "../../redux/usersRedux/authSlice";
+import { logout } from "../../redux/usersRedux/authSlice";
 
 const Header = () => {
-  const [showBurgerMenu, setshowBurgerMenu] = useState(false);
+  const [showBurgerMenu, setShowBurgerMenu] = useState(false);
   const dispatch = useDispatch();
-  const isLogin = useSelector((state) => state.auth.loginUser);
-  // const navigate = useNavigate();
-  const logout = useSelector((state) => state.auth.logout);
+  const islogout = useSelector((state) => state.auth.token);
+
+  console.log("Cqsc", islogout);
 
   const handleClickBurger = () => {
-    setshowBurgerMenu(!showBurgerMenu);
+    setShowBurgerMenu(!showBurgerMenu);
   };
   const handleLogout = () => {
-    localStorage.removeItem("token");
     dispatch(logout);
     window.location.href = "/";
   };
-
-  // const handleLogout = () => {
-  //   const Redirect = () => {
-  //     navigate("/");
-  //   };
-  //   // localStorage.removeItem("token");
-  //   dispatch(logout(Redirect()));
-  // };
+  const handleLinkClick = () => {
+    setShowBurgerMenu(false);
+  };
 
   return (
     <header className="header">
       <div className="containerLogo">
         <div className="logo">
-          <Link to="/">
+          <Link to="/" onClick={handleLinkClick}>
             <img src="/logo/logoElectroDrive.png" alt="logo electroDrive" />
           </Link>
         </div>
@@ -40,12 +34,18 @@ const Header = () => {
       </div>
       <nav className="navBar">
         <div className={`menuNavBar ${showBurgerMenu ? "active" : ""}`}>
-          <Link to="">Nos véhicules</Link>
+          <Link to="" onClick={handleLinkClick}>
+            Nos véhicules
+          </Link>
           <Link>Ma réservation</Link>
-          <Link to="/profile">Mon compte</Link>
+          <Link to="/profile" onClick={handleLinkClick}>
+            Mon compte
+          </Link>
           <>
-            {!isLogin ? (
-              <Link to="/login">Connexion</Link>
+            {islogout === null ? (
+              <Link to="/login" onClick={handleLinkClick}>
+                Connexion
+              </Link>
             ) : (
               <Link onClick={handleLogout}>Déconnexion</Link>
             )}
@@ -65,3 +65,11 @@ const Header = () => {
 };
 
 export default Header;
+
+// const handleLogout = () => {
+//   const Redirect = () => {
+//     navigate("/");
+//   };
+//   // localStorage.removeItem("token");
+//   dispatch(logout(Redirect()));
+// };

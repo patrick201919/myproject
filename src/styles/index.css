@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.formVehicleAll select,
 input,
 .btn {
   margin: 1rem;
@@ -18,11 +19,182 @@ input[type=submit],
 }
 
 @media screen and (min-width: 768px) {
+  .formVehicleAll select,
   input,
   .btn {
-    width: 70%;
+    width: 60%;
   }
 }
+.titleLicense {
+  display: block;
+  color: #f4a261;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 3.5rem 0;
+}
+
+.containerAllUser,
+.containerVehicleAll,
+.containerVehicleCreate,
+.containerPersonalInfo,
+.passwordForm,
+.createProfileForm,
+.editProfileForm,
+.containerPersonalInfo {
+  transition: all 0.5s ease-in-out;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  width: 90%;
+}
+.containerAllUser h2,
+.containerVehicleAll h2,
+.containerVehicleCreate h2,
+.containerPersonalInfo h2,
+.passwordForm h2,
+.createProfileForm h2,
+.editProfileForm h2,
+.containerPersonalInfo h2 {
+  margin-bottom: 3rem;
+}
+.containerAllUser strong,
+.containerAllUser label,
+.containerVehicleAll strong,
+.containerVehicleAll label,
+.containerVehicleCreate strong,
+.containerVehicleCreate label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label,
+.passwordForm strong,
+.passwordForm label,
+.createProfileForm strong,
+.createProfileForm label,
+.editProfileForm strong,
+.editProfileForm label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label {
+  font-size: 2rem;
+  color: #00a699;
+}
+.containerAllUser div,
+.containerVehicleAll div,
+.containerVehicleCreate div,
+.containerPersonalInfo div,
+.passwordForm div,
+.createProfileForm div,
+.editProfileForm div,
+.containerPersonalInfo div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.containerAllUser .btn,
+.containerVehicleAll .btn,
+.containerVehicleCreate .btn,
+.containerPersonalInfo .btn,
+.passwordForm .btn,
+.createProfileForm .btn,
+.editProfileForm .btn,
+.containerPersonalInfo .btn {
+  margin-top: 3rem;
+}
+.containerAllUser input[type=submit],
+.containerVehicleAll input[type=submit],
+.containerVehicleCreate input[type=submit],
+.containerPersonalInfo input[type=submit],
+.passwordForm input[type=submit],
+.createProfileForm input[type=submit],
+.editProfileForm input[type=submit],
+.containerPersonalInfo input[type=submit] {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .containerAllUser form,
+  .containerVehicleAll form,
+  .containerVehicleCreate form,
+  .containerPersonalInfo form,
+  .passwordForm form,
+  .createProfileForm form,
+  .editProfileForm form,
+  .containerPersonalInfo form {
+    width: 70%;
+    border: 3px solid #f4a261;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  .containerAllUser form div,
+  .containerVehicleAll form div,
+  .containerVehicleCreate form div,
+  .containerPersonalInfo form div,
+  .passwordForm form div,
+  .createProfileForm form div,
+  .editProfileForm form div,
+  .containerPersonalInfo form div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .containerAllUser form div input,
+  .containerVehicleAll form div input,
+  .containerVehicleCreate form div input,
+  .containerPersonalInfo form div input,
+  .passwordForm form div input,
+  .createProfileForm form div input,
+  .editProfileForm form div input,
+  .containerPersonalInfo form div input {
+    margin-right: 0;
+  }
+  .containerAllUser form input[type=submit],
+  .containerAllUser form .btn,
+  .containerVehicleAll form input[type=submit],
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form input[type=submit],
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn,
+  .passwordForm form input[type=submit],
+  .passwordForm form .btn,
+  .createProfileForm form input[type=submit],
+  .createProfileForm form .btn,
+  .editProfileForm form input[type=submit],
+  .editProfileForm form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn {
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+  .containerAllUser form .btn,
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form .btn,
+  .passwordForm form .btn,
+  .createProfileForm form .btn,
+  .editProfileForm form .btn,
+  .containerPersonalInfo form .btn {
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .containerAllUser form,
+  .containerAllUser .formVehicleAll,
+  .containerVehicleAll form,
+  .containerVehicleAll .formVehicleAll,
+  .containerVehicleCreate form,
+  .containerVehicleCreate .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll,
+  .passwordForm form,
+  .passwordForm .formVehicleAll,
+  .createProfileForm form,
+  .createProfileForm .formVehicleAll,
+  .editProfileForm form,
+  .editProfileForm .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll {
+    width: 60%;
+  }
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -139,6 +311,7 @@ input[type=submit],
     display: none;
   }
 }
+.formVehicleAll select,
 input,
 .btn {
   margin: 1rem;
@@ -158,11 +331,182 @@ input[type=submit],
 }
 
 @media screen and (min-width: 768px) {
+  .formVehicleAll select,
   input,
   .btn {
-    width: 70%;
+    width: 60%;
   }
 }
+.titleLicense {
+  display: block;
+  color: #f4a261;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 3.5rem 0;
+}
+
+.containerAllUser,
+.containerVehicleAll,
+.containerVehicleCreate,
+.containerPersonalInfo,
+.passwordForm,
+.createProfileForm,
+.editProfileForm,
+.containerPersonalInfo {
+  transition: all 0.5s ease-in-out;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  width: 90%;
+}
+.containerAllUser h2,
+.containerVehicleAll h2,
+.containerVehicleCreate h2,
+.containerPersonalInfo h2,
+.passwordForm h2,
+.createProfileForm h2,
+.editProfileForm h2,
+.containerPersonalInfo h2 {
+  margin-bottom: 3rem;
+}
+.containerAllUser strong,
+.containerAllUser label,
+.containerVehicleAll strong,
+.containerVehicleAll label,
+.containerVehicleCreate strong,
+.containerVehicleCreate label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label,
+.passwordForm strong,
+.passwordForm label,
+.createProfileForm strong,
+.createProfileForm label,
+.editProfileForm strong,
+.editProfileForm label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label {
+  font-size: 2rem;
+  color: #00a699;
+}
+.containerAllUser div,
+.containerVehicleAll div,
+.containerVehicleCreate div,
+.containerPersonalInfo div,
+.passwordForm div,
+.createProfileForm div,
+.editProfileForm div,
+.containerPersonalInfo div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.containerAllUser .btn,
+.containerVehicleAll .btn,
+.containerVehicleCreate .btn,
+.containerPersonalInfo .btn,
+.passwordForm .btn,
+.createProfileForm .btn,
+.editProfileForm .btn,
+.containerPersonalInfo .btn {
+  margin-top: 3rem;
+}
+.containerAllUser input[type=submit],
+.containerVehicleAll input[type=submit],
+.containerVehicleCreate input[type=submit],
+.containerPersonalInfo input[type=submit],
+.passwordForm input[type=submit],
+.createProfileForm input[type=submit],
+.editProfileForm input[type=submit],
+.containerPersonalInfo input[type=submit] {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .containerAllUser form,
+  .containerVehicleAll form,
+  .containerVehicleCreate form,
+  .containerPersonalInfo form,
+  .passwordForm form,
+  .createProfileForm form,
+  .editProfileForm form,
+  .containerPersonalInfo form {
+    width: 70%;
+    border: 3px solid #f4a261;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  .containerAllUser form div,
+  .containerVehicleAll form div,
+  .containerVehicleCreate form div,
+  .containerPersonalInfo form div,
+  .passwordForm form div,
+  .createProfileForm form div,
+  .editProfileForm form div,
+  .containerPersonalInfo form div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .containerAllUser form div input,
+  .containerVehicleAll form div input,
+  .containerVehicleCreate form div input,
+  .containerPersonalInfo form div input,
+  .passwordForm form div input,
+  .createProfileForm form div input,
+  .editProfileForm form div input,
+  .containerPersonalInfo form div input {
+    margin-right: 0;
+  }
+  .containerAllUser form input[type=submit],
+  .containerAllUser form .btn,
+  .containerVehicleAll form input[type=submit],
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form input[type=submit],
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn,
+  .passwordForm form input[type=submit],
+  .passwordForm form .btn,
+  .createProfileForm form input[type=submit],
+  .createProfileForm form .btn,
+  .editProfileForm form input[type=submit],
+  .editProfileForm form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn {
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+  .containerAllUser form .btn,
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form .btn,
+  .passwordForm form .btn,
+  .createProfileForm form .btn,
+  .editProfileForm form .btn,
+  .containerPersonalInfo form .btn {
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .containerAllUser form,
+  .containerAllUser .formVehicleAll,
+  .containerVehicleAll form,
+  .containerVehicleAll .formVehicleAll,
+  .containerVehicleCreate form,
+  .containerVehicleCreate .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll,
+  .passwordForm form,
+  .passwordForm .formVehicleAll,
+  .createProfileForm form,
+  .createProfileForm .formVehicleAll,
+  .editProfileForm form,
+  .editProfileForm .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll {
+    width: 60%;
+  }
+}
+
 .containerHome .sectionHomeSearch {
   margin-bottom: 5rem;
 }
@@ -324,6 +668,7 @@ input[type=submit],
   }
 }
 
+.formVehicleAll select,
 input,
 .btn {
   margin: 1rem;
@@ -343,11 +688,182 @@ input[type=submit],
 }
 
 @media screen and (min-width: 768px) {
+  .formVehicleAll select,
   input,
   .btn {
-    width: 70%;
+    width: 60%;
   }
 }
+.titleLicense {
+  display: block;
+  color: #f4a261;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 3.5rem 0;
+}
+
+.containerAllUser,
+.containerVehicleAll,
+.containerVehicleCreate,
+.containerPersonalInfo,
+.passwordForm,
+.createProfileForm,
+.editProfileForm,
+.containerPersonalInfo {
+  transition: all 0.5s ease-in-out;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  width: 90%;
+}
+.containerAllUser h2,
+.containerVehicleAll h2,
+.containerVehicleCreate h2,
+.containerPersonalInfo h2,
+.passwordForm h2,
+.createProfileForm h2,
+.editProfileForm h2,
+.containerPersonalInfo h2 {
+  margin-bottom: 3rem;
+}
+.containerAllUser strong,
+.containerAllUser label,
+.containerVehicleAll strong,
+.containerVehicleAll label,
+.containerVehicleCreate strong,
+.containerVehicleCreate label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label,
+.passwordForm strong,
+.passwordForm label,
+.createProfileForm strong,
+.createProfileForm label,
+.editProfileForm strong,
+.editProfileForm label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label {
+  font-size: 2rem;
+  color: #00a699;
+}
+.containerAllUser div,
+.containerVehicleAll div,
+.containerVehicleCreate div,
+.containerPersonalInfo div,
+.passwordForm div,
+.createProfileForm div,
+.editProfileForm div,
+.containerPersonalInfo div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.containerAllUser .btn,
+.containerVehicleAll .btn,
+.containerVehicleCreate .btn,
+.containerPersonalInfo .btn,
+.passwordForm .btn,
+.createProfileForm .btn,
+.editProfileForm .btn,
+.containerPersonalInfo .btn {
+  margin-top: 3rem;
+}
+.containerAllUser input[type=submit],
+.containerVehicleAll input[type=submit],
+.containerVehicleCreate input[type=submit],
+.containerPersonalInfo input[type=submit],
+.passwordForm input[type=submit],
+.createProfileForm input[type=submit],
+.editProfileForm input[type=submit],
+.containerPersonalInfo input[type=submit] {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .containerAllUser form,
+  .containerVehicleAll form,
+  .containerVehicleCreate form,
+  .containerPersonalInfo form,
+  .passwordForm form,
+  .createProfileForm form,
+  .editProfileForm form,
+  .containerPersonalInfo form {
+    width: 70%;
+    border: 3px solid #f4a261;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  .containerAllUser form div,
+  .containerVehicleAll form div,
+  .containerVehicleCreate form div,
+  .containerPersonalInfo form div,
+  .passwordForm form div,
+  .createProfileForm form div,
+  .editProfileForm form div,
+  .containerPersonalInfo form div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .containerAllUser form div input,
+  .containerVehicleAll form div input,
+  .containerVehicleCreate form div input,
+  .containerPersonalInfo form div input,
+  .passwordForm form div input,
+  .createProfileForm form div input,
+  .editProfileForm form div input,
+  .containerPersonalInfo form div input {
+    margin-right: 0;
+  }
+  .containerAllUser form input[type=submit],
+  .containerAllUser form .btn,
+  .containerVehicleAll form input[type=submit],
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form input[type=submit],
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn,
+  .passwordForm form input[type=submit],
+  .passwordForm form .btn,
+  .createProfileForm form input[type=submit],
+  .createProfileForm form .btn,
+  .editProfileForm form input[type=submit],
+  .editProfileForm form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn {
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+  .containerAllUser form .btn,
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form .btn,
+  .passwordForm form .btn,
+  .createProfileForm form .btn,
+  .editProfileForm form .btn,
+  .containerPersonalInfo form .btn {
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .containerAllUser form,
+  .containerAllUser .formVehicleAll,
+  .containerVehicleAll form,
+  .containerVehicleAll .formVehicleAll,
+  .containerVehicleCreate form,
+  .containerVehicleCreate .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll,
+  .passwordForm form,
+  .passwordForm .formVehicleAll,
+  .createProfileForm form,
+  .createProfileForm .formVehicleAll,
+  .editProfileForm form,
+  .editProfileForm .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll {
+    width: 60%;
+  }
+}
+
 .timeContainer {
   display: flex;
   justify-content: space-around;
@@ -431,6 +947,7 @@ input[type=submit],
   }
 }
 
+.formVehicleAll select,
 input,
 .btn {
   margin: 1rem;
@@ -450,11 +967,182 @@ input[type=submit],
 }
 
 @media screen and (min-width: 768px) {
+  .formVehicleAll select,
   input,
   .btn {
-    width: 70%;
+    width: 60%;
   }
 }
+.titleLicense {
+  display: block;
+  color: #f4a261;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 3.5rem 0;
+}
+
+.containerAllUser,
+.containerVehicleAll,
+.containerVehicleCreate,
+.containerPersonalInfo,
+.passwordForm,
+.createProfileForm,
+.editProfileForm,
+.containerPersonalInfo {
+  transition: all 0.5s ease-in-out;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  width: 90%;
+}
+.containerAllUser h2,
+.containerVehicleAll h2,
+.containerVehicleCreate h2,
+.containerPersonalInfo h2,
+.passwordForm h2,
+.createProfileForm h2,
+.editProfileForm h2,
+.containerPersonalInfo h2 {
+  margin-bottom: 3rem;
+}
+.containerAllUser strong,
+.containerAllUser label,
+.containerVehicleAll strong,
+.containerVehicleAll label,
+.containerVehicleCreate strong,
+.containerVehicleCreate label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label,
+.passwordForm strong,
+.passwordForm label,
+.createProfileForm strong,
+.createProfileForm label,
+.editProfileForm strong,
+.editProfileForm label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label {
+  font-size: 2rem;
+  color: #00a699;
+}
+.containerAllUser div,
+.containerVehicleAll div,
+.containerVehicleCreate div,
+.containerPersonalInfo div,
+.passwordForm div,
+.createProfileForm div,
+.editProfileForm div,
+.containerPersonalInfo div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.containerAllUser .btn,
+.containerVehicleAll .btn,
+.containerVehicleCreate .btn,
+.containerPersonalInfo .btn,
+.passwordForm .btn,
+.createProfileForm .btn,
+.editProfileForm .btn,
+.containerPersonalInfo .btn {
+  margin-top: 3rem;
+}
+.containerAllUser input[type=submit],
+.containerVehicleAll input[type=submit],
+.containerVehicleCreate input[type=submit],
+.containerPersonalInfo input[type=submit],
+.passwordForm input[type=submit],
+.createProfileForm input[type=submit],
+.editProfileForm input[type=submit],
+.containerPersonalInfo input[type=submit] {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .containerAllUser form,
+  .containerVehicleAll form,
+  .containerVehicleCreate form,
+  .containerPersonalInfo form,
+  .passwordForm form,
+  .createProfileForm form,
+  .editProfileForm form,
+  .containerPersonalInfo form {
+    width: 70%;
+    border: 3px solid #f4a261;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  .containerAllUser form div,
+  .containerVehicleAll form div,
+  .containerVehicleCreate form div,
+  .containerPersonalInfo form div,
+  .passwordForm form div,
+  .createProfileForm form div,
+  .editProfileForm form div,
+  .containerPersonalInfo form div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .containerAllUser form div input,
+  .containerVehicleAll form div input,
+  .containerVehicleCreate form div input,
+  .containerPersonalInfo form div input,
+  .passwordForm form div input,
+  .createProfileForm form div input,
+  .editProfileForm form div input,
+  .containerPersonalInfo form div input {
+    margin-right: 0;
+  }
+  .containerAllUser form input[type=submit],
+  .containerAllUser form .btn,
+  .containerVehicleAll form input[type=submit],
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form input[type=submit],
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn,
+  .passwordForm form input[type=submit],
+  .passwordForm form .btn,
+  .createProfileForm form input[type=submit],
+  .createProfileForm form .btn,
+  .editProfileForm form input[type=submit],
+  .editProfileForm form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn {
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+  .containerAllUser form .btn,
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form .btn,
+  .passwordForm form .btn,
+  .createProfileForm form .btn,
+  .editProfileForm form .btn,
+  .containerPersonalInfo form .btn {
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .containerAllUser form,
+  .containerAllUser .formVehicleAll,
+  .containerVehicleAll form,
+  .containerVehicleAll .formVehicleAll,
+  .containerVehicleCreate form,
+  .containerVehicleCreate .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll,
+  .passwordForm form,
+  .passwordForm .formVehicleAll,
+  .createProfileForm form,
+  .createProfileForm .formVehicleAll,
+  .editProfileForm form,
+  .editProfileForm .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll {
+    width: 60%;
+  }
+}
+
 .footer {
   transition: all 0.5s ease-in-out;
   background-color: #cbcbcb;
@@ -488,6 +1176,7 @@ input[type=submit],
   }
 }
 
+.formVehicleAll select,
 input,
 .btn {
   margin: 1rem;
@@ -507,22 +1196,211 @@ input[type=submit],
 }
 
 @media screen and (min-width: 768px) {
+  .formVehicleAll select,
   input,
   .btn {
-    width: 70%;
+    width: 60%;
   }
 }
+.titleLicense {
+  display: block;
+  color: #f4a261;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 3.5rem 0;
+}
+
+.containerAllUser,
+.containerVehicleAll,
+.containerVehicleCreate,
+.containerPersonalInfo,
+.passwordForm,
+.createProfileForm,
+.editProfileForm,
+.containerPersonalInfo {
+  transition: all 0.5s ease-in-out;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  width: 90%;
+}
+.containerAllUser h2,
+.containerVehicleAll h2,
+.containerVehicleCreate h2,
+.containerPersonalInfo h2,
+.passwordForm h2,
+.createProfileForm h2,
+.editProfileForm h2,
+.containerPersonalInfo h2 {
+  margin-bottom: 3rem;
+}
+.containerAllUser strong,
+.containerAllUser label,
+.containerVehicleAll strong,
+.containerVehicleAll label,
+.containerVehicleCreate strong,
+.containerVehicleCreate label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label,
+.passwordForm strong,
+.passwordForm label,
+.createProfileForm strong,
+.createProfileForm label,
+.editProfileForm strong,
+.editProfileForm label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label {
+  font-size: 2rem;
+  color: #00a699;
+}
+.containerAllUser div,
+.containerVehicleAll div,
+.containerVehicleCreate div,
+.containerPersonalInfo div,
+.passwordForm div,
+.createProfileForm div,
+.editProfileForm div,
+.containerPersonalInfo div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.containerAllUser .btn,
+.containerVehicleAll .btn,
+.containerVehicleCreate .btn,
+.containerPersonalInfo .btn,
+.passwordForm .btn,
+.createProfileForm .btn,
+.editProfileForm .btn,
+.containerPersonalInfo .btn {
+  margin-top: 3rem;
+}
+.containerAllUser input[type=submit],
+.containerVehicleAll input[type=submit],
+.containerVehicleCreate input[type=submit],
+.containerPersonalInfo input[type=submit],
+.passwordForm input[type=submit],
+.createProfileForm input[type=submit],
+.editProfileForm input[type=submit],
+.containerPersonalInfo input[type=submit] {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .containerAllUser form,
+  .containerVehicleAll form,
+  .containerVehicleCreate form,
+  .containerPersonalInfo form,
+  .passwordForm form,
+  .createProfileForm form,
+  .editProfileForm form,
+  .containerPersonalInfo form {
+    width: 70%;
+    border: 3px solid #f4a261;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  .containerAllUser form div,
+  .containerVehicleAll form div,
+  .containerVehicleCreate form div,
+  .containerPersonalInfo form div,
+  .passwordForm form div,
+  .createProfileForm form div,
+  .editProfileForm form div,
+  .containerPersonalInfo form div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .containerAllUser form div input,
+  .containerVehicleAll form div input,
+  .containerVehicleCreate form div input,
+  .containerPersonalInfo form div input,
+  .passwordForm form div input,
+  .createProfileForm form div input,
+  .editProfileForm form div input,
+  .containerPersonalInfo form div input {
+    margin-right: 0;
+  }
+  .containerAllUser form input[type=submit],
+  .containerAllUser form .btn,
+  .containerVehicleAll form input[type=submit],
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form input[type=submit],
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn,
+  .passwordForm form input[type=submit],
+  .passwordForm form .btn,
+  .createProfileForm form input[type=submit],
+  .createProfileForm form .btn,
+  .editProfileForm form input[type=submit],
+  .editProfileForm form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn {
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+  .containerAllUser form .btn,
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form .btn,
+  .passwordForm form .btn,
+  .createProfileForm form .btn,
+  .editProfileForm form .btn,
+  .containerPersonalInfo form .btn {
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .containerAllUser form,
+  .containerAllUser .formVehicleAll,
+  .containerVehicleAll form,
+  .containerVehicleAll .formVehicleAll,
+  .containerVehicleCreate form,
+  .containerVehicleCreate .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll,
+  .passwordForm form,
+  .passwordForm .formVehicleAll,
+  .createProfileForm form,
+  .createProfileForm .formVehicleAll,
+  .editProfileForm form,
+  .editProfileForm .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll {
+    width: 60%;
+  }
+}
+
 .login {
   margin: 8rem 0;
 }
 .login .passwordForget {
+  margin-top: 2rem;
   margin-bottom: 3rem;
 }
 .login .createAccount a,
 .login .passwordForget a {
   color: #0077b6;
 }
+@media screen and (min-width: 768px) {
+  .login .loginForm {
+    border: none;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .login form {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .login form {
+    width: 60%;
+  }
+}
 
+.formVehicleAll select,
 input,
 .btn {
   margin: 1rem;
@@ -542,51 +1420,203 @@ input[type=submit],
 }
 
 @media screen and (min-width: 768px) {
+  .formVehicleAll select,
   input,
   .btn {
-    width: 70%;
+    width: 60%;
   }
 }
-.createProfileForm {
+.titleLicense {
+  display: block;
+  color: #f4a261;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 3.5rem 0;
+}
+
+.containerAllUser,
+.containerVehicleAll,
+.containerVehicleCreate,
+.containerPersonalInfo,
+.passwordForm,
+.createProfileForm,
+.editProfileForm,
+.containerPersonalInfo {
   transition: all 0.5s ease-in-out;
-  margin-bottom: 3rem;
-}
-.createProfileForm h2 {
-  margin-bottom: 3rem;
-}
-.createProfileForm form {
   margin: 0 auto;
+  margin-bottom: 3rem;
   width: 90%;
 }
-.createProfileForm form div {
+.containerAllUser h2,
+.containerVehicleAll h2,
+.containerVehicleCreate h2,
+.containerPersonalInfo h2,
+.passwordForm h2,
+.createProfileForm h2,
+.editProfileForm h2,
+.containerPersonalInfo h2 {
+  margin-bottom: 3rem;
+}
+.containerAllUser strong,
+.containerAllUser label,
+.containerVehicleAll strong,
+.containerVehicleAll label,
+.containerVehicleCreate strong,
+.containerVehicleCreate label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label,
+.passwordForm strong,
+.passwordForm label,
+.createProfileForm strong,
+.createProfileForm label,
+.editProfileForm strong,
+.editProfileForm label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label {
+  font-size: 2rem;
+  color: #00a699;
+}
+.containerAllUser div,
+.containerVehicleAll div,
+.containerVehicleCreate div,
+.containerPersonalInfo div,
+.passwordForm div,
+.createProfileForm div,
+.editProfileForm div,
+.containerPersonalInfo div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.createProfileForm form input[type=submit] {
+.containerAllUser .btn,
+.containerVehicleAll .btn,
+.containerVehicleCreate .btn,
+.containerPersonalInfo .btn,
+.passwordForm .btn,
+.createProfileForm .btn,
+.editProfileForm .btn,
+.containerPersonalInfo .btn {
   margin-top: 3rem;
 }
+.containerAllUser input[type=submit],
+.containerVehicleAll input[type=submit],
+.containerVehicleCreate input[type=submit],
+.containerPersonalInfo input[type=submit],
+.passwordForm input[type=submit],
+.createProfileForm input[type=submit],
+.editProfileForm input[type=submit],
+.containerPersonalInfo input[type=submit] {
+  margin-top: 1rem;
+}
 @media screen and (min-width: 768px) {
-  .createProfileForm form {
-    width: 60%;
+  .containerAllUser form,
+  .containerVehicleAll form,
+  .containerVehicleCreate form,
+  .containerPersonalInfo form,
+  .passwordForm form,
+  .createProfileForm form,
+  .editProfileForm form,
+  .containerPersonalInfo form {
+    width: 70%;
     border: 3px solid #f4a261;
     border-radius: 0.5rem;
     padding: 1rem;
   }
-  .createProfileForm form div {
+  .containerAllUser form div,
+  .containerVehicleAll form div,
+  .containerVehicleCreate form div,
+  .containerPersonalInfo form div,
+  .passwordForm form div,
+  .createProfileForm form div,
+  .editProfileForm form div,
+  .containerPersonalInfo form div {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-  .createProfileForm form div input {
+  .containerAllUser form div input,
+  .containerVehicleAll form div input,
+  .containerVehicleCreate form div input,
+  .containerPersonalInfo form div input,
+  .passwordForm form div input,
+  .createProfileForm form div input,
+  .editProfileForm form div input,
+  .containerPersonalInfo form div input {
     margin-right: 0;
   }
-  .createProfileForm form input[type=submit] {
+  .containerAllUser form input[type=submit],
+  .containerAllUser form .btn,
+  .containerVehicleAll form input[type=submit],
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form input[type=submit],
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn,
+  .passwordForm form input[type=submit],
+  .passwordForm form .btn,
+  .createProfileForm form input[type=submit],
+  .createProfileForm form .btn,
+  .editProfileForm form input[type=submit],
+  .editProfileForm form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn {
     margin: 0 auto;
     margin-top: 3rem;
   }
+  .containerAllUser form .btn,
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form .btn,
+  .passwordForm form .btn,
+  .createProfileForm form .btn,
+  .editProfileForm form .btn,
+  .containerPersonalInfo form .btn {
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .containerAllUser form,
+  .containerAllUser .formVehicleAll,
+  .containerVehicleAll form,
+  .containerVehicleAll .formVehicleAll,
+  .containerVehicleCreate form,
+  .containerVehicleCreate .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll,
+  .passwordForm form,
+  .passwordForm .formVehicleAll,
+  .createProfileForm form,
+  .createProfileForm .formVehicleAll,
+  .editProfileForm form,
+  .editProfileForm .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll {
+    width: 60%;
+  }
 }
 
+@media screen and (min-width: 768px) {
+  .createProfileForm .form {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .createProfileForm .form input {
+    width: 55%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .createProfileForm .form {
+    width: 68%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .createProfileForm .form {
+    width: 35%;
+  }
+}
+
+.formVehicleAll select,
 input,
 .btn {
   margin: 1rem;
@@ -606,183 +1636,252 @@ input[type=submit],
 }
 
 @media screen and (min-width: 768px) {
+  .formVehicleAll select,
   input,
   .btn {
-    width: 70%;
+    width: 60%;
   }
 }
-.readProfileForm,
+.titleLicense {
+  display: block;
+  color: #f4a261;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 3.5rem 0;
+}
+
+.containerAllUser,
+.containerVehicleAll,
+.containerVehicleCreate,
+.containerPersonalInfo,
+.passwordForm,
+.createProfileForm,
+.editProfileForm,
 .containerPersonalInfo {
   transition: all 0.5s ease-in-out;
+  margin: 0 auto;
   margin-bottom: 3rem;
+  width: 90%;
 }
-.readProfileForm h2,
+.containerAllUser h2,
+.containerVehicleAll h2,
+.containerVehicleCreate h2,
+.containerPersonalInfo h2,
+.passwordForm h2,
+.createProfileForm h2,
+.editProfileForm h2,
 .containerPersonalInfo h2 {
   margin-bottom: 3rem;
 }
-.readProfileForm form,
-.readProfileForm .articlePeronalInfo,
-.containerPersonalInfo form,
-.containerPersonalInfo .articlePeronalInfo {
+.containerAllUser strong,
+.containerAllUser label,
+.containerVehicleAll strong,
+.containerVehicleAll label,
+.containerVehicleCreate strong,
+.containerVehicleCreate label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label,
+.passwordForm strong,
+.passwordForm label,
+.createProfileForm strong,
+.createProfileForm label,
+.editProfileForm strong,
+.editProfileForm label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label {
+  font-size: 2rem;
+  color: #00a699;
+}
+.containerAllUser div,
+.containerVehicleAll div,
+.containerVehicleCreate div,
+.containerPersonalInfo div,
+.passwordForm div,
+.createProfileForm div,
+.editProfileForm div,
+.containerPersonalInfo div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.containerAllUser .btn,
+.containerVehicleAll .btn,
+.containerVehicleCreate .btn,
+.containerPersonalInfo .btn,
+.passwordForm .btn,
+.createProfileForm .btn,
+.editProfileForm .btn,
+.containerPersonalInfo .btn {
+  margin-top: 3rem;
+}
+.containerAllUser input[type=submit],
+.containerVehicleAll input[type=submit],
+.containerVehicleCreate input[type=submit],
+.containerPersonalInfo input[type=submit],
+.passwordForm input[type=submit],
+.createProfileForm input[type=submit],
+.editProfileForm input[type=submit],
+.containerPersonalInfo input[type=submit] {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .containerAllUser form,
+  .containerVehicleAll form,
+  .containerVehicleCreate form,
+  .containerPersonalInfo form,
+  .passwordForm form,
+  .createProfileForm form,
+  .editProfileForm form,
+  .containerPersonalInfo form {
+    width: 70%;
+    border: 3px solid #f4a261;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  .containerAllUser form div,
+  .containerVehicleAll form div,
+  .containerVehicleCreate form div,
+  .containerPersonalInfo form div,
+  .passwordForm form div,
+  .createProfileForm form div,
+  .editProfileForm form div,
+  .containerPersonalInfo form div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .containerAllUser form div input,
+  .containerVehicleAll form div input,
+  .containerVehicleCreate form div input,
+  .containerPersonalInfo form div input,
+  .passwordForm form div input,
+  .createProfileForm form div input,
+  .editProfileForm form div input,
+  .containerPersonalInfo form div input {
+    margin-right: 0;
+  }
+  .containerAllUser form input[type=submit],
+  .containerAllUser form .btn,
+  .containerVehicleAll form input[type=submit],
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form input[type=submit],
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn,
+  .passwordForm form input[type=submit],
+  .passwordForm form .btn,
+  .createProfileForm form input[type=submit],
+  .createProfileForm form .btn,
+  .editProfileForm form input[type=submit],
+  .editProfileForm form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn {
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+  .containerAllUser form .btn,
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form .btn,
+  .passwordForm form .btn,
+  .createProfileForm form .btn,
+  .editProfileForm form .btn,
+  .containerPersonalInfo form .btn {
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .containerAllUser form,
+  .containerAllUser .formVehicleAll,
+  .containerVehicleAll form,
+  .containerVehicleAll .formVehicleAll,
+  .containerVehicleCreate form,
+  .containerVehicleCreate .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll,
+  .passwordForm form,
+  .passwordForm .formVehicleAll,
+  .createProfileForm form,
+  .createProfileForm .formVehicleAll,
+  .editProfileForm form,
+  .editProfileForm .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll {
+    width: 60%;
+  }
+}
+
+.containerPersonalInfo .articlePeronalInfo,
+.editProfileForm .articlePeronalInfo {
   margin: 0 auto;
   width: 90%;
+  border: 3px solid #f4a261;
+  border-radius: 0.5rem;
+  padding: 1rem;
 }
-.readProfileForm form h3,
-.readProfileForm .articlePeronalInfo h3,
-.containerPersonalInfo form h3,
-.containerPersonalInfo .articlePeronalInfo h3 {
-  margin: 3rem 0;
-}
-.readProfileForm form p,
-.readProfileForm .articlePeronalInfo p,
-.containerPersonalInfo form p,
-.containerPersonalInfo .articlePeronalInfo p {
+.containerPersonalInfo p,
+.editProfileForm p {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   margin-top: 2rem;
 }
-.readProfileForm form p span,
-.readProfileForm .articlePeronalInfo p span,
-.containerPersonalInfo form p span,
-.containerPersonalInfo .articlePeronalInfo p span {
+.containerPersonalInfo p span,
+.editProfileForm p span {
   font-size: 1.7rem;
 }
-.readProfileForm form strong,
-.readProfileForm form label,
-.readProfileForm .articlePeronalInfo strong,
-.readProfileForm .articlePeronalInfo label,
-.containerPersonalInfo form strong,
-.containerPersonalInfo form label,
-.containerPersonalInfo .articlePeronalInfo strong,
-.containerPersonalInfo .articlePeronalInfo label {
-  font-size: 2rem;
-  color: #00a699;
-}
-.readProfileForm form .titleLicense,
-.readProfileForm form .titleLicenseForm,
-.readProfileForm .articlePeronalInfo .titleLicense,
-.readProfileForm .articlePeronalInfo .titleLicenseForm,
-.containerPersonalInfo form .titleLicense,
-.containerPersonalInfo form .titleLicenseForm,
-.containerPersonalInfo .articlePeronalInfo .titleLicense,
-.containerPersonalInfo .articlePeronalInfo .titleLicenseForm {
-  color: #f4a261;
-}
-.readProfileForm form .titleLicenseForm,
-.readProfileForm .articlePeronalInfo .titleLicenseForm,
-.containerPersonalInfo form .titleLicenseForm,
-.containerPersonalInfo .articlePeronalInfo .titleLicenseForm {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.readProfileForm form div,
-.readProfileForm .articlePeronalInfo div,
-.containerPersonalInfo form div,
-.containerPersonalInfo .articlePeronalInfo div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.readProfileForm form .btn,
-.readProfileForm .articlePeronalInfo .btn,
-.containerPersonalInfo form .btn,
-.containerPersonalInfo .articlePeronalInfo .btn {
-  margin-top: 3rem;
-}
-.readProfileForm form input[type=submit],
-.readProfileForm .articlePeronalInfo input[type=submit],
-.containerPersonalInfo form input[type=submit],
-.containerPersonalInfo .articlePeronalInfo input[type=submit] {
-  margin-top: 1rem;
-}
-.readProfileForm form .passwordProfile,
-.readProfileForm .articlePeronalInfo .passwordProfile,
-.containerPersonalInfo form .passwordProfile,
-.containerPersonalInfo .articlePeronalInfo .passwordProfile {
+.containerPersonalInfo .passwordProfile,
+.editProfileForm .passwordProfile {
   margin: 0 auto;
-  color: #00a699;
   color: #0077b6;
   margin-top: 2rem;
   font-size: 2rem;
 }
-.readProfileForm form .passwordProfile:hover,
-.readProfileForm .articlePeronalInfo .passwordProfile:hover,
-.containerPersonalInfo form .passwordProfile:hover,
-.containerPersonalInfo .articlePeronalInfo .passwordProfile:hover {
+.containerPersonalInfo .passwordProfile:hover,
+.editProfileForm .passwordProfile:hover {
   color: #f4a261;
 }
-@media screen and (min-width: 520px) {
-  .readProfileForm .articlePeronalInfo,
-  .containerPersonalInfo .articlePeronalInfo {
-    width: 80%;
-  }
-}
-@media screen and (min-width: 600px) {
-  .readProfileForm .articlePeronalInfo,
-  .containerPersonalInfo .articlePeronalInfo {
-    width: 75%;
-  }
-}
-@media screen and (min-width: 700px) {
-  .readProfileForm .articlePeronalInfo,
-  .containerPersonalInfo .articlePeronalInfo {
-    width: 65%;
-  }
-}
 @media screen and (min-width: 768px) {
-  .readProfileForm form,
-  .readProfileForm .articlePeronalInfo,
-  .containerPersonalInfo form,
-  .containerPersonalInfo .articlePeronalInfo {
+  .containerPersonalInfo .articlePeronalInfo,
+  .editProfileForm .articlePeronalInfo {
     width: 60%;
-    border: 3px solid #f4a261;
-    border-radius: 0.5rem;
-    padding: 1rem;
   }
-  .readProfileForm form div,
-  .readProfileForm .articlePeronalInfo div,
-  .containerPersonalInfo form div,
-  .containerPersonalInfo .articlePeronalInfo div {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .readProfileForm form div input,
-  .readProfileForm .articlePeronalInfo div input,
-  .containerPersonalInfo form div input,
-  .containerPersonalInfo .articlePeronalInfo div input {
-    margin-right: 0;
-  }
-  .readProfileForm form input[type=submit],
-  .readProfileForm form .btn,
-  .readProfileForm .articlePeronalInfo input[type=submit],
-  .readProfileForm .articlePeronalInfo .btn,
-  .containerPersonalInfo form input[type=submit],
-  .containerPersonalInfo form .btn,
-  .containerPersonalInfo .articlePeronalInfo input[type=submit],
-  .containerPersonalInfo .articlePeronalInfo .btn {
+  .containerPersonalInfo .articlePeronalInfo .btn,
+  .editProfileForm .articlePeronalInfo .btn {
+    width: 100%;
     margin: 0 auto;
     margin-top: 3rem;
   }
-  .readProfileForm form .btn,
-  .readProfileForm .articlePeronalInfo .btn,
-  .containerPersonalInfo form .btn,
-  .containerPersonalInfo .articlePeronalInfo .btn {
-    margin-right: 5%;
-  }
-  .readProfileForm .articlePeronalInfo,
-  .containerPersonalInfo .articlePeronalInfo {
-    width: 65%;
+  .containerPersonalInfo .editForm,
+  .editProfileForm .editForm {
+    margin: 0 auto;
+    width: 80%;
   }
 }
 @media screen and (min-width: 992px) {
-  .readProfileForm .articlePeronalInfo,
-  .containerPersonalInfo .articlePeronalInfo {
-    width: 50%;
+  .containerPersonalInfo .articlePeronalInfo,
+  .editProfileForm .articlePeronalInfo {
+    width: 55%;
+  }
+  .containerPersonalInfo .editForm,
+  .editProfileForm .editForm {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .containerPersonalInfo .articlePeronalInfo,
+  .editProfileForm .articlePeronalInfo {
+    width: 40%;
+  }
+  .containerPersonalInfo .editForm,
+  .editProfileForm .editForm {
+    width: 40%;
   }
 }
 
+.formVehicleAll select,
 input,
 .btn {
   margin: 1rem;
@@ -802,66 +1901,830 @@ input[type=submit],
 }
 
 @media screen and (min-width: 768px) {
+  .formVehicleAll select,
   input,
   .btn {
-    width: 70%;
+    width: 60%;
   }
 }
-.passwordForm {
+.titleLicense {
+  display: block;
+  color: #f4a261;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 3.5rem 0;
+}
+
+.containerAllUser,
+.containerVehicleAll,
+.containerVehicleCreate,
+.containerPersonalInfo,
+.passwordForm,
+.createProfileForm,
+.editProfileForm,
+.containerPersonalInfo {
   transition: all 0.5s ease-in-out;
-  margin-bottom: 3rem;
-}
-.passwordForm h2 {
-  margin-bottom: 3rem;
-}
-.passwordForm form {
   margin: 0 auto;
+  margin-bottom: 3rem;
   width: 90%;
 }
-.passwordForm form div {
+.containerAllUser h2,
+.containerVehicleAll h2,
+.containerVehicleCreate h2,
+.containerPersonalInfo h2,
+.passwordForm h2,
+.createProfileForm h2,
+.editProfileForm h2,
+.containerPersonalInfo h2 {
+  margin-bottom: 3rem;
+}
+.containerAllUser strong,
+.containerAllUser label,
+.containerVehicleAll strong,
+.containerVehicleAll label,
+.containerVehicleCreate strong,
+.containerVehicleCreate label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label,
+.passwordForm strong,
+.passwordForm label,
+.createProfileForm strong,
+.createProfileForm label,
+.editProfileForm strong,
+.editProfileForm label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label {
+  font-size: 2rem;
+  color: #00a699;
+}
+.containerAllUser div,
+.containerVehicleAll div,
+.containerVehicleCreate div,
+.containerPersonalInfo div,
+.passwordForm div,
+.createProfileForm div,
+.editProfileForm div,
+.containerPersonalInfo div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.passwordForm form a {
-  margin: 0 auto;
-  width: 100%;
-}
-.passwordForm form a .btn {
+.containerAllUser .btn,
+.containerVehicleAll .btn,
+.containerVehicleCreate .btn,
+.containerPersonalInfo .btn,
+.passwordForm .btn,
+.createProfileForm .btn,
+.editProfileForm .btn,
+.containerPersonalInfo .btn {
   margin-top: 3rem;
 }
-.passwordForm form input[type=submit] {
+.containerAllUser input[type=submit],
+.containerVehicleAll input[type=submit],
+.containerVehicleCreate input[type=submit],
+.containerPersonalInfo input[type=submit],
+.passwordForm input[type=submit],
+.createProfileForm input[type=submit],
+.editProfileForm input[type=submit],
+.containerPersonalInfo input[type=submit] {
   margin-top: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .passwordForm form {
+  .containerAllUser form,
+  .containerVehicleAll form,
+  .containerVehicleCreate form,
+  .containerPersonalInfo form,
+  .passwordForm form,
+  .createProfileForm form,
+  .editProfileForm form,
+  .containerPersonalInfo form {
     width: 70%;
     border: 3px solid #f4a261;
     border-radius: 0.5rem;
     padding: 1rem;
   }
-  .passwordForm form div {
+  .containerAllUser form div,
+  .containerVehicleAll form div,
+  .containerVehicleCreate form div,
+  .containerPersonalInfo form div,
+  .passwordForm form div,
+  .createProfileForm form div,
+  .editProfileForm form div,
+  .containerPersonalInfo form div {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-  .passwordForm form div input {
+  .containerAllUser form div input,
+  .containerVehicleAll form div input,
+  .containerVehicleCreate form div input,
+  .containerPersonalInfo form div input,
+  .passwordForm form div input,
+  .createProfileForm form div input,
+  .editProfileForm form div input,
+  .containerPersonalInfo form div input {
     margin-right: 0;
   }
-  .passwordForm form input[type=submit] {
+  .containerAllUser form input[type=submit],
+  .containerAllUser form .btn,
+  .containerVehicleAll form input[type=submit],
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form input[type=submit],
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn,
+  .passwordForm form input[type=submit],
+  .passwordForm form .btn,
+  .createProfileForm form input[type=submit],
+  .createProfileForm form .btn,
+  .editProfileForm form input[type=submit],
+  .editProfileForm form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn {
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+  .containerAllUser form .btn,
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form .btn,
+  .passwordForm form .btn,
+  .createProfileForm form .btn,
+  .editProfileForm form .btn,
+  .containerPersonalInfo form .btn {
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .containerAllUser form,
+  .containerAllUser .formVehicleAll,
+  .containerVehicleAll form,
+  .containerVehicleAll .formVehicleAll,
+  .containerVehicleCreate form,
+  .containerVehicleCreate .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll,
+  .passwordForm form,
+  .passwordForm .formVehicleAll,
+  .createProfileForm form,
+  .createProfileForm .formVehicleAll,
+  .editProfileForm form,
+  .editProfileForm .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll {
+    width: 60%;
+  }
+}
+
+.passwordForm .form {
+  margin: 0 auto;
+  width: 90%;
+}
+.passwordForm .form label {
+  color: #f4a261;
+}
+.passwordForm .form a {
+  margin: 0 auto;
+  width: 100%;
+}
+.passwordForm .form a .btn {
+  margin-top: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .passwordForm .form {
+    border: none;
+    width: 80%;
+  }
+  .passwordForm .form input[type=submit],
+  .passwordForm .form input {
     width: 50%;
   }
-  .passwordForm form a {
+  .passwordForm .form a {
     width: 50%;
     margin-right: 5%;
   }
-  .passwordForm form a .btn {
+  .passwordForm .form a .btn {
     width: 100%;
   }
+  .passwordForm .form input[type=submit],
+  .passwordForm .form .btn {
+    margin: 3.5rem auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .passwordForm .form {
+    width: 70%;
+  }
+}
+
+.formVehicleAll select,
+input,
+.btn {
+  margin: 1rem;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  outline-style: none;
+  border: 2px solid #0077b6;
+}
+
+input[type=submit],
+.btn {
+  background-color: #0077b6;
+  color: rgba(255, 255, 255, 0.9137254902);
+  font-weight: 100;
+}
+
+@media screen and (min-width: 768px) {
+  .formVehicleAll select,
+  input,
+  .btn {
+    width: 60%;
+  }
+}
+.titleLicense {
+  display: block;
+  color: #f4a261;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 3.5rem 0;
+}
+
+.containerAllUser,
+.containerVehicleAll,
+.containerVehicleCreate,
+.containerPersonalInfo,
+.passwordForm,
+.createProfileForm,
+.editProfileForm,
+.containerPersonalInfo {
+  transition: all 0.5s ease-in-out;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  width: 90%;
+}
+.containerAllUser h2,
+.containerVehicleAll h2,
+.containerVehicleCreate h2,
+.containerPersonalInfo h2,
+.passwordForm h2,
+.createProfileForm h2,
+.editProfileForm h2,
+.containerPersonalInfo h2 {
+  margin-bottom: 3rem;
+}
+.containerAllUser strong,
+.containerAllUser label,
+.containerVehicleAll strong,
+.containerVehicleAll label,
+.containerVehicleCreate strong,
+.containerVehicleCreate label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label,
+.passwordForm strong,
+.passwordForm label,
+.createProfileForm strong,
+.createProfileForm label,
+.editProfileForm strong,
+.editProfileForm label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label {
+  font-size: 2rem;
+  color: #00a699;
+}
+.containerAllUser div,
+.containerVehicleAll div,
+.containerVehicleCreate div,
+.containerPersonalInfo div,
+.passwordForm div,
+.createProfileForm div,
+.editProfileForm div,
+.containerPersonalInfo div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.containerAllUser .btn,
+.containerVehicleAll .btn,
+.containerVehicleCreate .btn,
+.containerPersonalInfo .btn,
+.passwordForm .btn,
+.createProfileForm .btn,
+.editProfileForm .btn,
+.containerPersonalInfo .btn {
+  margin-top: 3rem;
+}
+.containerAllUser input[type=submit],
+.containerVehicleAll input[type=submit],
+.containerVehicleCreate input[type=submit],
+.containerPersonalInfo input[type=submit],
+.passwordForm input[type=submit],
+.createProfileForm input[type=submit],
+.editProfileForm input[type=submit],
+.containerPersonalInfo input[type=submit] {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .containerAllUser form,
+  .containerVehicleAll form,
+  .containerVehicleCreate form,
+  .containerPersonalInfo form,
+  .passwordForm form,
+  .createProfileForm form,
+  .editProfileForm form,
+  .containerPersonalInfo form {
+    width: 70%;
+    border: 3px solid #f4a261;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  .containerAllUser form div,
+  .containerVehicleAll form div,
+  .containerVehicleCreate form div,
+  .containerPersonalInfo form div,
+  .passwordForm form div,
+  .createProfileForm form div,
+  .editProfileForm form div,
+  .containerPersonalInfo form div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .containerAllUser form div input,
+  .containerVehicleAll form div input,
+  .containerVehicleCreate form div input,
+  .containerPersonalInfo form div input,
+  .passwordForm form div input,
+  .createProfileForm form div input,
+  .editProfileForm form div input,
+  .containerPersonalInfo form div input {
+    margin-right: 0;
+  }
+  .containerAllUser form input[type=submit],
+  .containerAllUser form .btn,
+  .containerVehicleAll form input[type=submit],
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form input[type=submit],
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn,
   .passwordForm form input[type=submit],
-  .passwordForm form .btn {
+  .passwordForm form .btn,
+  .createProfileForm form input[type=submit],
+  .createProfileForm form .btn,
+  .editProfileForm form input[type=submit],
+  .editProfileForm form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn {
     margin: 0 auto;
     margin-top: 3rem;
+  }
+  .containerAllUser form .btn,
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form .btn,
+  .passwordForm form .btn,
+  .createProfileForm form .btn,
+  .editProfileForm form .btn,
+  .containerPersonalInfo form .btn {
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .containerAllUser form,
+  .containerAllUser .formVehicleAll,
+  .containerVehicleAll form,
+  .containerVehicleAll .formVehicleAll,
+  .containerVehicleCreate form,
+  .containerVehicleCreate .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll,
+  .passwordForm form,
+  .passwordForm .formVehicleAll,
+  .createProfileForm form,
+  .createProfileForm .formVehicleAll,
+  .editProfileForm form,
+  .editProfileForm .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll {
+    width: 60%;
+  }
+}
+
+.containerVehicleCreate form {
+  margin: 0 auto;
+}
+
+.formVehicleAll select,
+input,
+.btn {
+  margin: 1rem;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  outline-style: none;
+  border: 2px solid #0077b6;
+}
+
+input[type=submit],
+.btn {
+  background-color: #0077b6;
+  color: rgba(255, 255, 255, 0.9137254902);
+  font-weight: 100;
+}
+
+@media screen and (min-width: 768px) {
+  .formVehicleAll select,
+  input,
+  .btn {
+    width: 60%;
+  }
+}
+.titleLicense {
+  display: block;
+  color: #f4a261;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 3.5rem 0;
+}
+
+.containerAllUser,
+.containerVehicleAll,
+.containerVehicleCreate,
+.containerPersonalInfo,
+.passwordForm,
+.createProfileForm,
+.editProfileForm,
+.containerPersonalInfo {
+  transition: all 0.5s ease-in-out;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  width: 90%;
+}
+.containerAllUser h2,
+.containerVehicleAll h2,
+.containerVehicleCreate h2,
+.containerPersonalInfo h2,
+.passwordForm h2,
+.createProfileForm h2,
+.editProfileForm h2,
+.containerPersonalInfo h2 {
+  margin-bottom: 3rem;
+}
+.containerAllUser strong,
+.containerAllUser label,
+.containerVehicleAll strong,
+.containerVehicleAll label,
+.containerVehicleCreate strong,
+.containerVehicleCreate label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label,
+.passwordForm strong,
+.passwordForm label,
+.createProfileForm strong,
+.createProfileForm label,
+.editProfileForm strong,
+.editProfileForm label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label {
+  font-size: 2rem;
+  color: #00a699;
+}
+.containerAllUser div,
+.containerVehicleAll div,
+.containerVehicleCreate div,
+.containerPersonalInfo div,
+.passwordForm div,
+.createProfileForm div,
+.editProfileForm div,
+.containerPersonalInfo div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.containerAllUser .btn,
+.containerVehicleAll .btn,
+.containerVehicleCreate .btn,
+.containerPersonalInfo .btn,
+.passwordForm .btn,
+.createProfileForm .btn,
+.editProfileForm .btn,
+.containerPersonalInfo .btn {
+  margin-top: 3rem;
+}
+.containerAllUser input[type=submit],
+.containerVehicleAll input[type=submit],
+.containerVehicleCreate input[type=submit],
+.containerPersonalInfo input[type=submit],
+.passwordForm input[type=submit],
+.createProfileForm input[type=submit],
+.editProfileForm input[type=submit],
+.containerPersonalInfo input[type=submit] {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .containerAllUser form,
+  .containerVehicleAll form,
+  .containerVehicleCreate form,
+  .containerPersonalInfo form,
+  .passwordForm form,
+  .createProfileForm form,
+  .editProfileForm form,
+  .containerPersonalInfo form {
+    width: 70%;
+    border: 3px solid #f4a261;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  .containerAllUser form div,
+  .containerVehicleAll form div,
+  .containerVehicleCreate form div,
+  .containerPersonalInfo form div,
+  .passwordForm form div,
+  .createProfileForm form div,
+  .editProfileForm form div,
+  .containerPersonalInfo form div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .containerAllUser form div input,
+  .containerVehicleAll form div input,
+  .containerVehicleCreate form div input,
+  .containerPersonalInfo form div input,
+  .passwordForm form div input,
+  .createProfileForm form div input,
+  .editProfileForm form div input,
+  .containerPersonalInfo form div input {
+    margin-right: 0;
+  }
+  .containerAllUser form input[type=submit],
+  .containerAllUser form .btn,
+  .containerVehicleAll form input[type=submit],
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form input[type=submit],
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn,
+  .passwordForm form input[type=submit],
+  .passwordForm form .btn,
+  .createProfileForm form input[type=submit],
+  .createProfileForm form .btn,
+  .editProfileForm form input[type=submit],
+  .editProfileForm form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn {
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+  .containerAllUser form .btn,
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form .btn,
+  .passwordForm form .btn,
+  .createProfileForm form .btn,
+  .editProfileForm form .btn,
+  .containerPersonalInfo form .btn {
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .containerAllUser form,
+  .containerAllUser .formVehicleAll,
+  .containerVehicleAll form,
+  .containerVehicleAll .formVehicleAll,
+  .containerVehicleCreate form,
+  .containerVehicleCreate .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll,
+  .passwordForm form,
+  .passwordForm .formVehicleAll,
+  .createProfileForm form,
+  .createProfileForm .formVehicleAll,
+  .editProfileForm form,
+  .editProfileForm .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll {
+    width: 60%;
+  }
+}
+
+.containerVehicleAll form {
+  margin: 0 auto;
+  border: 3px solid #f4a261;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 5rem;
+}
+.containerVehicleAll form select {
+  padding-left: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .containerVehicleAll .formVehicleAll select,
+  .containerVehicleAll .formVehicleAll input {
+    width: 50%;
+    margin-right: 0;
+  }
+}
+
+.formVehicleAll select,
+input,
+.btn {
+  margin: 1rem;
+  padding: 1rem;
+  width: 80%;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  outline-style: none;
+  border: 2px solid #0077b6;
+}
+
+input[type=submit],
+.btn {
+  background-color: #0077b6;
+  color: rgba(255, 255, 255, 0.9137254902);
+  font-weight: 100;
+}
+
+@media screen and (min-width: 768px) {
+  .formVehicleAll select,
+  input,
+  .btn {
+    width: 60%;
+  }
+}
+.titleLicense {
+  display: block;
+  color: #f4a261;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 3.5rem 0;
+}
+
+.containerAllUser,
+.containerVehicleAll,
+.containerVehicleCreate,
+.containerPersonalInfo,
+.passwordForm,
+.createProfileForm,
+.editProfileForm,
+.containerPersonalInfo {
+  transition: all 0.5s ease-in-out;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  width: 90%;
+}
+.containerAllUser h2,
+.containerVehicleAll h2,
+.containerVehicleCreate h2,
+.containerPersonalInfo h2,
+.passwordForm h2,
+.createProfileForm h2,
+.editProfileForm h2,
+.containerPersonalInfo h2 {
+  margin-bottom: 3rem;
+}
+.containerAllUser strong,
+.containerAllUser label,
+.containerVehicleAll strong,
+.containerVehicleAll label,
+.containerVehicleCreate strong,
+.containerVehicleCreate label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label,
+.passwordForm strong,
+.passwordForm label,
+.createProfileForm strong,
+.createProfileForm label,
+.editProfileForm strong,
+.editProfileForm label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label {
+  font-size: 2rem;
+  color: #00a699;
+}
+.containerAllUser div,
+.containerVehicleAll div,
+.containerVehicleCreate div,
+.containerPersonalInfo div,
+.passwordForm div,
+.createProfileForm div,
+.editProfileForm div,
+.containerPersonalInfo div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.containerAllUser .btn,
+.containerVehicleAll .btn,
+.containerVehicleCreate .btn,
+.containerPersonalInfo .btn,
+.passwordForm .btn,
+.createProfileForm .btn,
+.editProfileForm .btn,
+.containerPersonalInfo .btn {
+  margin-top: 3rem;
+}
+.containerAllUser input[type=submit],
+.containerVehicleAll input[type=submit],
+.containerVehicleCreate input[type=submit],
+.containerPersonalInfo input[type=submit],
+.passwordForm input[type=submit],
+.createProfileForm input[type=submit],
+.editProfileForm input[type=submit],
+.containerPersonalInfo input[type=submit] {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .containerAllUser form,
+  .containerVehicleAll form,
+  .containerVehicleCreate form,
+  .containerPersonalInfo form,
+  .passwordForm form,
+  .createProfileForm form,
+  .editProfileForm form,
+  .containerPersonalInfo form {
+    width: 70%;
+    border: 3px solid #f4a261;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  .containerAllUser form div,
+  .containerVehicleAll form div,
+  .containerVehicleCreate form div,
+  .containerPersonalInfo form div,
+  .passwordForm form div,
+  .createProfileForm form div,
+  .editProfileForm form div,
+  .containerPersonalInfo form div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .containerAllUser form div input,
+  .containerVehicleAll form div input,
+  .containerVehicleCreate form div input,
+  .containerPersonalInfo form div input,
+  .passwordForm form div input,
+  .createProfileForm form div input,
+  .editProfileForm form div input,
+  .containerPersonalInfo form div input {
+    margin-right: 0;
+  }
+  .containerAllUser form input[type=submit],
+  .containerAllUser form .btn,
+  .containerVehicleAll form input[type=submit],
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form input[type=submit],
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn,
+  .passwordForm form input[type=submit],
+  .passwordForm form .btn,
+  .createProfileForm form input[type=submit],
+  .createProfileForm form .btn,
+  .editProfileForm form input[type=submit],
+  .editProfileForm form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn {
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+  .containerAllUser form .btn,
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form .btn,
+  .passwordForm form .btn,
+  .createProfileForm form .btn,
+  .editProfileForm form .btn,
+  .containerPersonalInfo form .btn {
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .containerAllUser form,
+  .containerAllUser .formVehicleAll,
+  .containerVehicleAll form,
+  .containerVehicleAll .formVehicleAll,
+  .containerVehicleCreate form,
+  .containerVehicleCreate .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll,
+  .passwordForm form,
+  .passwordForm .formVehicleAll,
+  .createProfileForm form,
+  .createProfileForm .formVehicleAll,
+  .editProfileForm form,
+  .editProfileForm .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll {
+    width: 60%;
   }
 }
 
@@ -1088,6 +2951,7 @@ input[type=submit],
   display: none;
 }
 
+.formVehicleAll select,
 input,
 .btn {
   margin: 1rem;
@@ -1107,11 +2971,182 @@ input[type=submit],
 }
 
 @media screen and (min-width: 768px) {
+  .formVehicleAll select,
   input,
   .btn {
-    width: 70%;
+    width: 60%;
   }
 }
+.titleLicense {
+  display: block;
+  color: #f4a261;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 3.5rem 0;
+}
+
+.containerAllUser,
+.containerVehicleAll,
+.containerVehicleCreate,
+.containerPersonalInfo,
+.passwordForm,
+.createProfileForm,
+.editProfileForm,
+.containerPersonalInfo {
+  transition: all 0.5s ease-in-out;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  width: 90%;
+}
+.containerAllUser h2,
+.containerVehicleAll h2,
+.containerVehicleCreate h2,
+.containerPersonalInfo h2,
+.passwordForm h2,
+.createProfileForm h2,
+.editProfileForm h2,
+.containerPersonalInfo h2 {
+  margin-bottom: 3rem;
+}
+.containerAllUser strong,
+.containerAllUser label,
+.containerVehicleAll strong,
+.containerVehicleAll label,
+.containerVehicleCreate strong,
+.containerVehicleCreate label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label,
+.passwordForm strong,
+.passwordForm label,
+.createProfileForm strong,
+.createProfileForm label,
+.editProfileForm strong,
+.editProfileForm label,
+.containerPersonalInfo strong,
+.containerPersonalInfo label {
+  font-size: 2rem;
+  color: #00a699;
+}
+.containerAllUser div,
+.containerVehicleAll div,
+.containerVehicleCreate div,
+.containerPersonalInfo div,
+.passwordForm div,
+.createProfileForm div,
+.editProfileForm div,
+.containerPersonalInfo div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.containerAllUser .btn,
+.containerVehicleAll .btn,
+.containerVehicleCreate .btn,
+.containerPersonalInfo .btn,
+.passwordForm .btn,
+.createProfileForm .btn,
+.editProfileForm .btn,
+.containerPersonalInfo .btn {
+  margin-top: 3rem;
+}
+.containerAllUser input[type=submit],
+.containerVehicleAll input[type=submit],
+.containerVehicleCreate input[type=submit],
+.containerPersonalInfo input[type=submit],
+.passwordForm input[type=submit],
+.createProfileForm input[type=submit],
+.editProfileForm input[type=submit],
+.containerPersonalInfo input[type=submit] {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .containerAllUser form,
+  .containerVehicleAll form,
+  .containerVehicleCreate form,
+  .containerPersonalInfo form,
+  .passwordForm form,
+  .createProfileForm form,
+  .editProfileForm form,
+  .containerPersonalInfo form {
+    width: 70%;
+    border: 3px solid #f4a261;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  .containerAllUser form div,
+  .containerVehicleAll form div,
+  .containerVehicleCreate form div,
+  .containerPersonalInfo form div,
+  .passwordForm form div,
+  .createProfileForm form div,
+  .editProfileForm form div,
+  .containerPersonalInfo form div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .containerAllUser form div input,
+  .containerVehicleAll form div input,
+  .containerVehicleCreate form div input,
+  .containerPersonalInfo form div input,
+  .passwordForm form div input,
+  .createProfileForm form div input,
+  .editProfileForm form div input,
+  .containerPersonalInfo form div input {
+    margin-right: 0;
+  }
+  .containerAllUser form input[type=submit],
+  .containerAllUser form .btn,
+  .containerVehicleAll form input[type=submit],
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form input[type=submit],
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn,
+  .passwordForm form input[type=submit],
+  .passwordForm form .btn,
+  .createProfileForm form input[type=submit],
+  .createProfileForm form .btn,
+  .editProfileForm form input[type=submit],
+  .editProfileForm form .btn,
+  .containerPersonalInfo form input[type=submit],
+  .containerPersonalInfo form .btn {
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+  .containerAllUser form .btn,
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form .btn,
+  .containerPersonalInfo form .btn,
+  .passwordForm form .btn,
+  .createProfileForm form .btn,
+  .editProfileForm form .btn,
+  .containerPersonalInfo form .btn {
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .containerAllUser form,
+  .containerAllUser .formVehicleAll,
+  .containerVehicleAll form,
+  .containerVehicleAll .formVehicleAll,
+  .containerVehicleCreate form,
+  .containerVehicleCreate .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll,
+  .passwordForm form,
+  .passwordForm .formVehicleAll,
+  .createProfileForm form,
+  .createProfileForm .formVehicleAll,
+  .editProfileForm form,
+  .editProfileForm .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll {
+    width: 60%;
+  }
+}
+
 :root {
   font-size: 62.5%;
   box-sizing: border-box;

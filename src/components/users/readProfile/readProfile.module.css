@@ -1,3 +1,4 @@
+.formVehicleAll select,
 input,
 .btn {
   margin: 1rem;
@@ -17,6 +18,7 @@ input[type=submit],
 }
 
 @media screen and (min-width: 768px) {
+  .formVehicleAll select,
   input,
   .btn {
     width: 60%;
@@ -31,6 +33,9 @@ input[type=submit],
   margin: 3.5rem 0;
 }
 
+.containerAllUser,
+.containerVehicleAll,
+.containerVehicleCreate,
 .containerPersonalInfo,
 .passwordForm,
 .createProfileForm,
@@ -41,6 +46,9 @@ input[type=submit],
   margin-bottom: 3rem;
   width: 90%;
 }
+.containerAllUser h2,
+.containerVehicleAll h2,
+.containerVehicleCreate h2,
 .containerPersonalInfo h2,
 .passwordForm h2,
 .createProfileForm h2,
@@ -48,6 +56,12 @@ input[type=submit],
 .containerPersonalInfo h2 {
   margin-bottom: 3rem;
 }
+.containerAllUser strong,
+.containerAllUser label,
+.containerVehicleAll strong,
+.containerVehicleAll label,
+.containerVehicleCreate strong,
+.containerVehicleCreate label,
 .containerPersonalInfo strong,
 .containerPersonalInfo label,
 .passwordForm strong,
@@ -61,6 +75,9 @@ input[type=submit],
   font-size: 2rem;
   color: #00a699;
 }
+.containerAllUser div,
+.containerVehicleAll div,
+.containerVehicleCreate div,
 .containerPersonalInfo div,
 .passwordForm div,
 .createProfileForm div,
@@ -70,6 +87,9 @@ input[type=submit],
   flex-direction: column;
   align-items: center;
 }
+.containerAllUser .btn,
+.containerVehicleAll .btn,
+.containerVehicleCreate .btn,
 .containerPersonalInfo .btn,
 .passwordForm .btn,
 .createProfileForm .btn,
@@ -77,6 +97,9 @@ input[type=submit],
 .containerPersonalInfo .btn {
   margin-top: 3rem;
 }
+.containerAllUser input[type=submit],
+.containerVehicleAll input[type=submit],
+.containerVehicleCreate input[type=submit],
 .containerPersonalInfo input[type=submit],
 .passwordForm input[type=submit],
 .createProfileForm input[type=submit],
@@ -85,6 +108,9 @@ input[type=submit],
   margin-top: 1rem;
 }
 @media screen and (min-width: 768px) {
+  .containerAllUser form,
+  .containerVehicleAll form,
+  .containerVehicleCreate form,
   .containerPersonalInfo form,
   .passwordForm form,
   .createProfileForm form,
@@ -95,6 +121,9 @@ input[type=submit],
     border-radius: 0.5rem;
     padding: 1rem;
   }
+  .containerAllUser form div,
+  .containerVehicleAll form div,
+  .containerVehicleCreate form div,
   .containerPersonalInfo form div,
   .passwordForm form div,
   .createProfileForm form div,
@@ -104,6 +133,9 @@ input[type=submit],
     justify-content: space-between;
     align-items: center;
   }
+  .containerAllUser form div input,
+  .containerVehicleAll form div input,
+  .containerVehicleCreate form div input,
   .containerPersonalInfo form div input,
   .passwordForm form div input,
   .createProfileForm form div input,
@@ -111,6 +143,12 @@ input[type=submit],
   .containerPersonalInfo form div input {
     margin-right: 0;
   }
+  .containerAllUser form input[type=submit],
+  .containerAllUser form .btn,
+  .containerVehicleAll form input[type=submit],
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form input[type=submit],
+  .containerVehicleCreate form .btn,
   .containerPersonalInfo form input[type=submit],
   .containerPersonalInfo form .btn,
   .passwordForm form input[type=submit],
@@ -124,6 +162,9 @@ input[type=submit],
     margin: 0 auto;
     margin-top: 3rem;
   }
+  .containerAllUser form .btn,
+  .containerVehicleAll form .btn,
+  .containerVehicleCreate form .btn,
   .containerPersonalInfo form .btn,
   .passwordForm form .btn,
   .createProfileForm form .btn,
@@ -133,11 +174,22 @@ input[type=submit],
   }
 }
 @media screen and (min-width: 992px) {
+  .containerAllUser form,
+  .containerAllUser .formVehicleAll,
+  .containerVehicleAll form,
+  .containerVehicleAll .formVehicleAll,
+  .containerVehicleCreate form,
+  .containerVehicleCreate .formVehicleAll,
   .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll,
   .passwordForm form,
+  .passwordForm .formVehicleAll,
   .createProfileForm form,
+  .createProfileForm .formVehicleAll,
   .editProfileForm form,
-  .containerPersonalInfo form {
+  .editProfileForm .formVehicleAll,
+  .containerPersonalInfo form,
+  .containerPersonalInfo .formVehicleAll {
     width: 60%;
   }
 }

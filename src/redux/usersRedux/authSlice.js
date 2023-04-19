@@ -5,7 +5,7 @@ export const loginUser = createAsyncThunk(
   "auth/loginUser",
   async (loginData, thunkAPI) => {
     try {
-      const response = await fetch(`${API_URL}` + "/users/login", {
+      const response = await fetch(`${API_URL}/users/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,7 +34,6 @@ const authSlice = createSlice({
   reducers: {
     logout(state) {
       state.token = null;
-      localStorage.removeItem("token");
     },
   },
   extraReducers: (builder) => {
@@ -45,7 +44,6 @@ const authSlice = createSlice({
       .addCase(loginUser.fulfilled, (state, action) => {
         state.token = action.payload;
         state.error = null;
-        localStorage.setItem("token", action.payload);
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.token = null;

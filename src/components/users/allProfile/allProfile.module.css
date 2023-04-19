@@ -1,3 +1,4 @@
+.formAllUser select,
 .formVehicleAll select,
 input,
 .btn {
@@ -31,6 +32,15 @@ input[type=submit],
   font-size: 1.8rem;
   font-weight: bold;
   margin: 3.5rem 0;
+}
+
+.containerAllUser form,
+.containerVehicleAll form {
+  margin: 0 auto;
+  border: 3px solid #f4a261;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 5rem;
 }
 
 .containerAllUser,
@@ -133,13 +143,21 @@ input[type=submit],
     justify-content: space-between;
     align-items: center;
   }
+  .containerAllUser form div select,
   .containerAllUser form div input,
+  .containerVehicleAll form div select,
   .containerVehicleAll form div input,
+  .containerVehicleCreate form div select,
   .containerVehicleCreate form div input,
+  .containerPersonalInfo form div select,
   .containerPersonalInfo form div input,
+  .passwordForm form div select,
   .passwordForm form div input,
+  .createProfileForm form div select,
   .createProfileForm form div input,
+  .editProfileForm form div select,
   .editProfileForm form div input,
+  .containerPersonalInfo form div select,
   .containerPersonalInfo form div input {
     margin-right: 0;
   }
@@ -194,30 +212,16 @@ input[type=submit],
   }
 }
 
-.login {
-  margin: 8rem 0;
+.containerAllUser form {
+  margin: 0 auto;
+  margin-bottom: 5rem;
 }
-.login .passwordForget {
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-}
-.login .createAccount a,
-.login .passwordForget a {
-  color: #0077b6;
+.containerAllUser form select {
+  padding-left: 0.5rem;
 }
 @media screen and (min-width: 768px) {
-  .login .loginForm {
-    border: none;
-    margin: 0 auto;
-  }
-}
-@media screen and (min-width: 992px) {
-  .login form {
-    width: 80%;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .login form {
+  .containerAllUser form select {
     width: 60%;
+    margin-right: 0;
   }
-}/*# sourceMappingURL=login.module.css.map */
+}/*# sourceMappingURL=allProfile.module.css.map */

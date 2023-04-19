@@ -194,30 +194,6 @@ input[type=submit],
   }
 }
 
-.login {
-  margin: 8rem 0;
-}
-.login .passwordForget {
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-}
-.login .createAccount a,
-.login .passwordForget a {
-  color: #0077b6;
-}
-@media screen and (min-width: 768px) {
-  .login .loginForm {
-    border: none;
-    margin: 0 auto;
-  }
-}
-@media screen and (min-width: 992px) {
-  .login form {
-    width: 80%;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .login form {
-    width: 60%;
-  }
-}/*# sourceMappingURL=login.module.css.map */
+.containerVehicleCreate form {
+  margin: 0 auto;
+}/*# sourceMappingURL=vehicleCreate.module.css.map */

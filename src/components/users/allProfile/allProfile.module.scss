@@ -1,0 +1,16 @@
+@import "../../../styles/settings.scss";
+.containerAllUser {
+  form {
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    select {
+      padding-left: 0.5rem;
+    }
+    @media screen and (min-width: 768px) {
+      select {
+        width: 60%;
+        margin-right: 0;
+      }
+    }
+  }
+}

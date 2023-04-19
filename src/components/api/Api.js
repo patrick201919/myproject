@@ -27,7 +27,7 @@ const putRequest = async (url, body = {}, token = null) => {
     body: JSON.stringify(body),
     headers: { "Content-type": "application/json; charset=UTF-8" },
   };
-
+  console.log(body);
   if (token) config.headers.Authorization = token;
 
   return await request(url, config);

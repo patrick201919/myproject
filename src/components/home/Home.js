@@ -21,9 +21,9 @@ const Home = () => {
                   <label htmlFor="departureAgency">
                     <FontAwesomeIcon icon={faLocationDot} />
                   </label>
-                  <select name="AgencydepartureAgency" id="departureAgency">
+                  <select name="departureAgency" id="departureAgency">
                     <option value="#">AGENCE DE DEPART</option>
-                    <option value="bordeux">Bordeaux</option>
+                    <option value="bordeaux">Bordeaux</option>
                   </select>
                 </div>
                 <div className="selectReturn">

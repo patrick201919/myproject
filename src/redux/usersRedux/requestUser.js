@@ -56,6 +56,23 @@ export const updateUser = createAsyncThunk(
   }
 );
 
+export const updateUserAdmin = createAsyncThunk(
+  "/users/upadateAdmin",
+  async (form, thunkApi) => {
+    const { fulfillWithValue, rejectWithValue } = thunkApi;
+    const token = window.localStorage.getItem("token");
+    const { status, result, error } = await putRequest(
+      "/users/updateAdmin",
+      form,
+      token
+    );
+    console.log(result);
+    return error
+      ? rejectWithValue(`Cannot get user - Error status ${status} - ${error}`)
+      : fulfillWithValue(result);
+  }
+);
+
 export const updatePassword = createAsyncThunk(
   "/users/password",
   async (form, thunkApi) => {

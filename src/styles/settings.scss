@@ -9,8 +9,9 @@ $colorText: #484848;
 $colorBlack: #1d1e20;
 $colorFlyGray: #cbcbcb;
 
-// style Input
-
+// style Input / button / select
+.formAllUser select,
+.formVehicleAll select,
 input,
 .btn {
   margin: 1rem;
@@ -28,6 +29,7 @@ input[type="submit"],
   font-weight: 100;
 }
 @media screen and (min-width: 768px) {
+  .formVehicleAll select,
   input,
   .btn {
     width: 60%;
@@ -42,6 +44,20 @@ input[type="submit"],
   font-weight: bold;
   margin: 3.5rem 0;
 }
+.containerAllUser,
+.containerVehicleAll {
+  form {
+    margin: 0 auto;
+    border: 3px solid $colorOrange;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.containerAllUser,
+.containerVehicleAll,
+.containerVehicleCreate,
 .containerPersonalInfo,
 .passwordForm,
 .createProfileForm,
@@ -84,6 +100,8 @@ input[type="submit"],
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+
+        select,
         input {
           margin-right: 0;
         }
@@ -99,92 +117,9 @@ input[type="submit"],
     }
   }
   @media screen and (min-width: 992px) {
-    form {
+    form,
+    .formVehicleAll {
       width: 60%;
     }
   }
 }
-
-//   transition: all 0.5s ease-in-out;
-//   margin-bottom: 3rem;
-//   h2 {
-//     margin-bottom: 3rem;
-//   }
-
-//   form,
-//   .articlePeronalInfo {
-//     margin: 0 auto;
-//     width: 90%;
-
-//     p {
-//       display: flex;
-//       justify-content: space-between;
-//       align-items: center;
-//       margin: 0 auto;
-//       margin-top: 2rem;
-//       span {
-//         font-size: 1.7rem;
-//       }
-//     }
-//     strong,
-//     label {
-//       font-size: 2rem;
-//       color: $colorGreen;
-//     }
-
-//     div {
-//       display: flex;
-//       flex-direction: column;
-//       align-items: center;
-//     }
-//     .btn {
-//       margin-top: 3rem;
-//     }
-//     input[type="submit"] {
-//       margin-top: 1rem;
-//     }
-//     .passwordProfile {
-//       margin: 0 auto;
-//       color: $colorGreen;
-//       color: $colorBlue;
-//       margin-top: 2rem;
-//       font-size: 2rem;
-//     }
-//     .passwordProfile:hover {
-//       color: $colorOrange;
-//     }
-//   }
-
-//   @media screen and (min-width: 768px) {
-//     form,
-//     .articlePeronalInfo {
-//       width: 70%;
-//       border: 3px solid $colorOrange;
-//       border-radius: 0.5rem;
-//       padding: 1rem;
-
-//       div {
-//         flex-direction: row;
-//         justify-content: space-between;
-//         align-items: center;
-//         input {
-//           margin-right: 0;
-//         }
-//       }
-//       input[type="submit"],
-//       .btn {
-//         margin: 0 auto;
-//         margin-top: 3rem;
-//       }
-//       .btn {
-//         margin-right: 5%;
-//       }
-//     }
-//   }
-//   @media screen and (min-width: 992px) {
-//     form,
-//     .articlePeronalInfo {
-//       width: 60%;
-//     }
-//   }
-// }

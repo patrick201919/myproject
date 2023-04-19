@@ -7,7 +7,12 @@ import {
   updateUser,
 } from "../../../redux/usersRedux/requestUser";
 import { Link } from "react-router-dom";
-
+import {
+  emailIsValid,
+  // passwordIsValid,
+  phoneIsValid,
+} from "../../../constants/regex";
+import { USER_ROLE } from "../../../constants/userConstant";
 const ReadProfile = () => {
   const user = useSelector((state) => state.users.users);
   const dispatch = useDispatch();
@@ -16,21 +21,27 @@ const ReadProfile = () => {
     dispatch(readUser());
   }, [dispatch]);
 
-  const [state, setState] = useState(user);
+  const [profile, setProfile] = useState(user);
   const [editUser, setEditUser] = useState(false);
 
   useEffect(() => {
-    setState(user);
+    setProfile(user);
   }, [user]);
 
   const handleChange = (key, value) => {
-    setState({ ...state, [key]: value });
-    console.log(state);
+    setProfile({ ...profile, [key]: value });
   };
+
+  const isemailIsValid = emailIsValid(profile.email);
+  const isphoneIsValid = phoneIsValid(profile.telephone);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(updateUser(state));
+    dispatch(updateUser(profile));
+    if (!isemailIsValid || !isphoneIsValid) {
+      alert("l'email ou le numéro de téléphone est incorrect");
+    }
+
     setEditUser(false);
   };
 
@@ -57,7 +68,7 @@ const ReadProfile = () => {
                 type="text"
                 name="firstName"
                 placeholder="Prénom"
-                value={state.firstName}
+                value={profile.firstName}
                 onChange={(e) => handleChange("firstName", e.target.value)}
               />
             </div>
@@ -67,7 +78,7 @@ const ReadProfile = () => {
                 type="text"
                 name="name"
                 placeholder="Nom"
-                value={state.name}
+                value={profile.name}
                 onChange={(e) => handleChange("name", e.target.value)}
               />
             </div>
@@ -77,7 +88,7 @@ const ReadProfile = () => {
                 type="number"
                 name="age"
                 placeholder="votre age"
-                value={state.age}
+                value={profile.age}
                 onChange={(e) => handleChange("age", e.target.value)}
               />
             </div>
@@ -87,7 +98,7 @@ const ReadProfile = () => {
                 type="date"
                 name="birthDay"
                 placeholder="Date de naissance"
-                value={state.birthDay}
+                value={profile.birthDay}
                 onChange={(e) => handleChange("birthDay", e.target.value)}
               />
             </div>
@@ -97,7 +108,7 @@ const ReadProfile = () => {
                 type="text"
                 name="address"
                 placeholder="Adresse"
-                value={state.address}
+                value={profile.address}
                 required
                 onChange={(e) => handleChange("address", e.target.value)}
               />
@@ -108,7 +119,7 @@ const ReadProfile = () => {
                 type="text"
                 name="postCode"
                 placeholder="Code postal"
-                value={state.postCode}
+                value={profile.postCode}
                 required
                 onChange={(e) => handleChange("postCode", e.target.value)}
               />
@@ -119,7 +130,7 @@ const ReadProfile = () => {
                 type="text"
                 name="city"
                 placeholder="Ville"
-                value={state.city}
+                value={profile.city}
                 required
                 onChange={(e) => handleChange("city", e.target.value)}
               />
@@ -130,7 +141,7 @@ const ReadProfile = () => {
                 type="text"
                 name="country"
                 placeholder="Pays"
-                value={state.country}
+                value={profile.country}
                 required
                 onChange={(e) => handleChange("country", e.target.value)}
               />
@@ -141,8 +152,8 @@ const ReadProfile = () => {
                 type="tel"
                 name="telephone"
                 placeholder="Téléphone"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                value={state.telephone}
+                // pattern={isPhoneValid}
+                value={profile.telephone}
                 required
                 onChange={(e) => handleChange("telephone", e.target.value)}
               />
@@ -153,7 +164,7 @@ const ReadProfile = () => {
                 type="email"
                 name="email"
                 placeholder="Email"
-                value={state.email}
+                value={profile.email}
                 required
                 onChange={(e) => handleChange("email", e.target.value)}
               />
@@ -165,7 +176,7 @@ const ReadProfile = () => {
                 type="text"
                 name="drivingLicenseNumber"
                 placeholder="N° de permis"
-                value={state.drivingLicenseNumber}
+                value={profile.drivingLicenseNumber}
                 onChange={(e) =>
                   handleChange("drivingLicenseNumber", e.target.value)
                 }
@@ -177,7 +188,7 @@ const ReadProfile = () => {
                 type="date"
                 name="permitIssuedOn"
                 placeholder="Date"
-                value={state.permitIssuedOn}
+                value={profile.permitIssuedOn}
                 onChange={(e) => handleChange("permitIssuedOn", e.target.value)}
               />
             </div>
@@ -187,7 +198,7 @@ const ReadProfile = () => {
                 type="text"
                 name="licenseIssuedBy"
                 placeholder="Permis délivré par"
-                value={state.licenseIssuedBy}
+                value={profile.licenseIssuedBy}
                 onChange={(e) =>
                   handleChange("licenseIssuedBy", e.target.value)
                 }
@@ -252,9 +263,9 @@ const ReadProfile = () => {
               </p>
               <p>
                 <strong>Statut : </strong>
-                {user.role === 2
+                {user.role === USER_ROLE.member
                   ? "Membre"
-                  : user.role === 1
+                  : user.role === USER_ROLE.admin
                   ? "Admin"
                   : "Autre"}
               </p>

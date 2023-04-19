@@ -42,7 +42,6 @@ const CreateProfile = () => {
   };
 
   const handleSubmit = () => {
-    window.location.href = "/";
     dispatch(createUser(newUser));
   };
 

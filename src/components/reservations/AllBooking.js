@@ -20,7 +20,7 @@ const AllBooking = () => {
 
   return (
     <div>
-      <h1>Les réservations</h1>
+      <h2>Les réservations</h2>
       <div>
         {bookings.map((booking) => (
           <form>
