@@ -16,11 +16,19 @@ const AllProfile = () => {
     dispatch(getAllUser());
   }, [dispatch]);
 
-  const [allUser, setAllUser] = useState(users);
+  const [allUser, setAllUser] = useState([]);
 
   useEffect(() => {
-    setAllUser(users);
+    if (users.length > 0) {
+      setAllUser(users);
+    }
   }, [users]);
+
+  // const [allUser, setAllUser] = useState(users);
+
+  // useEffect(() => {
+  //   setAllUser(users);
+  // }, [users]);
 
   const handleChange = (id, key, value) => {
     const updatedAllUser = allUser.map((user) => {
@@ -35,208 +43,221 @@ const AllProfile = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-  const handleDeleteClick = () => {
-    dispatch(deleteUser(allUser));
-  };
 
   return (
     <section className="containerAllUser">
       <h2>Informations des utilisateurs</h2>
       <main>
-        {allUser.map((user) => (
-          <form className="formAllUser" onClick={handleSubmit} key={user.id}>
-            <div>
-              <label htmlFor="firstName">Prénom</label>
-              <input
-                type="text"
-                id="firstName"
-                placeholder="Prénom"
-                name="firstName"
-                value={user.firstName}
-                onChange={(e) =>
-                  handleChange(user.id, "firstName", e.target.value)
-                }
-              />
-            </div>
-            <div>
-              <label htmlFor="name">Nom</label>
-              <input
-                type="text"
-                id="name"
-                placeholder="Nom"
-                name="name"
-                value={user.name}
-                required
-                onChange={(e) => handleChange(user.id, "name", e.target.value)}
-              />
-            </div>
-            <div>
-              <label htmlFor="age">Age</label>
-              <input
-                type="number"
-                id="age"
-                name="age"
-                placeholder="votre age"
-                value={user.age}
-                onChange={(e) => handleChange(user.id, "age", e.target.value)}
-              />
-            </div>
-            <div>
-              <label htmlFor="birthDay">Date de naissance</label>
-              <input
-                type="date"
-                id="birthDay"
-                name="birthDay"
-                placeholder="Date de naissance"
-                value={user.birthDay}
-                onChange={(e) =>
-                  handleChange(user.id, "birthDay", e.target.value)
-                }
-              />
-            </div>
-            <div>
-              <label htmlFor="address">Adresse</label>
-              <input
-                type="text"
-                id="address"
-                placeholder="adresse"
-                name="address"
-                value={user.address}
-                required
-                onChange={(e) =>
-                  handleChange(user.id, "address", e.target.value)
-                }
-              />
-            </div>
-            <div>
-              <label htmlFor="postCode">Code postal</label>
-              <input
-                type="text"
-                id="postCode"
-                placeholder="Code postal"
-                name="postCode"
-                value={user.postCode}
-                required
-                onChange={(e) =>
-                  handleChange(user.id, "postCode", e.target.value)
-                }
-              />
-            </div>
-            <div>
-              <label htmlFor="city">Ville</label>
-              <input
-                type="text"
-                id="city"
-                placeholder="Ville"
-                name="city"
-                value={user.city}
-                required
-                onChange={(e) => handleChange(user.id, "city", e.target.value)}
-              />
-            </div>
-            <div>
-              <label htmlFor="country">Pays</label>
-              <input
-                type="text"
-                id="country"
-                placeholder="Pays"
-                name="country"
-                value={user.country}
-                required
-                onChange={(e) =>
-                  handleChange(user.id, "country", e.target.value)
-                }
-              />
-            </div>
-            <div>
-              <label htmlFor="telephone">Téléphone</label>
-              <input
-                type="text"
-                id="telephone"
-                placeholder="Téléphone"
-                name="telephone"
-                value={user.telephone}
-                required
-                onChange={(e) =>
-                  handleChange(user.id, "telephone", e.target.value)
-                }
-              />
-            </div>
-            <div>
-              <label htmlFor="role">Rôle utilisateur</label>
-              <select
-                name="role"
-                id="role"
-                value={user.role}
-                onChange={(e) => handleChange(user.id, "role", e.target.value)}
+        {Array.isArray(allUser) &&
+          allUser.map((user) => (
+            <form className="formAllUser" onSubmit={handleSubmit} key={user.id}>
+              <div>
+                <label htmlFor="firstName">Prénom</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  placeholder="Prénom"
+                  name="firstName"
+                  value={user.firstName}
+                  onChange={(e) =>
+                    handleChange(user.id, "firstName", e.target.value)
+                  }
+                />
+              </div>
+              <div>
+                <label htmlFor="name">Nom</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Nom"
+                  name="name"
+                  value={user.name}
+                  required
+                  onChange={(e) =>
+                    handleChange(user.id, "name", e.target.value)
+                  }
+                />
+              </div>
+              <div>
+                <label htmlFor="age">Age</label>
+                <input
+                  type="number"
+                  id="age"
+                  name="age"
+                  placeholder="votre age"
+                  value={user.age}
+                  onChange={(e) => handleChange(user.id, "age", e.target.value)}
+                />
+              </div>
+              <div>
+                <label htmlFor="birthDay">Date de naissance</label>
+                <input
+                  type="date"
+                  id="birthDay"
+                  name="birthDay"
+                  placeholder="Date de naissance"
+                  value={user.birthDay}
+                  onChange={(e) =>
+                    handleChange(user.id, "birthDay", e.target.value)
+                  }
+                />
+              </div>
+              <div>
+                <label htmlFor="address">Adresse</label>
+                <input
+                  type="text"
+                  id="address"
+                  placeholder="adresse"
+                  name="address"
+                  value={user.address}
+                  required
+                  onChange={(e) =>
+                    handleChange(user.id, "address", e.target.value)
+                  }
+                />
+              </div>
+              <div>
+                <label htmlFor="postCode">Code postal</label>
+                <input
+                  type="text"
+                  id="postCode"
+                  placeholder="Code postal"
+                  name="postCode"
+                  value={user.postCode}
+                  required
+                  onChange={(e) =>
+                    handleChange(user.id, "postCode", e.target.value)
+                  }
+                />
+              </div>
+              <div>
+                <label htmlFor="city">Ville</label>
+                <input
+                  type="text"
+                  id="city"
+                  placeholder="Ville"
+                  name="city"
+                  value={user.city}
+                  required
+                  onChange={(e) =>
+                    handleChange(user.id, "city", e.target.value)
+                  }
+                />
+              </div>
+              <div>
+                <label htmlFor="country">Pays</label>
+                <input
+                  type="text"
+                  id="country"
+                  placeholder="Pays"
+                  name="country"
+                  value={user.country}
+                  required
+                  onChange={(e) =>
+                    handleChange(user.id, "country", e.target.value)
+                  }
+                />
+              </div>
+              <div>
+                <label htmlFor="telephone">Téléphone</label>
+                <input
+                  type="text"
+                  id="telephone"
+                  placeholder="Téléphone"
+                  name="telephone"
+                  value={user.telephone}
+                  required
+                  onChange={(e) =>
+                    handleChange(user.id, "telephone", e.target.value)
+                  }
+                />
+              </div>
+              <div>
+                <label htmlFor="role">Rôle utilisateur</label>
+                <select
+                  name="role"
+                  id="role"
+                  value={user.role}
+                  onChange={(e) =>
+                    handleChange(user.id, "role", e.target.value)
+                  }
+                >
+                  <option value={USER_ROLE.admin}>Admin</option>
+                  <option value={USER_ROLE.member}>Membre</option>
+                </select>
+              </div>
+              <div>
+                <label htmlFor="email">Email</label>
+                <input
+                  type="text"
+                  id="email"
+                  placeholder="Email"
+                  name="email"
+                  value={user.email}
+                  required
+                  onChange={(e) =>
+                    handleChange(user.id, "email", e.target.value)
+                  }
+                />
+              </div>
+              <span className="titleLicense">Permis de conduire</span>
+              <div>
+                <label htmlFor="drivingLicenseNumber">N° de permis</label>
+                <input
+                  type="text"
+                  id="drivingLicenseNumber"
+                  name="drivingLicenseNumber"
+                  placeholder="N° de permis"
+                  value={user.drivingLicenseNumber}
+                  onChange={(e) =>
+                    handleChange(
+                      user.id,
+                      "drivingLicenseNumber",
+                      e.target.value
+                    )
+                  }
+                />
+              </div>
+              <div>
+                <label htmlFor="permitIssuedOn">Permis délivré le</label>
+                <input
+                  type="date"
+                  id="permitIssuedOn"
+                  name="permitIssuedOn"
+                  placeholder="Date"
+                  value={user.permitIssuedOn}
+                  onChange={(e) =>
+                    handleChange(user.id, "permitIssuedOn", e.target.value)
+                  }
+                />
+              </div>
+              <div>
+                <label htmlFor="licenseIssuedBy">Permis délivré par</label>
+                <input
+                  type="text"
+                  id="licenseIssuedBy"
+                  name="licenseIssuedBy"
+                  placeholder="Permis délivré par"
+                  value={user.licenseIssuedBy}
+                  onChange={(e) =>
+                    handleChange(user.id, "licenseIssuedBy", e.target.value)
+                  }
+                />
+              </div>
+              <button
+                className="btn"
+                onClick={() => dispatch(deleteUser(user.id))}
               >
-                <option value={USER_ROLE.admin}>Admin</option>
-                <option value={USER_ROLE.member}>Membre</option>
-              </select>
-            </div>
-            <div>
-              <label htmlFor="email">Email</label>
-              <input
-                type="text"
-                id="email"
-                placeholder="Email"
-                name="email"
-                value={user.email}
-                required
-                onChange={(e) => handleChange(user.id, "email", e.target.value)}
-              />
-            </div>
-            <span className="titleLicense">Permis de conduire</span>
-            <div>
-              <label htmlFor="drivingLicenseNumber">N° de permis</label>
-              <input
-                type="text"
-                id="drivingLicenseNumber"
-                name="drivingLicenseNumber"
-                placeholder="N° de permis"
-                value={user.drivingLicenseNumber}
-                onChange={(e) =>
-                  handleChange(user.id, "drivingLicenseNumber", e.target.value)
-                }
-              />
-            </div>
-            <div>
-              <label htmlFor="permitIssuedOn">Permis délivré le</label>
-              <input
-                type="date"
-                id="permitIssuedOn"
-                name="permitIssuedOn"
-                placeholder="Date"
-                value={user.permitIssuedOn}
-                onChange={(e) =>
-                  handleChange(user.id, "permitIssuedOn", e.target.value)
-                }
-              />
-            </div>
-            <div>
-              <label htmlFor="licenseIssuedBy">Permis délivré par</label>
-              <input
-                type="text"
-                id="licenseIssuedBy"
-                name="licenseIssuedBy"
-                placeholder="Permis délivré par"
-                value={user.licenseIssuedBy}
-                onChange={(e) =>
-                  handleChange(user.id, "licenseIssuedBy", e.target.value)
-                }
-              />
-            </div>
-            <button className="btn" onClick={handleDeleteClick}>
-              Supprimer
-            </button>
-            <button
-              className="btn"
-              onClick={() => dispatch(updateUserAdmin(user))}
-            >
-              Enregister
-            </button>
-          </form>
-        ))}
+                Supprimer
+              </button>
+              <button
+                className="btn"
+                onSubmit={() => dispatch(updateUserAdmin(user))}
+              >
+                Enregister
+              </button>
+            </form>
+          ))}
       </main>
     </section>
   );

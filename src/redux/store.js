@@ -1,12 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import authSlice from "./usersRedux/authSlice";
-import usersReducer from "./usersRedux/usersSlice";
 import bookingsReducer from "./bookingsRedux/bookingsSlice";
 import vehicleSlice from "./vehicleRedux/vehicleSlice";
+import usersSlice from "./usersRedux/usersSlice";
 
 export const Store = configureStore({
   reducer: {
-    users: usersReducer,
+    users: usersSlice,
     auth: authSlice,
     bookings: bookingsReducer,
     vehicles: vehicleSlice,

@@ -10,6 +10,8 @@ $colorBlack: #1d1e20;
 $colorFlyGray: #cbcbcb;
 
 // style Input / button / select
+.linkCreateVehicle a,
+.formVehicleCreate select,
 .formAllUser select,
 .formVehicleAll select,
 input,
@@ -22,6 +24,7 @@ input,
   outline-style: none;
   border: 2px solid $colorBlue;
 }
+.linkCreateVehicle a,
 input[type="submit"],
 .btn {
   background-color: $colorBlue;
@@ -29,6 +32,8 @@ input[type="submit"],
   font-weight: 100;
 }
 @media screen and (min-width: 768px) {
+  .linkCreateVehicle a,
+  .formVehicleCreate select,
   .formVehicleAll select,
   input,
   .btn {
@@ -44,6 +49,7 @@ input[type="submit"],
   font-weight: bold;
   margin: 3.5rem 0;
 }
+.containerVehicleCreate,
 .containerAllUser,
 .containerVehicleAll {
   form {

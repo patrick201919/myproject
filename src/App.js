@@ -13,14 +13,19 @@ import UpdatePassword from "./components/users/password/UpdatePassword";
 import VehicleCreate from "./components/vehicles/create/VehicleCreate";
 import AllVehicle from "./components/vehicles/allVehicle/AllVehicle";
 import AllProfile from "./components/users/allProfile/AllProfile";
+import { useSelector } from "react-redux";
 function App() {
+  const islogout = useSelector((state) => state.auth.token);
   return (
     <div className="App">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profiles" element={<AllProfile />} />
-        <Route path="/profile" element={<ReadProfile />} />
+        <Route
+          path={islogout === null ? "/" : "/profile"}
+          element={<ReadProfile />}
+        />
         <Route path="/password" element={<UpdatePassword />} />
         <Route path="/profile/create" element={<CreateProfile />} />
         <Route path="/login" element={<Login />} />

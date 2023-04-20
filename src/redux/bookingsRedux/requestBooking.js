@@ -24,7 +24,6 @@ export const getAllBooking = createAsyncThunk(
   "/booking/readall",
   async (_, thunkApi) => {
     const { fulfillWithValue, rejectWithValue } = thunkApi;
-    // const token = getItem("token");
     const token = window.localStorage.getItem("token");
     const { status, result, error } = await getRequest(
       `/reservations/readall`,

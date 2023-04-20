@@ -1,3 +1,5 @@
+.formVehicleCreate select,
+.formAllUser select,
 .formVehicleAll select,
 input,
 .btn {
@@ -18,6 +20,7 @@ input[type=submit],
 }
 
 @media screen and (min-width: 768px) {
+  .formVehicleCreate select,
   .formVehicleAll select,
   input,
   .btn {
@@ -31,6 +34,16 @@ input[type=submit],
   font-size: 1.8rem;
   font-weight: bold;
   margin: 3.5rem 0;
+}
+
+.containerVehicleCreate form,
+.containerAllUser form,
+.containerVehicleAll form {
+  margin: 0 auto;
+  border: 3px solid #f4a261;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 5rem;
 }
 
 .containerAllUser,
@@ -133,13 +146,21 @@ input[type=submit],
     justify-content: space-between;
     align-items: center;
   }
+  .containerAllUser form div select,
   .containerAllUser form div input,
+  .containerVehicleAll form div select,
   .containerVehicleAll form div input,
+  .containerVehicleCreate form div select,
   .containerVehicleCreate form div input,
+  .containerPersonalInfo form div select,
   .containerPersonalInfo form div input,
+  .passwordForm form div select,
   .passwordForm form div input,
+  .createProfileForm form div select,
   .createProfileForm form div input,
+  .editProfileForm form div select,
   .editProfileForm form div input,
+  .containerPersonalInfo form div select,
   .containerPersonalInfo form div input {
     margin-right: 0;
   }
@@ -246,7 +267,6 @@ input[type=submit],
   display: block;
   padding: 10px;
   color: rgba(255, 255, 255, 0.9137254902);
-  transition: all 0.3s ease-in-out;
   line-height: 2.5;
   font-size: 2.5rem;
 }

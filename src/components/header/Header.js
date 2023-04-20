@@ -1,21 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./header.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { logout } from "../../redux/usersRedux/authSlice";
+import { USER_ROLE } from "../../constants/userConstant";
+import { readUser } from "../../redux/usersRedux/requestUser";
 
 const Header = () => {
-  const [showBurgerMenu, setShowBurgerMenu] = useState(false);
-  const dispatch = useDispatch();
   const islogout = useSelector((state) => state.auth.token);
+  const role = useSelector((state) => state.auth.role);
+  const roles = useSelector((state) => state.users.users.role);
 
-  console.log("Cqsc", islogout);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(readUser());
+  }, [dispatch]);
+
+  const [showBurgerMenu, setShowBurgerMenu] = useState(false);
 
   const handleClickBurger = () => {
     setShowBurgerMenu(!showBurgerMenu);
   };
   const handleLogout = () => {
-    dispatch(logout);
+    localStorage.removeItem("token");
+    dispatch(logout());
     window.location.href = "/";
   };
   const handleLinkClick = () => {
@@ -34,13 +43,45 @@ const Header = () => {
       </div>
       <nav className="navBar">
         <div className={`menuNavBar ${showBurgerMenu ? "active" : ""}`}>
-          <Link to="" onClick={handleLinkClick}>
-            Nos véhicules
-          </Link>
-          <Link>Ma réservation</Link>
-          <Link to="/profile" onClick={handleLinkClick}>
-            Mon compte
-          </Link>
+          {role || roles !== USER_ROLE.admin ? (
+            (console.log("roles", roles),
+            (
+              <>
+                <Link to="" onClick={handleLinkClick}>
+                  Nos véhicules
+                </Link>
+                <Link
+                  to={islogout === null ? "/" : "/booking"}
+                  onClick={handleLinkClick}
+                >
+                  Mes réservations
+                </Link>
+                <Link
+                  to={islogout === null ? "/" : "/profile"}
+                  onClick={handleLinkClick}
+                >
+                  Mon compte
+                </Link>
+              </>
+            ))
+          ) : (
+            <>
+              <Link to="/bookings" onClick={handleLinkClick}>
+                Les réservations
+              </Link>
+              <Link to="/profiles" onClick={handleLinkClick}>
+                Les utilisateurs
+              </Link>
+              <Link to="/vehicles" onClick={handleLinkClick}>
+                Les véhicules
+              </Link>
+              <Link>Ma réservation</Link>
+              {/* <Link to="/profile" onClick={handleLinkClick}>
+                Mon compte
+              </Link> */}
+            </>
+          )}
+
           <>
             {islogout === null ? (
               <Link to="/login" onClick={handleLinkClick}>

@@ -16,7 +16,8 @@ export const loginUser = createAsyncThunk(
         const data = await response.json();
         localStorage.setItem("token", data.token);
         window.location.href = "/";
-        return data.token;
+        const role = data.role;
+        return role;
       }
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);
@@ -29,6 +30,7 @@ const authSlice = createSlice({
   initialState: {
     token: localStorage.getItem("token"),
     error: null,
+    role: null,
   },
 
   reducers: {
@@ -43,6 +45,7 @@ const authSlice = createSlice({
       })
       .addCase(loginUser.fulfilled, (state, action) => {
         state.token = action.payload;
+        state.role = action.payload;
         state.error = null;
       })
       .addCase(loginUser.rejected, (state, action) => {

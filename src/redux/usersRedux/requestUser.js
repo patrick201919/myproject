@@ -22,7 +22,7 @@ export const getAllUser = createAsyncThunk(
   async (_, thunkApi) => {
     const { fulfillWithValue, rejectWithValue } = thunkApi;
     const token = window.localStorage.getItem("token");
-    const { status, result, error } = await getRequest(`/users/readall`, token);
+    const { status, result, error } = await getRequest("/users/readall", token);
     return error
       ? rejectWithValue(`Cannot get user - Error status ${status} - ${error}`)
       : fulfillWithValue(result.data);
@@ -92,7 +92,7 @@ export const updatePassword = createAsyncThunk(
 );
 
 export const deleteUser = createAsyncThunk(
-  "/users/read",
+  "/users/delete",
   async (user, thunkApi) => {
     const { fulfillWithValue, rejectWithValue } = thunkApi;
     const token = window.localStorage.getItem("token");

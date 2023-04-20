@@ -46,8 +46,8 @@ const ReadProfile = () => {
   };
 
   const handleDeleteClick = () => {
-    dispatch(deleteUser(user));
-    //redirection home page
+    dispatch(deleteUser(user.id));
+    window.location.href = "/";
   };
   const handleCancelEdit = () => {
     setEditUser(false);

@@ -1,12 +1,20 @@
 @import "../../../styles/settings.scss";
 
 .containerVehicleAll {
+  .linkCreateVehicle a {
+    display: block;
+    font-size: 2rem;
+    margin: 4rem auto;
+  }
   form {
     select {
       padding-left: 0.5rem;
     }
   }
   @media screen and (min-width: 768px) {
+    .linkCreateVehicle a {
+      width: 50%;
+    }
     .formVehicleAll {
       select,
       input {

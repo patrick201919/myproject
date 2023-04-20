@@ -47,7 +47,7 @@ const VehicleCreate = () => {
   return (
     <section className="containerVehicleCreate">
       <h2>Enregistrer un véhicule</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="formVehicleCreate">
         <div>
           <label htmlFor="typeOfVehicle">Type de véhicule</label>
           <select

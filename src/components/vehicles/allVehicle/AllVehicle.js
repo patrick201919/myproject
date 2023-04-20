@@ -6,6 +6,7 @@ import {
   getAllVehicle,
   updateVehicle,
 } from "../../../redux/vehicleRedux/requestVehicle";
+import { Link } from "react-router-dom";
 
 const AllVehicle = () => {
   const { vehicles } = useSelector((state) => state.vehicles);
@@ -35,15 +36,16 @@ const AllVehicle = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-  // const handleDeleteClick = () => {
-  //   dispatch(deleteVehicle(vehicleAll));
-  // };
+
   return (
     <section className="containerVehicleAll">
       <h2>Les véhicules enregistrés</h2>
+      <span className="linkCreateVehicle">
+        <Link to="/vehicle/create">Ajouter un véhicule</Link>
+      </span>
       {vehicleAll.map((vehicle) => (
         <form
-          onClick={handleSubmit}
+          onSubmit={handleSubmit}
           key={vehicle.id}
           className="formVehicleAll"
         >
@@ -229,7 +231,7 @@ const AllVehicle = () => {
           </button>
           <button
             className="btn"
-            onClick={() => dispatch(updateVehicle(vehicle))}
+            onSubmit={() => dispatch(updateVehicle(vehicle))}
           >
             Enregister
           </button>
