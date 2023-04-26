@@ -15,9 +15,9 @@ export const loginUser = createAsyncThunk(
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem("token", data.token);
+        localStorage.setItem("role", data.role);
         window.location.href = "/";
-        const role = data.role;
-        return role;
+        return data.token;
       }
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);
@@ -29,13 +29,14 @@ const authSlice = createSlice({
   name: "auth",
   initialState: {
     token: localStorage.getItem("token"),
+    role: localStorage.getItem("role"),
     error: null,
-    role: null,
   },
 
   reducers: {
     logout(state) {
-      state.token = null;
+      state.token = localStorage.removeItem("token");
+      state.role = localStorage.removeItem("role");
     },
   },
   extraReducers: (builder) => {

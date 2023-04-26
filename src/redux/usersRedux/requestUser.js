@@ -93,12 +93,28 @@ export const updatePassword = createAsyncThunk(
 
 export const deleteUser = createAsyncThunk(
   "/users/delete",
-  async (user, thunkApi) => {
+  async (id, thunkApi) => {
     const { fulfillWithValue, rejectWithValue } = thunkApi;
     const token = window.localStorage.getItem("token");
     const { status, result, error } = await deleteRequest(
       "/users/delete",
-      { user: user },
+      id,
+      token
+    );
+    return error
+      ? rejectWithValue(`Cannot get user - Error status ${status} - ${error}`)
+      : fulfillWithValue(result.data);
+  }
+);
+
+export const deleteUserAd = createAsyncThunk(
+  "/users/deleteAdmin",
+  async (id, thunkApi) => {
+    const { fulfillWithValue, rejectWithValue } = thunkApi;
+    const token = window.localStorage.getItem("token");
+    const { status, result, error } = await deleteRequest(
+      "/users/deleteAdmin",
+      { id: id },
       token
     );
     return error

@@ -1,0 +1,45 @@
+@import "../../../styles/settings.scss";
+
+.containerShowVehicle {
+  transition: all 5s ease-in-out;
+  article {
+    margin: 4rem;
+    .media {
+      margin-bottom: 2rem;
+    }
+    .priceByDay {
+      color: $colorOrange;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    .btn-models {
+      width: 24rem;
+      padding: 0.7rem;
+    }
+    .typeOfVehicle {
+      font-size: 2rem;
+      font-weight: bolder;
+    }
+    .imgModel {
+      width: 80%;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    article {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .imgModel {
+        width: 90%;
+      }
+      .media {
+        width: 60%;
+      }
+
+      .vehicle {
+        width: 40%;
+      }
+    }
+  }
+}

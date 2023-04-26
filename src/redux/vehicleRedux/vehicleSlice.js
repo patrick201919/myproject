@@ -11,25 +11,20 @@ export const vehicleSlice = createSlice({
   name: "vehicles",
   initialState: {
     vehicles: [],
+    vehicleId: null,
     loading: false,
   },
   reducers: {
     [createVehicle.fulfilled]: (state, action) => {
       state.loading = false;
       state.vehicles.push(action.payload);
+      state.vehicleId = action.payload;
     },
-    // [getAllVehicle.fulfilled]: (state, action) => {
-    //   state.loading = false;
-    //   state.vehicles = action.payload;
-    // },
+
     [readVehicle.fulfilled]: (state, action) => {
       state.loading = false;
       state.vehicles = action.payload;
     },
-    // [updateVehicle.fulfilled]: (state, action) => {
-    //   state.loading = false;
-    //   state = { ...state, ...action.payload };
-    // },
 
     [deleteVehicle.fulfilled]: (state, action) => {
       state.loading = false;
@@ -60,5 +55,4 @@ export const vehicleSlice = createSlice({
       });
   },
 });
-// export const { getAllVehicle } = vehicleSlice.actions;
 export default vehicleSlice.reducer;

@@ -23,7 +23,6 @@ const Header = () => {
     setShowBurgerMenu(!showBurgerMenu);
   };
   const handleLogout = () => {
-    localStorage.removeItem("token");
     dispatch(logout());
     window.location.href = "/";
   };
@@ -42,56 +41,82 @@ const Header = () => {
         <p>ElectroDrive</p>
       </div>
       <nav className="navBar">
-        <div className={`menuNavBar ${showBurgerMenu ? "active" : ""}`}>
-          {role || roles !== USER_ROLE.admin ? (
+        <ul className={`menuNavBar ${showBurgerMenu ? "active" : ""}`}>
+          {parseInt(role || roles) !== USER_ROLE.admin ? (
             (console.log("roles", roles),
             (
               <>
-                <Link to="" onClick={handleLinkClick}>
-                  Nos véhicules
-                </Link>
+                <li>
+                  <Link to="/models" onClick={handleLinkClick}>
+                    Nos véhicules
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to={islogout === null ? "/" : "/booking"}
+                    onClick={handleLinkClick}
+                  >
+                    Mes réservations
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to={islogout === null ? "/" : "/profile"}
+                    onClick={handleLinkClick}
+                  >
+                    Mon compte
+                  </Link>
+                </li>
+              </>
+            ))
+          ) : (
+            <>
+              <li>
                 <Link
-                  to={islogout === null ? "/" : "/booking"}
+                  to={islogout === null ? "/" : "/bookings"}
                   onClick={handleLinkClick}
                 >
-                  Mes réservations
+                  Les réservations
                 </Link>
+              </li>
+              <li>
+                <Link
+                  to={islogout === null ? "/" : "/profiles"}
+                  onClick={handleLinkClick}
+                >
+                  Les utilisateurs
+                </Link>
+              </li>
+              <li>
+                <Link to="/vehicles" onClick={handleLinkClick}>
+                  Les véhicules
+                </Link>
+              </li>
+              <li>
                 <Link
                   to={islogout === null ? "/" : "/profile"}
                   onClick={handleLinkClick}
                 >
                   Mon compte
                 </Link>
-              </>
-            ))
-          ) : (
-            <>
-              <Link to="/bookings" onClick={handleLinkClick}>
-                Les réservations
-              </Link>
-              <Link to="/profiles" onClick={handleLinkClick}>
-                Les utilisateurs
-              </Link>
-              <Link to="/vehicles" onClick={handleLinkClick}>
-                Les véhicules
-              </Link>
-              <Link>Ma réservation</Link>
-              {/* <Link to="/profile" onClick={handleLinkClick}>
-                Mon compte
-              </Link> */}
+              </li>
             </>
           )}
 
           <>
             {islogout === null ? (
-              <Link to="/login" onClick={handleLinkClick}>
-                Connexion
-              </Link>
+              <li>
+                <Link to="/login" onClick={handleLinkClick}>
+                  Connecter / S'inscrire
+                </Link>
+              </li>
             ) : (
-              <Link onClick={handleLogout}>Déconnexion</Link>
+              <li>
+                <Link onClick={handleLogout}>Déconnexion</Link>
+              </li>
             )}
           </>
-        </div>
+        </ul>
         <div
           className={`burger ${showBurgerMenu ? "active" : ""}`}
           onClick={handleClickBurger}

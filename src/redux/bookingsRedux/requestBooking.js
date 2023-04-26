@@ -39,7 +39,6 @@ export const readBooking = createAsyncThunk(
   "/booking/read",
   async (_, thunkApi) => {
     const { fulfillWithValue, rejectWithValue } = thunkApi;
-    // const token = getItem("token");
     const token = window.localStorage.getItem("token");
     const { status, result, error } = await getRequest(
       `/reservations/read`,
@@ -55,11 +54,7 @@ export const updateBooking = createAsyncThunk(
   "/booking/upadate",
   async (form, thunkApi) => {
     const { fulfillWithValue, rejectWithValue } = thunkApi;
-    // const userid = getItem("user_id");
-    // const token = getItem("token");
-
     const token = window.localStorage.getItem("token");
-
     const { status, result, error } = await putRequest(
       "/reservations/update",
       form,
@@ -76,7 +71,6 @@ export const deleteBooking = createAsyncThunk(
   "/booking/read",
   async (_, thunkApi) => {
     const { fulfillWithValue, rejectWithValue } = thunkApi;
-    // const token = getItem("token");
     const token = window.localStorage.getItem("token");
     const { status, result, error } = await deleteRequest(
       "/reservations/delete",

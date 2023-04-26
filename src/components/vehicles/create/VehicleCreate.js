@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./vehicleCreate.module.scss";
 import { useDispatch } from "react-redux";
 import { createVehicle } from "../../../redux/vehicleRedux/requestVehicle";
+import { createMedia } from "../../../redux/mediaRedux/requestMedia";
 
 const VehicleCreate = () => {
   const dispatch = useDispatch();
@@ -21,6 +22,8 @@ const VehicleCreate = () => {
   const [bikeSize, setBikeSize] = useState("");
   const [bikeWeight, setBikeWeight] = useState("");
   const [priceByDay, setPriceByDay] = useState("");
+  const [mediaName, setMediaName] = useState("");
+  const [mediaDescription, setMediaDescription] = useState("");
 
   const newVehicle = {
     typeOfVehicle,
@@ -40,8 +43,17 @@ const VehicleCreate = () => {
     priceByDay,
   };
 
-  const handleSubmit = () => {
-    dispatch(createVehicle(newVehicle));
+  const handleSubmit = async () => {
+    const vehicleId = await dispatch(createVehicle(newVehicle));
+    const id = vehicleId.payload.vehicleId;
+    if (vehicleId) {
+      const newMedia = {
+        image: mediaName,
+        description: mediaDescription,
+        vehicleId: id,
+      };
+      await dispatch(createMedia(newMedia));
+    }
   };
 
   return (
@@ -68,6 +80,7 @@ const VehicleCreate = () => {
           <label htmlFor="brand">Marque</label>
           <input
             type="text"
+            id="brand"
             name="brand"
             required
             value={brand}
@@ -78,6 +91,7 @@ const VehicleCreate = () => {
           <label htmlFor="vehicleNumber">Numéro de véhicule</label>
           <input
             type="text"
+            id="vehicleNumber"
             name="vehicleNumber"
             required
             value={vehicleNumber}
@@ -88,6 +102,7 @@ const VehicleCreate = () => {
           <label htmlFor="range">Autonomie</label>
           <input
             type="text"
+            id="range"
             name="range"
             required
             value={range}
@@ -98,6 +113,7 @@ const VehicleCreate = () => {
           <label htmlFor="power">Puissance</label>
           <input
             type="text"
+            id="power"
             name="power"
             value={power}
             onChange={(e) => setPower(e.target.value)}
@@ -107,6 +123,7 @@ const VehicleCreate = () => {
           <label htmlFor="charging">Recharge</label>
           <input
             type="text"
+            id="charging"
             name="charging"
             required
             value={charging}
@@ -117,6 +134,7 @@ const VehicleCreate = () => {
           <label htmlFor="maximunSpeed">Vitesse maximale</label>
           <input
             type="text"
+            id="maximunSpeed"
             name="maximunSpeed"
             value={maximunSpeed}
             onChange={(e) => setMaximunSpeed(e.target.value)}
@@ -126,6 +144,7 @@ const VehicleCreate = () => {
           <label htmlFor="typeOfPlug">Type de prise</label>
           <input
             type="text"
+            id="typeOfplug"
             name="typeOfPlug"
             required
             value={typeOfPlug}
@@ -136,6 +155,7 @@ const VehicleCreate = () => {
           <label htmlFor="passenger">Nombre de passagers</label>
           <input
             type="text"
+            id="passenger"
             name="passenger"
             value={passenger}
             onChange={(e) => setPassenger(e.target.value)}
@@ -145,6 +165,7 @@ const VehicleCreate = () => {
           <label htmlFor="cargo">Capacité de chargement</label>
           <input
             type="text"
+            id="cargo"
             name="cargo"
             required
             value={cargo}
@@ -155,6 +176,7 @@ const VehicleCreate = () => {
           <label htmlFor="door">Nombre de portes</label>
           <input
             type="text"
+            id="door"
             name="door"
             value={door}
             onChange={(e) => setDoor(e.target.value)}
@@ -164,6 +186,7 @@ const VehicleCreate = () => {
           <label htmlFor="categorie">Catégorie</label>
           <input
             type="text"
+            id="categorie"
             name="categorie"
             value={categorie}
             onChange={(e) => setCategorie(e.target.value)}
@@ -173,6 +196,7 @@ const VehicleCreate = () => {
           <label htmlFor="bikeSize">Taille du vélo</label>
           <input
             type="text"
+            id="bikeSize"
             name="bikeSize"
             value={bikeSize}
             onChange={(e) => setBikeSize(e.target.value)}
@@ -182,6 +206,7 @@ const VehicleCreate = () => {
           <label htmlFor="bikeWeight">Poids vélo</label>
           <input
             type="text"
+            id="bikeWeight"
             name="bikeWeight"
             value={bikeWeight}
             onChange={(e) => setBikeWeight(e.target.value)}
@@ -191,10 +216,32 @@ const VehicleCreate = () => {
           <label htmlFor="priceByDay">Prix par jour</label>
           <input
             type="text"
+            id="priceByDay"
             name="priceByDay"
             required
             value={priceByDay}
             onChange={(e) => setPriceByDay(e.target.value)}
+          />
+        </div>
+        <span className="titleMedia">Média</span>
+        <div>
+          <label htmlFor="image">Nom image</label>
+          <input
+            type="text"
+            id="image"
+            name="image"
+            value={mediaName}
+            onChange={(e) => setMediaName(e.target.value)}
+          />
+        </div>
+        <div>
+          <label htmlFor="description">Description</label>
+          <input
+            type="text"
+            id="description"
+            name="description"
+            value={mediaDescription}
+            onChange={(e) => setMediaDescription(e.target.value)}
           />
         </div>
         <input type="submit" value="Valider" />

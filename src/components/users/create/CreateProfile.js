@@ -53,6 +53,7 @@ const CreateProfile = () => {
           <label htmlFor="firstName">Prénom</label>
           <input
             type="text"
+            id="firstName"
             name="firstName"
             required
             value={firstName}
@@ -63,6 +64,7 @@ const CreateProfile = () => {
           <label htmlFor="name">Nom</label>
           <input
             type="text"
+            id="name"
             name="name"
             required
             value={name}
@@ -73,6 +75,7 @@ const CreateProfile = () => {
           <label htmlFor="age">Age</label>
           <input
             type="number"
+            id="age"
             name="age"
             required
             value={age}
@@ -83,6 +86,7 @@ const CreateProfile = () => {
           <label htmlFor="birthDay">Date de naissance</label>
           <input
             type="date"
+            id="birthDay"
             name="birthDay"
             required
             value={birthDay}
@@ -93,6 +97,7 @@ const CreateProfile = () => {
           <label htmlFor="address">Adresse</label>
           <input
             type="text"
+            id="address"
             name="address"
             required
             value={address}
@@ -103,6 +108,7 @@ const CreateProfile = () => {
           <label htmlFor="postCode">Code postal</label>
           <input
             type="text"
+            id="postCode"
             name="postCode"
             required
             value={postCode}
@@ -113,6 +119,7 @@ const CreateProfile = () => {
           <label htmlFor="city">Ville</label>
           <input
             type="text"
+            id="city"
             name="city"
             required
             value={city}
@@ -123,6 +130,7 @@ const CreateProfile = () => {
           <label htmlFor="country">Pays</label>
           <input
             type="text"
+            id="country"
             name="country"
             required
             value={country}
@@ -133,6 +141,7 @@ const CreateProfile = () => {
           <label htmlFor="telephone">Télephone</label>
           <input
             type="tel"
+            id="telephone"
             name="telephone"
             required
             value={telephone}
@@ -143,6 +152,7 @@ const CreateProfile = () => {
           <label htmlFor="email">Email</label>
           <input
             type="email"
+            id="email"
             name="email"
             required
             value={email}
@@ -153,6 +163,7 @@ const CreateProfile = () => {
           <label htmlFor="password">Mot de passe</label>
           <input
             type="password"
+            id="password"
             name="password"
             required
             value={password}
@@ -163,6 +174,7 @@ const CreateProfile = () => {
           <label htmlFor="confirmPassword">Confirmation mot de passe</label>
           <input
             type="password"
+            id="confirmPassword"
             name="confirmPassword"
             required
             value={confirmPassword}
@@ -174,6 +186,7 @@ const CreateProfile = () => {
           <label htmlFor="drivingLicenseNumber">N° de permis</label>
           <input
             type="text"
+            id="drivingLicenseNumber"
             name="drivingLicenseNumber"
             value={drivingLicenseNumber}
             onChange={(e) => setDrivingLicenseNumber(e.target.value)}
@@ -183,6 +196,7 @@ const CreateProfile = () => {
           <label htmlFor="permitIssuedOn">Permis délivré le</label>
           <input
             type="date"
+            id="permitIssuedOn"
             name="permitIssuedOn"
             value={permitIssuedOn}
             onChange={(e) => setPermitIssuedOn(e.target.value)}
@@ -192,6 +206,7 @@ const CreateProfile = () => {
           <label htmlFor="licenseIssuedBy">Permis délivré par</label>
           <input
             type="text"
+            id="licenseIssuedBy"
             name="licenseIssuedBy"
             value={licenseIssuedBy}
             onChange={(e) => setLicenseIssuedBy(e.target.value)}

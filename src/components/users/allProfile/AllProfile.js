@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./allProfile.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  deleteUser,
   getAllUser,
   updateUserAdmin,
 } from "../../../redux/usersRedux/requestUser";
@@ -24,12 +23,6 @@ const AllProfile = () => {
     }
   }, [users]);
 
-  // const [allUser, setAllUser] = useState(users);
-
-  // useEffect(() => {
-  //   setAllUser(users);
-  // }, [users]);
-
   const handleChange = (id, key, value) => {
     const updatedAllUser = allUser.map((user) => {
       if (user.id === id) {
@@ -40,17 +33,13 @@ const AllProfile = () => {
     setAllUser(updatedAllUser);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
   return (
     <section className="containerAllUser">
       <h2>Informations des utilisateurs</h2>
       <main>
         {Array.isArray(allUser) &&
           allUser.map((user) => (
-            <form className="formAllUser" onSubmit={handleSubmit} key={user.id}>
+            <form className="formAllUser" key={user.id}>
               <div>
                 <label htmlFor="firstName">Prénom</label>
                 <input
@@ -246,13 +235,7 @@ const AllProfile = () => {
               </div>
               <button
                 className="btn"
-                onClick={() => dispatch(deleteUser(user.id))}
-              >
-                Supprimer
-              </button>
-              <button
-                className="btn"
-                onSubmit={() => dispatch(updateUserAdmin(user))}
+                onClick={() => dispatch(updateUserAdmin(user))}
               >
                 Enregister
               </button>

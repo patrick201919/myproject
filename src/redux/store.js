@@ -3,6 +3,7 @@ import authSlice from "./usersRedux/authSlice";
 import bookingsReducer from "./bookingsRedux/bookingsSlice";
 import vehicleSlice from "./vehicleRedux/vehicleSlice";
 import usersSlice from "./usersRedux/usersSlice";
+import { mediaSlice } from "./mediaRedux/mediaSlice";
 
 export const Store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ export const Store = configureStore({
     auth: authSlice,
     bookings: bookingsReducer,
     vehicles: vehicleSlice,
+    medias: mediaSlice,
   },
 });
 export default Store;

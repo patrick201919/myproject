@@ -7,12 +7,9 @@ import {
   updateUser,
 } from "../../../redux/usersRedux/requestUser";
 import { Link } from "react-router-dom";
-import {
-  emailIsValid,
-  // passwordIsValid,
-  phoneIsValid,
-} from "../../../constants/regex";
+import { emailIsValid, phoneIsValid } from "../../../constants/regex";
 import { USER_ROLE } from "../../../constants/userConstant";
+
 const ReadProfile = () => {
   const user = useSelector((state) => state.users.users);
   const dispatch = useDispatch();
@@ -46,7 +43,7 @@ const ReadProfile = () => {
   };
 
   const handleDeleteClick = () => {
-    dispatch(deleteUser(user.id));
+    dispatch(deleteUser(user));
     window.location.href = "/";
   };
   const handleCancelEdit = () => {
@@ -66,6 +63,7 @@ const ReadProfile = () => {
               <label htmlFor="firstName">Prénom</label>
               <input
                 type="text"
+                id="firstName"
                 name="firstName"
                 placeholder="Prénom"
                 value={profile.firstName}
@@ -76,6 +74,7 @@ const ReadProfile = () => {
               <label htmlFor="name">Nom</label>
               <input
                 type="text"
+                id="name"
                 name="name"
                 placeholder="Nom"
                 value={profile.name}
@@ -86,6 +85,7 @@ const ReadProfile = () => {
               <label htmlFor="age">Age</label>
               <input
                 type="number"
+                id="age"
                 name="age"
                 placeholder="votre age"
                 value={profile.age}
@@ -96,6 +96,7 @@ const ReadProfile = () => {
               <label htmlFor="birthDay">Date de naissance</label>
               <input
                 type="date"
+                id="birthDay"
                 name="birthDay"
                 placeholder="Date de naissance"
                 value={profile.birthDay}
@@ -106,6 +107,7 @@ const ReadProfile = () => {
               <label htmlFor="address">Votre adresse</label>
               <input
                 type="text"
+                id="address"
                 name="address"
                 placeholder="Adresse"
                 value={profile.address}
@@ -117,6 +119,7 @@ const ReadProfile = () => {
               <label htmlFor="postCode">Code postal</label>
               <input
                 type="text"
+                id="postCode"
                 name="postCode"
                 placeholder="Code postal"
                 value={profile.postCode}
@@ -128,6 +131,7 @@ const ReadProfile = () => {
               <label htmlFor="city">Ville</label>
               <input
                 type="text"
+                id="city"
                 name="city"
                 placeholder="Ville"
                 value={profile.city}
@@ -139,6 +143,7 @@ const ReadProfile = () => {
               <label htmlFor="country">Pays</label>
               <input
                 type="text"
+                id="country"
                 name="country"
                 placeholder="Pays"
                 value={profile.country}
@@ -150,9 +155,9 @@ const ReadProfile = () => {
               <label htmlFor="telephone">Numéro de téléphone</label>
               <input
                 type="tel"
+                id="telephone"
                 name="telephone"
                 placeholder="Téléphone"
-                // pattern={isPhoneValid}
                 value={profile.telephone}
                 required
                 onChange={(e) => handleChange("telephone", e.target.value)}
@@ -162,6 +167,7 @@ const ReadProfile = () => {
               <label htmlFor="email">Votre email</label>
               <input
                 type="email"
+                id="email"
                 name="email"
                 placeholder="Email"
                 value={profile.email}
@@ -174,6 +180,7 @@ const ReadProfile = () => {
               <label htmlFor="drivingLicenseNumber">N° de permis</label>
               <input
                 type="text"
+                id="drivingLicenseNumber"
                 name="drivingLicenseNumber"
                 placeholder="N° de permis"
                 value={profile.drivingLicenseNumber}
@@ -186,6 +193,7 @@ const ReadProfile = () => {
               <label htmlFor="permitIssuedOn">Permis délivré le</label>
               <input
                 type="date"
+                id="permitIssuedOn"
                 name="permitIssuedOn"
                 placeholder="Date"
                 value={profile.permitIssuedOn}
@@ -196,6 +204,7 @@ const ReadProfile = () => {
               <label htmlFor="licenseIssuedBy">Permis délivré par</label>
               <input
                 type="text"
+                id="licenseIssuedBy"
                 name="licenseIssuedBy"
                 placeholder="Permis délivré par"
                 value={profile.licenseIssuedBy}

@@ -22,6 +22,7 @@ const Login = () => {
         <form onSubmit={handleSubmit} className="loginForm">
           <input
             type="email"
+            id="email"
             name="email"
             value={email}
             placeholder="email"
@@ -30,6 +31,7 @@ const Login = () => {
           />
           <input
             type="password"
+            id="password"
             name="password"
             placeholder="Mot de passe"
             required

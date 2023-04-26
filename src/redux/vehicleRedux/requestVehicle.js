@@ -10,24 +10,29 @@ export const createVehicle = createAsyncThunk(
   "/vehicles/create",
   async (form, thunkApi) => {
     const { fulfillWithValue, rejectWithValue } = thunkApi;
+    const token = window.localStorage.getItem("token");
     const { status, result, error } = await postRequest(
       "/vehicles/create",
-      form
+      form,
+      token
     );
-    console.log(result);
+    const vehicleId = result.data.result.id;
+
+    console.log("resultID", vehicleId);
+
+    localStorage.setItem("vehicleId", vehicleId);
     return error
       ? rejectWithValue(`Cannot sign up - Error status ${status} - ${error}`)
-      : fulfillWithValue(result);
+      : fulfillWithValue({ result, vehicleId });
   }
 );
 export const getAllVehicle = createAsyncThunk(
   "/vehicles/readall",
   async (_, thunkApi) => {
     const { fulfillWithValue, rejectWithValue } = thunkApi;
-    const token = window.localStorage.getItem("token");
     const { status, result, error } = await getRequest(
-      "/vehicles/readall",
-      token
+      "/vehicles/readall"
+      // token
     );
     console.log("resut", result);
     return error
@@ -54,7 +59,6 @@ export const updateVehicle = createAsyncThunk(
     const { fulfillWithValue, rejectWithValue } = thunkApi;
     const token = window.localStorage.getItem("token");
     const { status, result, error } = await putRequest(
-      // `/vehicles/update/${form.id}`,
       "/vehicles/update",
       form,
       token

@@ -4,7 +4,7 @@ import "./gallery.module.scss";
 const Gallery = () => {
   return (
     <div className="containerGalleryHome">
-      <h2>Nos modèles de véhicule</h2>
+      <h2>Nos différentes catégories de véhicule</h2>
       <div className="containerImgText">
         <article className="carImgText">
           <div className="carImg">

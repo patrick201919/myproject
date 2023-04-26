@@ -11,12 +11,20 @@ const Footer = () => {
         </Link>
       </div>
       <nav>
-        <div className="navFooter">
-          <Link to="">À propos</Link>
-          <Link to="">Politique de confidentialié</Link>
-          <Link to="">Mentions légales</Link>
-          <Link to="">Nous contacter</Link>
-        </div>
+        <ul className="navFooter">
+          <li>
+            <Link to="">À propos</Link>
+          </li>
+          <li>
+            <Link to="">Politique de confidentialié</Link>
+          </li>
+          <li>
+            <Link to="">Mentions légales</Link>
+          </li>
+          <li>
+            <Link to="">Nous contacter</Link>
+          </li>
+        </ul>
       </nav>
       <p className="copyright">Copyright &copy; 2022 ElectroDrive</p>
     </footer>

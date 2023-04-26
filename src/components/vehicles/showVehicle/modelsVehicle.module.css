@@ -217,4 +217,46 @@ input[type=submit],
   .containerPersonalInfo .formVehicleAll {
     width: 60%;
   }
-}/*# sourceMappingURL=settings.css.map */
+}
+
+.containerShowVehicle {
+  transition: all 5s ease-in-out;
+}
+.containerShowVehicle article {
+  margin: 4rem;
+}
+.containerShowVehicle article .media {
+  margin-bottom: 2rem;
+}
+.containerShowVehicle article .priceByDay {
+  color: #f4a261;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.containerShowVehicle article .btn-models {
+  width: 24rem;
+  padding: 0.7rem;
+}
+.containerShowVehicle article .typeOfVehicle {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.containerShowVehicle article .imgModel {
+  width: 80%;
+}
+@media screen and (min-width: 768px) {
+  .containerShowVehicle article {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .containerShowVehicle article .imgModel {
+    width: 90%;
+  }
+  .containerShowVehicle article .media {
+    width: 60%;
+  }
+  .containerShowVehicle article .vehicle {
+    width: 40%;
+  }
+}/*# sourceMappingURL=modelsVehicle.module.css.map */

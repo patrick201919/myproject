@@ -1,3 +1,4 @@
+.linkCreateVehicle a,
 .formVehicleCreate select,
 .formAllUser select,
 .formVehicleAll select,
@@ -12,6 +13,7 @@ input,
   border: 2px solid #0077b6;
 }
 
+.linkCreateVehicle a,
 input[type=submit],
 .btn {
   background-color: #0077b6;
@@ -20,6 +22,7 @@ input[type=submit],
 }
 
 @media screen and (min-width: 768px) {
+  .linkCreateVehicle a,
   .formVehicleCreate select,
   .formVehicleAll select,
   input,
@@ -27,6 +30,7 @@ input[type=submit],
     width: 60%;
   }
 }
+.titleMedia,
 .titleLicense {
   display: block;
   color: #f4a261;
@@ -280,6 +284,8 @@ input[type=submit],
   position: absolute;
   width: 30px;
   height: 18px;
+  top: 3rem;
+  right: 0.5rem;
 }
 .navBar .burger span {
   width: 100%;

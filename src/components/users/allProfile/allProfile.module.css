@@ -1,3 +1,5 @@
+.linkCreateVehicle a,
+.formVehicleCreate select,
 .formAllUser select,
 .formVehicleAll select,
 input,
@@ -11,6 +13,7 @@ input,
   border: 2px solid #0077b6;
 }
 
+.linkCreateVehicle a,
 input[type=submit],
 .btn {
   background-color: #0077b6;
@@ -19,12 +22,15 @@ input[type=submit],
 }
 
 @media screen and (min-width: 768px) {
+  .linkCreateVehicle a,
+  .formVehicleCreate select,
   .formVehicleAll select,
   input,
   .btn {
     width: 60%;
   }
 }
+.titleMedia,
 .titleLicense {
   display: block;
   color: #f4a261;
@@ -34,6 +40,7 @@ input[type=submit],
   margin: 3.5rem 0;
 }
 
+.containerVehicleCreate form,
 .containerAllUser form,
 .containerVehicleAll form {
   margin: 0 auto;
